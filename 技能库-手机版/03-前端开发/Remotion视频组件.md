@@ -1,3 +1,8 @@
+---
+name: remotion-video-components
+description: "使用 Remotion 构建视频组件，支持动画、字幕、音频可视化、3D效果、过渡动效等。适用于程序化生成视频内容的场景。触发词：Remotion、视频组件、程序化视频、视频动画、Remotion视频。"
+---
+
 ## When to use
 
 Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.

@@ -1,3 +1,8 @@
+---
+name: google-workflow
+description: "使用 gws 命令行工具操作 Google Workspace 工作流，包括 standup 报告、会议准备、邮件转任务等。触发词：Google工作流、gws workflow、standup报告。"
+---
+
 # workflow (v1)
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.

@@ -1,3 +1,8 @@
+---
+name: wordpress-router
+description: "识别 WordPress 项目类型（插件/主题/区块主题/完整站点），并路由到对应的领域工作流。触发词：WordPress路由、项目类型识别、WordPress分析、wp-triage。"
+---
+
 # WordPress Router
 
 ## When to use

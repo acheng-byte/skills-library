@@ -1,3 +1,8 @@
+---
+name: playwright-cli
+description: "使用 playwright-cli 命令行工具控制浏览器，执行点击、填表、截图等自动化操作。触发词：playwright-cli、浏览器命令行、自动化命令、网页操作。"
+---
+
 # Browser Automation with playwright-cli
 
 ## Quick start

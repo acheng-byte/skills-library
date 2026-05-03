@@ -1,3 +1,8 @@
+---
+name: vc-investor-workbench
+description: "VC投资人总控工作台，自动将用户需求路由到对应的子技能（赛道研究、项目判断、每日作战、内容创作等）。当用户提到VC、投资、看项目、BP分析、赛道研究、内容写作时触发。"
+---
+
 # VC Investor Workbench
 
 ## Role

@@ -1,273 +1,274 @@
-# Requirements for Outputs
+---
+name: excel-file-processing
+description: "在手机端使用 JavaScript（ExcelJS）创建和处理 Excel 文件，适用于 RikkaHub 环境。当用户说「Excel处理」「生成表格」「创建Excel」「手机Excel」时触发。"
+---
 
-## All Excel files
+# Excel 文件处理（手机版）
 
-### Professional Font
-- Use a consistent, professional font (e.g., Arial, Times New Roman) for all deliverables unless otherwise instructed by the user
+## 环境说明
 
-### Zero Formula Errors
-- Every Excel model MUST be delivered with ZERO formula errors (#REF!, #DIV/0!, #VALUE!, #N/A, #NAME?)
+手机端（RikkaHub）可执行 **JavaScript**，生成 Excel 文件使用 **ExcelJS**。
 
-### Preserve Existing Templates (when updating templates)
-- Study and EXACTLY match existing format, style, and conventions when modifying files
-- Never impose standardized formatting on files with established patterns
-- Existing template conventions ALWAYS override these guidelines
-
-## Financial models
-
-### Color Coding Standards
-Unless otherwise stated by the user or existing template
-
-#### Industry-Standard Color Conventions
-- **Blue text (RGB: 0,0,255)**: Hardcoded inputs, and numbers users will change for scenarios
-- **Black text (RGB: 0,0,0)**: ALL formulas and calculations
-- **Green text (RGB: 0,128,0)**: Links pulling from other worksheets within same workbook
-- **Red text (RGB: 255,0,0)**: External links to other files
-- **Yellow background (RGB: 255,255,0)**: Key assumptions needing attention or cells that need to be updated
-
-### Number Formatting Standards
-
-#### Required Format Rules
-- **Years**: Format as text strings (e.g., "2024" not "2,024")
-- **Currency**: Use $#,##0 format; ALWAYS specify units in headers ("Revenue ($mm)")
-- **Zeros**: Use number formatting to make all zeros "-", including percentages (e.g., "$#,##0;($#,##0);-")
-- **Percentages**: Default to 0.0% format (one decimal)
-- **Multiples**: Format as 0.0x for valuation multiples (EV/EBITDA, P/E)
-- **Negative numbers**: Use parentheses (123) not minus -123
-
-### Formula Construction Rules
-
-#### Assumptions Placement
-- Place ALL assumptions (growth rates, margins, multiples, etc.) in separate assumption cells
-- Use cell references instead of hardcoded values in formulas
-- Example: Use =B5*(1+$B$6) instead of =B5*1.05
-
-#### Formula Error Prevention
-- Verify all cell references are correct
-- Check for off-by-one errors in ranges
-- Ensure consistent formulas across all projection periods
-- Test with edge cases (zero values, negative numbers)
-- Verify no unintended circular references
-
-#### Documentation Requirements for Hardcodes
-- Comment or in cells beside (if end of table). Format: "Source: [System/Document], [Date], [Specific Reference], [URL if applicable]"
-- Examples:
-  - "Source: Company 10-K, FY2024, Page 45, Revenue Note, [SEC EDGAR URL]"
-  - "Source: Company 10-Q, Q2 2025, Exhibit 99.1, [SEC EDGAR URL]"
-  - "Source: Bloomberg Terminal, 8/15/2025, AAPL US Equity"
-  - "Source: FactSet, 8/20/2025, Consensus Estimates Screen"
-
-# XLSX creation, editing, and analysis
-
-## Overview
-
-A user may ask you to create, edit, or analyze the contents of an .xlsx file. You have different tools and workflows available for different tasks.
-
-## Important Requirements
-
-## Reading and analyzing data
-
-### Data analysis with pandas
-For data analysis, visualization, and basic operations, use **pandas** which provides powerful data manipulation capabilities:
-
-```python
-import pandas as pd
-
-# Read Excel
-df = pd.read_excel('file.xlsx')  # Default: first sheet
-all_sheets = pd.read_excel('file.xlsx', sheet_name=None)  # All sheets as dict
-
-# Analyze
-df.head()      # Preview data
-df.info()      # Column info
-df.describe()  # Statistics
-
-# Write Excel
-df.to_excel('output.xlsx', index=False)
+安装依赖：
+```
+npm install exceljs
 ```
 
-## Excel File Workflows
+---
 
-## CRITICAL: Use Formulas, Not Hardcoded Values
+## 输出质量要求
 
-**Always use Excel formulas instead of calculating values in Python and hardcoding them.** This ensures the spreadsheet remains dynamic and updateable.
+### 全部 Excel 文件
 
-### ❌ WRONG - Hardcoding Calculated Values
-```python
-# Bad: Calculating in Python and hardcoding result
-total = df['Sales'].sum()
-sheet['B10'] = total  # Hardcodes 5000
+- 使用专业字体（Arial、Times New Roman 等）
+- 每个 Excel 模型必须 **零公式错误**（#REF! #DIV/0! #VALUE! #N/A #NAME?）
+- 修改模板时，严格匹配已有格式、风格和约定，已有约定始终优先
 
-# Bad: Computing growth rate in Python
-growth = (df.iloc[-1]['Revenue'] - df.iloc[0]['Revenue']) / df.iloc[0]['Revenue']
-sheet['C5'] = growth  # Hardcodes 0.15
+### 财务模型颜色规范
 
-# Bad: Python calculation for average
-avg = sum(values) / len(values)
-sheet['D20'] = avg  # Hardcodes 42.5
-```
+| 颜色 | 含义 |
+|------|------|
+| 蓝色文字 (0,0,255) | 硬编码输入值（用户会改变的数字） |
+| 黑色文字 (0,0,0) | 所有公式和计算结果 |
+| 绿色文字 (0,128,0) | 从同工作簿其他表引用的数据 |
+| 红色文字 (255,0,0) | 外部文件链接 |
+| 黄色背景 (255,255,0) | 需要注意的关键假设单元格 |
 
-### ✅ CORRECT - Using Excel Formulas
-```python
-# Good: Let Excel calculate the sum
-sheet['B10'] = '=SUM(B2:B9)'
+### 数字格式规范
 
-# Good: Growth rate as Excel formula
-sheet['C5'] = '=(C4-C2)/C2'
+- **年份**：文字字符串（"2024" 而非 "2,024"）
+- **货币**：$#,##0 格式，表头注明单位（"Revenue ($mm)"）
+- **零值**：用 "-" 显示，包括百分比
+- **百分比**：默认保留一位小数（0.0%）
+- **倍数**：0.0x 格式（EV/EBITDA、P/E 等）
+- **负数**：用括号 (123)，不用负号 -123
 
-# Good: Average using Excel function
-sheet['D20'] = '=AVERAGE(D2:D19)'
-```
+---
 
-This applies to ALL calculations - totals, percentages, ratios, differences, etc. The spreadsheet should be able to recalculate when source data changes.
+## 创建新 Excel 文件（JavaScript）
 
-## Common Workflow
-1. **Choose tool**: pandas for data, openpyxl for formulas/formatting
-2. **Create/Load**: Create new workbook or load existing file
-3. **Modify**: Add/edit data, formulas, and formatting
-4. **Save**: Write to file
-   ```
-6. **Verify and fix any errors**: 
-   - The script returns JSON with error details
-   - If `status` is `errors_found`, check `error_summary` for specific error types and locations
-   - Fix the identified errors and recalculate again
-   - Common errors to fix:
-     - `#REF!`: Invalid cell references
-     - `#DIV/0!`: Division by zero
-     - `#VALUE!`: Wrong data type in formula
-     - `#NAME?`: Unrecognized formula name
+```javascript
+const ExcelJS = require('exceljs');
 
-### Creating new Excel files
+async function createExcel() {
+  const workbook = new ExcelJS.Workbook();
+  workbook.creator = 'Capy';
+  workbook.created = new Date();
 
-```python
-# Using openpyxl for formulas and formatting
-from openpyxl import Workbook
-from openpyxl.styles import Font, PatternFill, Alignment
+  const sheet = workbook.addWorksheet('Sheet1');
 
-wb = Workbook()
-sheet = wb.active
+  // 添加表头行
+  sheet.addRow(['项目', '金额', '备注']);
 
-# Add data
-sheet['A1'] = 'Hello'
-sheet['B1'] = 'World'
-sheet.append(['Row', 'of', 'data'])
+  // 设置表头样式
+  const headerRow = sheet.getRow(1);
+  headerRow.eachCell(cell => {
+    cell.font = { bold: true, name: 'Arial', size: 11 };
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD5E8F0' } };
+    cell.alignment = { horizontal: 'center', vertical: 'middle' };
+    cell.border = {
+      top: { style: 'thin' },
+      bottom: { style: 'thin' },
+      left: { style: 'thin' },
+      right: { style: 'thin' }
+    };
+  });
 
-# Add formula
-sheet['B2'] = '=SUM(A1:A10)'
+  // 添加数据行（蓝色=输入值）
+  sheet.addRow(['收入 A', 1000, '来源: 2024年报']);
+  sheet.addRow(['收入 B', 2000, '来源: 2024年报']);
 
-# Formatting
-sheet['A1'].font = Font(bold=True, color='FF0000')
-sheet['A1'].fill = PatternFill('solid', start_color='FFFF00')
-sheet['A1'].alignment = Alignment(horizontal='center')
+  // 公式行（黑色=公式）
+  const totalRow = sheet.addRow(['合计', { formula: 'SUM(B2:B3)' }, '']);
+  totalRow.getCell(2).font = { color: { argb: 'FF000000' } }; // 黑色=公式
 
-# Column width
-sheet.column_dimensions['A'].width = 20
+  // 设置列宽
+  sheet.columns = [
+    { width: 20 },
+    { width: 15 },
+    { width: 30 }
+  ];
 
-wb.save('output.xlsx')
-```
-
-### Editing existing Excel files
-
-```python
-# Using openpyxl to preserve formulas and formatting
-from openpyxl import load_workbook
-
-# Load existing file
-wb = load_workbook('existing.xlsx')
-sheet = wb.active  # or wb['SheetName'] for specific sheet
-
-# Working with multiple sheets
-for sheet_name in wb.sheetnames:
-    sheet = wb[sheet_name]
-    print(f"Sheet: {sheet_name}")
-
-# Modify cells
-sheet['A1'] = 'New Value'
-sheet.insert_rows(2)  # Insert row at position 2
-sheet.delete_cols(3)  # Delete column 3
-
-# Add new sheet
-new_sheet = wb.create_sheet('NewSheet')
-new_sheet['A1'] = 'Data'
-
-wb.save('modified.xlsx')
-```
-
-## Recalculating formulas
-
-```
-
-Example:
-```
-
-The script:
-- Automatically sets up LibreOffice macro on first run
-- Recalculates all formulas in all sheets
-- Scans ALL cells for Excel errors (#REF!, #DIV/0!, etc.)
-- Returns JSON with detailed error locations and counts
-- Works on both Linux and macOS
-
-## Formula Verification Checklist
-
-Quick checks to ensure formulas work correctly:
-
-### Essential Verification
-- [ ] **Test 2-3 sample references**: Verify they pull correct values before building full model
-- [ ] **Column mapping**: Confirm Excel columns match (e.g., column 64 = BL, not BK)
-- [ ] **Row offset**: Remember Excel rows are 1-indexed (DataFrame row 5 = Excel row 6)
-
-### Common Pitfalls
-- [ ] **NaN handling**: Check for null values with `pd.notna()`
-- [ ] **Far-right columns**: FY data often in columns 50+ 
-- [ ] **Multiple matches**: Search all occurrences, not just first
-- [ ] **Division by zero**: Check denominators before using `/` in formulas (#DIV/0!)
-- [ ] **Wrong references**: Verify all cell references point to intended cells (#REF!)
-- [ ] **Cross-sheet references**: Use correct format (Sheet1!A1) for linking sheets
-
-### Formula Testing Strategy
-- [ ] **Start small**: Test formulas on 2-3 cells before applying broadly
-- [ ] **Verify dependencies**: Check all cells referenced in formulas exist
-- [ ] **Test edge cases**: Include zero, negative, and very large values
-
-The script returns JSON with error details:
-```json
-{
-  "status": "success",           // or "errors_found"
-  "total_errors": 0,              // Total error count
-  "total_formulas": 42,           // Number of formulas in file
-  "error_summary": {              // Only present if errors found
-    "#REF!": {
-      "count": 2,
-      "locations": ["Sheet1!B5", "Sheet1!C10"]
-    }
-  }
+  await workbook.xlsx.writeFile('output.xlsx');
+  console.log('Excel 文件已生成: output.xlsx');
 }
+
+createExcel();
 ```
 
-## Best Practices
+---
 
-### Library Selection
-- **pandas**: Best for data analysis, bulk operations, and simple data export
-- **openpyxl**: Best for complex formatting, formulas, and Excel-specific features
+## 关键规则：用公式，不用硬编码
 
-### Working with openpyxl
-- Cell indices are 1-based (row=1, column=1 refers to cell A1)
-- Use `data_only=True` to read calculated values: `load_workbook('file.xlsx', data_only=True)`
-- **Warning**: If opened with `data_only=True` and saved, formulas are replaced with values and permanently lost
-- For large files: Use `read_only=True` for reading or `write_only=True` for writing
+**始终使用 Excel 公式，而不是用 JavaScript 计算后写死结果。**
 
-### Working with pandas
-- Specify data types to avoid inference issues: `pd.read_excel('file.xlsx', dtype={'id': str})`
-- For large files, read specific columns: `pd.read_excel('file.xlsx', usecols=['A', 'C', 'E'])`
-- Handle dates properly: `pd.read_excel('file.xlsx', parse_dates=['date_column'])`
+### 错误做法
+```javascript
+// 在 JS 里算出结果后写死 — 错！
+const total = 1000 + 2000;
+sheet.getCell('B4').value = total; // 硬编码 3000
+```
 
-## Code Style Guidelines
-**IMPORTANT**: When generating Python code for Excel operations:
-- Write minimal, concise Python code without unnecessary comments
-- Avoid verbose variable names and redundant operations
-- Avoid unnecessary print statements
+### 正确做法
+```javascript
+// 让 Excel 自己计算 — 对！
+sheet.getCell('B4').value = { formula: 'SUM(B2:B3)' };
+sheet.getCell('C5').value = { formula: '=(C4-C2)/C2' };
+sheet.getCell('D6').value = { formula: 'AVERAGE(D2:D5)' };
+```
 
-**For Excel files themselves**:
-- Add comments to cells with complex formulas or important assumptions
-- Document data sources for hardcoded values
-- Include notes for key calculations and model sections
+---
+
+## 格式化与样式
+
+```javascript
+const ExcelJS = require('exceljs');
+
+async function formatExcel() {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet('财务模型');
+
+  // 蓝色文字 = 输入值
+  function inputCell(cell, value) {
+    cell.value = value;
+    cell.font = { color: { argb: 'FF0000FF' }, name: 'Arial' };
+  }
+
+  // 黑色文字 = 公式
+  function formulaCell(cell, formula) {
+    cell.value = { formula };
+    cell.font = { color: { argb: 'FF000000' }, name: 'Arial' };
+  }
+
+  // 数字格式
+  sheet.getCell('B2').numFmt = '$#,##0;($#,##0);-'; // 货币，零显示为 -
+  sheet.getCell('C2').numFmt = '0.0%';               // 百分比
+  sheet.getCell('D2').numFmt = '0.0x';               // 倍数
+
+  // 列宽
+  sheet.getColumn('A').width = 25;
+  sheet.getColumn('B').width = 15;
+
+  // 冻结首行
+  sheet.views = [{ state: 'frozen', ySplit: 1 }];
+
+  await workbook.xlsx.writeFile('formatted.xlsx');
+}
+
+formatExcel();
+```
+
+---
+
+## 读取分析现有 Excel
+
+```javascript
+const ExcelJS = require('exceljs');
+
+async function readExcel(filePath) {
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile(filePath);
+
+  workbook.eachSheet((sheet, id) => {
+    console.log(`\n=== 工作表: ${sheet.name} ===`);
+    sheet.eachRow((row, rowNum) => {
+      if (rowNum <= 5) { // 只看前5行预览
+        console.log(`行 ${rowNum}:`, row.values.slice(1).join(' | '));
+      }
+    });
+  });
+}
+
+readExcel('input.xlsx');
+```
+
+---
+
+## 多工作表
+
+```javascript
+const ExcelJS = require('exceljs');
+
+async function multiSheet() {
+  const workbook = new ExcelJS.Workbook();
+
+  // 创建多个工作表
+  const summary = workbook.addWorksheet('汇总');
+  const details = workbook.addWorksheet('明细');
+  const assumptions = workbook.addWorksheet('假设');
+
+  // 假设表（输入值）
+  assumptions.addRow(['假设项', '数值']);
+  assumptions.addRow(['增长率', 0.15]);
+  assumptions.getCell('B2').numFmt = '0.0%';
+
+  // 明细表引用假设表（跨表公式）
+  details.addRow(['基准收入', '增长后收入']);
+  details.addRow([1000, { formula: 'A2*(1+假设!B2)' }]);
+
+  // 汇总表
+  summary.addRow(['总收入', { formula: '明细!B2' }]);
+
+  await workbook.xlsx.writeFile('multi_sheet.xlsx');
+}
+
+multiSheet();
+```
+
+---
+
+## 图表（Charts）
+
+```javascript
+const ExcelJS = require('exceljs');
+
+async function addChart() {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet('数据');
+
+  // 添加数据
+  sheet.addRow(['月份', '收入']);
+  ['一月', '二月', '三月', '四月'].forEach((m, i) => {
+    sheet.addRow([m, (i + 1) * 1000]);
+  });
+
+  // ExcelJS 支持基础图表（柱状图、折线图等）
+  // 注意：图表支持需要商业版 ExcelJS 或手动写入 XML
+  // 替代方案：在单元格中用 sparklines 或注释说明图表意图
+
+  await workbook.xlsx.writeFile('chart.xlsx');
+}
+
+addChart();
+```
+
+---
+
+## 公式验证清单
+
+- [ ] 测试 2-3 个样本引用：确认公式引用正确单元格
+- [ ] 列映射：确认 Excel 列与数据对应（第 64 列 = BL，不是 BK）
+- [ ] 行偏移：Excel 行从 1 开始，数据第一行通常是第 2 行
+- [ ] NaN 处理：检查空值和 null
+- [ ] 除以零：检查分母不为零（#DIV/0!）
+- [ ] 跨表引用：格式为 `Sheet1!A1`
+
+---
+
+## 常见错误处理
+
+| 错误 | 原因 | 解决方式 |
+|------|------|----------|
+| #REF! | 无效单元格引用 | 检查引用范围是否正确 |
+| #DIV/0! | 除以零 | 用 `IFERROR` 包裹或检查分母 |
+| #VALUE! | 数据类型错误 | 确认参与计算的单元格都是数字 |
+| #NAME? | 不认识的函数名 | 检查拼写，确认 ExcelJS 支持该公式 |
+| #N/A | 查找未找到结果 | VLOOKUP/MATCH 未匹配到值 |
+
+---
+
+## 依赖
+
+```
+npm install exceljs
+```

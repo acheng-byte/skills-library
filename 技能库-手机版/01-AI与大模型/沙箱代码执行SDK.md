@@ -1,3 +1,8 @@
+---
+name: sandbox-code-execution
+description: "使用 Cloudflare Sandbox SDK 在隔离环境中安全执行代码，构建沙箱化代码运行平台。当用户说「沙箱执行」「安全代码运行」「隔离环境」「代码沙箱」时触发。"
+---
+
 # Cloudflare Sandbox SDK
 
 Build secure, isolated code execution environments on Cloudflare Workers.

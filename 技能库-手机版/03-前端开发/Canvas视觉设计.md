@@ -1,3 +1,8 @@
+---
+name: canvas-visual-design
+description: "生成视觉设计哲学并在画布上表达，创作博物馆或杂志品质的视觉艺术作品，输出 PDF 或 PNG 文件。适用于需要高端视觉设计哲学创作和艺术表达的场景。触发词：视觉设计、设计哲学、Canvas设计、艺术创作、PDF设计。"
+---
+
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 
 Complete this in two steps:

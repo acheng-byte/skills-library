@@ -1,3 +1,8 @@
+---
+name: codex-cli
+description: "使用 OpenAI Codex 命令行工具执行代码任务，支持多种推理强度和沙箱模式。当用户说「Codex」「命令行AI」「代码执行」「codex命令」时触发。"
+---
+
 # Codex Skill Guide
 
 ## Running a Task

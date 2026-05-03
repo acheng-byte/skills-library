@@ -1,3 +1,8 @@
+---
+name: clickhouse-best-practices
+description: "ClickHouse最佳实践专家，涵盖Schema设计、查询优化、数据摄入及AI代理连接。当用户说'ClickHouse'、'列式数据库'、'ClickHouse优化'、'ClickHouse查询'时触发。"
+---
+
 # ClickHouse Best Practices
 
 Comprehensive guidance for ClickHouse covering schema design, query optimization, data ingestion, and AI agent connectivity. Contains 31 rules across 4 main categories (schema, query, insert, agent), prioritized by impact.

@@ -1,3 +1,8 @@
+---
+name: multi-stage-dockerfile
+description: "多阶段Dockerfile专家，创建高效的多阶段Docker构建文件，生成更小、更安全的容器镜像。当用户说'Dockerfile'、'多阶段构建'、'Docker镜像优化'、'容器镜像'时触发。"
+---
+
 Your goal is to help me create efficient multi-stage Dockerfiles that follow best practices, resulting in smaller, more secure container images.
 
 ## Multi-Stage Structure

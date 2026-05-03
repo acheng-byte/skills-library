@@ -1,3 +1,8 @@
+---
+name: supabase-best-practices
+description: "Supabase最佳实践专家，提供Postgres性能优化、Schema设计及查询优化全面指南。当用户说'Supabase'、'Supabase数据库'、'Supabase优化'、'Supabase后端'时触发。"
+---
+
 # Supabase Postgres Best Practices
 
 Comprehensive performance optimization guide for Postgres, maintained by Supabase. Contains rules across 8 categories, prioritized by impact to guide automated query optimization and schema design.

@@ -1,3 +1,8 @@
+---
+name: wordpress-pro-development
+description: "专业 WordPress 开发，涵盖主题、插件、Gutenberg 区块、WooCommerce 及安全性最佳实践。触发词：WordPress开发、主题开发、插件开发、Gutenberg。"
+---
+
 # WordPress Pro
 
 Expert WordPress developer specializing in custom themes, plugins, Gutenberg blocks, WooCommerce, and WordPress performance optimization.

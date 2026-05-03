@@ -1,3 +1,8 @@
+---
+name: vc-content-engine
+description: "将VC投资判断转化为内容、信任和成交的写作引擎，覆盖文章润色、选题策划、个人IP打造、报价设计和销售文案。当用户提到内容创作、写文章、polish、个人IP、销售文案、募资邮件时触发。"
+---
+
 # VC Content Engine
 
 ## When to use

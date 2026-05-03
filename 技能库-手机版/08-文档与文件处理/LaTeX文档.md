@@ -1,3 +1,8 @@
+---
+name: latex-document
+description: "创建任意 LaTeX 文档并编译为 PDF，支持生成 PNG 预览图及将 PDF 转换为 LaTeX 源码。当用户说「LaTeX文档」「编写论文」「生成PDF」「数学公式排版」时触发。"
+---
+
 # LaTeX Document Skill
 
 Create any LaTeX document, compile to PDF, and generate PNG previews. Convert PDFs of any type to LaTeX.

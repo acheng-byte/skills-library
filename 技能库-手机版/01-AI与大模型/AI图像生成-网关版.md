@@ -1,3 +1,8 @@
+---
+name: ai-image-generation-gateway
+description: "通过 AI Gateway API 调用多种模型（Gemini、Seedream、GPT-Image）从文字提示生成或编辑图像。当用户说「生成图片」「网关图像」「图片生成」「编辑图片」时触发。"
+---
+
 # Image Generation Skill
 
 Generate images from text prompts and transform existing images using the AI Gateway API with support for multiple AI models including Google Gemini, Byteplus Seedream, and OpenAI GPT-Image.

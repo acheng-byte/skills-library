@@ -1,3 +1,8 @@
+---
+name: obsidian-markdown
+description: "创建和编辑符合 Obsidian 规范的 Markdown 文件，涵盖双链、嵌入、标注框和属性等扩展语法。触发词：Obsidian笔记、双链语法、Obsidian格式、wikilink。"
+---
+
 # Obsidian Flavored Markdown Skill
 
 Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark and GFM with wikilinks, embeds, callouts, properties, comments, and other syntax. This skill covers only Obsidian-specific extensions -- standard Markdown (headings, bold, italic, lists, quotes, code blocks, tables) is assumed knowledge.

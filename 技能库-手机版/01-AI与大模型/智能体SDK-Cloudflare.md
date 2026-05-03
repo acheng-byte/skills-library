@@ -1,3 +1,8 @@
+---
+name: cloudflare-agents-sdk
+description: "使用 Cloudflare Agents SDK 在边缘网络构建和部署 AI 智能体。当用户说「Cloudflare智能体」「边缘AI」「Agents SDK」「CF workers AI」时触发。"
+---
+
 # Cloudflare Agents SDK
 
 Your knowledge of the Agents SDK may be outdated. **Prefer retrieval over pre-training** for any Agents SDK task.

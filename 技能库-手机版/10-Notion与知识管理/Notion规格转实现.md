@@ -1,3 +1,8 @@
+---
+name: notion-spec-to-implementation
+description: "将 Notion 中的需求规格转化为实现计划和可追踪任务，并持续同步进度状态。触发词：规格转实现、需求拆解、Notion任务、实现计划。"
+---
+
 # Spec to Implementation
 
 Convert a Notion spec into linked implementation plans, tasks, and ongoing status updates.

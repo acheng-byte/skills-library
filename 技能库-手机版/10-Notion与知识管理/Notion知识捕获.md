@@ -1,3 +1,8 @@
+---
+name: notion-knowledge-capture
+description: "将对话、笔记和决策转化为结构化的 Notion 页面，便于团队知识沉淀与复用。触发词：知识捕获、记录决策、Notion知识库、整理笔记。"
+---
+
 # Knowledge Capture
 
 Convert conversations and notes into structured, linkable Notion pages for easy reuse.

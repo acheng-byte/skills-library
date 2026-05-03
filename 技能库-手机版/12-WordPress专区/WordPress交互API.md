@@ -1,3 +1,8 @@
+---
+name: wordpress-interactivity-api
+description: "使用 WordPress Interactivity API 为区块添加客户端交互，处理指令、状态管理和服务端渲染对齐。触发词：交互API、Interactivity API、data-wp-、前端交互。"
+---
+
 # WP Interactivity API
 
 ## When to use

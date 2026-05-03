@@ -1,3 +1,8 @@
+---
+name: vc-sector-research
+description: "快速构建赛道骨架和产业地图，把研报压缩成一页投资判断，支持技术成熟度分析和关键变量追踪。当用户提到赛道研究、行业分析、研报、产业地图、技术入门时触发。"
+---
+
 # VC Sector Research
 
 ## When to use

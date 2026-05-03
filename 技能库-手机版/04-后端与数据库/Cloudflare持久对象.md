@@ -1,3 +1,8 @@
+---
+name: cloudflare-durable-objects
+description: "Cloudflare持久对象（Durable Objects）专家，构建边缘端有状态、协调式应用。当用户说'Durable Objects'、'持久对象'、'Cloudflare状态管理'、'边缘状态'时触发。"
+---
+
 # Durable Objects
 
 Build stateful, coordinated applications on Cloudflare's edge using Durable Objects.

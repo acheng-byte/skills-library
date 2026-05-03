@@ -1,3 +1,8 @@
+---
+name: ceo-advisor
+description: "为CEO提供战略领导力框架，涵盖愿景设定、融资、董事会管理、企业文化和利益相关方对齐。当用户提到CEO、战略规划、融资、董事会、组织管理、创始人决策时触发。"
+---
+
 # CEO Advisor
 
 Strategic leadership frameworks for vision, fundraising, board management, culture, and stakeholder alignment.

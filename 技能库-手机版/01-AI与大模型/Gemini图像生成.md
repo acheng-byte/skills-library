@@ -1,3 +1,8 @@
+---
+name: gemini-image-generation
+description: "使用 Gemini 3 Pro Image 模型通过 AI Gateway 或直接 API 生成或编辑图像。当用户说「Gemini画图」「Gemini生成图片」「谷歌图像生成」时触发。"
+---
+
 # Nano Banana Pro (Gemini 3 Pro Image)
 
 Generate or edit images using Gemini 3 Pro Image via AI Gateway or direct API.

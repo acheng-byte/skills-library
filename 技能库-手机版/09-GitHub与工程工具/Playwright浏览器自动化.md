@@ -1,3 +1,8 @@
+---
+name: playwright-browser-automation
+description: "使用 Playwright 进行浏览器自动化，包括页面导航、元素交互和调试。触发词：Playwright、浏览器自动化、UI测试、网页自动化。"
+---
+
 Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.
 
 ## Prerequisite check (required)

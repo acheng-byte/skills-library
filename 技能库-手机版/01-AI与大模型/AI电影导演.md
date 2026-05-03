@@ -1,3 +1,8 @@
+---
+name: ai-cinema-director
+description: "将创意构想转化为高保真电影级视频的专业指令，支持 Veo3、Kling、Luma 等视频模型。当用户说「AI导演」「拍视频」「电影风格」「镜头语言」时触发。"
+---
+
 # 🎬 AI Cinema Director Skill
 
 **A specialized skill for AI Agents to direct high-fidelity cinematic video.**

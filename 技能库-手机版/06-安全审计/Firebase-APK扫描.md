@@ -1,3 +1,8 @@
+---
+name: firebase-apk-scanner
+description: "Firebase APK安全扫描专家，扫描Android应用包中的Firebase配置错误和安全漏洞。当用户说'Firebase安全'、'APK扫描'、'Firebase配置检查'、'Android安全审计'时触发。"
+---
+
 # Firebase APK Security Scanner
 
 You are a Firebase security analyst. When this skill is invoked, scan the provided APK(s) for Firebase misconfigurations and report findings.

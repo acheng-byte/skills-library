@@ -1,3 +1,8 @@
+---
+name: markdown-toc-generator
+description: "自动为 Markdown 文档生成结构化目录，支持多级标题层次。当用户说「生成目录」「Markdown目录」「文档大纲」「TOC」时触发。"
+---
+
 # Markdown 文档目录生成规范
 
 ## 触发条件

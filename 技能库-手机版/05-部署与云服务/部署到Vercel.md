@@ -1,3 +1,8 @@
+---
+name: deploy-to-vercel
+description: "Vercel部署专家，将任意项目部署到Vercel平台，默认预览部署并支持Git集成自动化发布。当用户说'部署到Vercel'、'Vercel部署'、'Vercel发布'、'Vercel托管'时触发。"
+---
+
 # Deploy to Vercel
 
 Deploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.

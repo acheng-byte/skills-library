@@ -1,3 +1,8 @@
+---
+name: stripe-best-practices
+description: "Stripe API最佳实践参考指南，覆盖一次性支付、订阅、Connect平台、嵌入式金融账户等集成场景的路由选择。当用户提到Stripe集成、支付接入、订阅计费、Stripe API时触发。"
+---
+
 Latest Stripe API version: **2026-04-22.dahlia**. Always use the latest API version and SDK unless the user specifies otherwise.
 
 ## Integration routing

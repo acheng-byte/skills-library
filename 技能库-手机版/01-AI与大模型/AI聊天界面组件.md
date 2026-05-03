@@ -1,3 +1,8 @@
+---
+name: ai-chat-ui-components
+description: "使用 AI Elements 组件库快速构建 AI 原生聊天界面，提供对话框、消息气泡等预制组件。当用户说「聊天界面」「AI对话组件」「构建聊天UI」时触发。"
+---
+
 # AI Elements
 
 [AI Elements](https://www.npmjs.com/package/ai-elements) is a component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build AI-native applications faster. It provides pre-built components like conversations, messages and more.

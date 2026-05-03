@@ -1,3 +1,8 @@
+---
+name: content-ab-testing
+description: "内容A/B测试和多变量实验的最佳实践指南，帮助提升转化率、用户参与度和内容体验，涵盖实验设计、结果分析和CMS集成。当用户提到A/B测试、内容实验、转化率优化、测试变体时触发。"
+---
+
 # Content Experimentation Best Practices
 
 Principles and patterns for running effective content experiments to improve conversion rates, engagement, and user experience.

@@ -1,3 +1,8 @@
+---
+name: cloudflare-platform
+description: "Cloudflare综合平台专家，整合所有Cloudflare产品能力，通过决策树选择合适方案。当用户说'Cloudflare平台'、'Cloudflare产品'、'Cloudflare选型'、'Cloudflare综合'时触发。"
+---
+
 # Cloudflare Platform Skill
 
 Consolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.

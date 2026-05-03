@@ -1,3 +1,8 @@
+---
+name: nextjs-cache-components
+description: "Next.js 16+ 缓存组件（Cache Components）使用指南，实现局部预渲染（PPR），混合静态、缓存和动态内容。触发词：use cache、缓存组件、PPR、局部预渲染、Next.js缓存、cacheLife、cacheTag。"
+---
+
 # Cache Components (Next.js 16+)
 
 Cache Components enable Partial Prerendering (PPR) - mix static, cached, and dynamic content in a single route.

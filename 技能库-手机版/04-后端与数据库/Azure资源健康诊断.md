@@ -1,3 +1,8 @@
+---
+name: azure-resource-health-diagnosis
+description: "Azure资源健康诊断专家，分析Azure资源健康状态、诊断问题并制定修复方案。当用户说'Azure诊断'、'Azure资源健康'、'Azure故障排查'、'Azure日志分析'时触发。"
+---
+
 # Azure Resource Health & Issue Diagnosis
 
 This workflow analyzes a specific Azure resource to assess its health status, diagnose potential issues using logs and telemetry data, and develop a comprehensive remediation plan for any problems discovered.

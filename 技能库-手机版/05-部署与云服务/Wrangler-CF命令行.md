@@ -1,3 +1,8 @@
+---
+name: wrangler-cf-cli
+description: "Wrangler命令行工具专家，用于管理和部署Cloudflare Workers项目。当用户说'Wrangler'、'wrangler命令'、'Cloudflare CLI'、'Workers命令行'时触发。"
+---
+
 # Wrangler CLI
 
 ## Retrieval Sources

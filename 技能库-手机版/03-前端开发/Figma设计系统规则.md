@@ -1,3 +1,8 @@
+---
+name: figma-design-system-rules
+description: "为项目生成 Figma 设计系统规则，指导 AI 编码智能体（Cursor、Claude Code 等）按照团队规范实现 Figma 设计。适用于建立 Figma 到代码工作流的场景。触发词：Figma规则、设计系统规则、Figma MCP、设计转代码、Figma guidelines。"
+---
+
 # Create Design System Rules
 
 ## Overview

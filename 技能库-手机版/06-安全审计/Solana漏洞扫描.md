@@ -1,3 +1,8 @@
+---
+name: solana-vulnerability-scanner
+description: "Solana漏洞扫描专家，系统性扫描Solana程序中的安全漏洞，包括跨程序调用、账户验证等关键风险。当用户说'Solana安全'、'Solana漏洞'、'Anchor安全审计'、'智能合约审计'时触发。"
+---
+
 # Solana Vulnerability Scanner
 
 ## 1. Purpose

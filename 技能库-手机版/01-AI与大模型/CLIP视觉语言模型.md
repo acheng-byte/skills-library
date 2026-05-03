@@ -1,3 +1,8 @@
+---
+name: clip-vision-language-model
+description: "使用 OpenAI CLIP 模型实现图文跨模态理解，支持图像分类、图文相似度计算。当用户说「图文匹配」「CLIP模型」「视觉语言」「图像识别」时触发。"
+---
+
 # CLIP - Contrastive Language-Image Pre-Training
 
 OpenAI's model that understands images from natural language.

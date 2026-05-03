@@ -1,3 +1,8 @@
+---
+name: web-app-testing
+description: "使用 Python Playwright 脚本测试本地 Web 应用，支持静态页面和动态应用的自动化测试。触发词：Web测试、应用测试、Playwright测试、前端测试。"
+---
+
 # Web Application Testing
 
 To test local web applications, write native Python Playwright scripts.

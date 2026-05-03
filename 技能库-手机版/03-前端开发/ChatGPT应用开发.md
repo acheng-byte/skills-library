@@ -1,3 +1,8 @@
+---
+name: chatgpt-app-development
+description: "使用 ChatGPT Apps SDK 开发 ChatGPT 应用，包含 MCP 服务器搭建、Widget 界面、工具规划和发布流程。适用于构建 ChatGPT 插件或应用的场景。触发词：ChatGPT应用、Apps SDK、MCP服务器、ChatGPT插件、openai apps。"
+---
+
 # ChatGPT Apps
 
 ## Overview

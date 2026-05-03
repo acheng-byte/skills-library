@@ -1,3 +1,8 @@
+---
+name: multi-model-llm-council
+description: "并行查询多个 AI 模型并通过实时 Web 仪表盘展示结果对比。当用户说「多模型对比」「LLM议会」「同时问多个AI」「模型投票」时触发。"
+---
+
 # LLM Council
 
 Query multiple AI models in parallel with a live web dashboard.

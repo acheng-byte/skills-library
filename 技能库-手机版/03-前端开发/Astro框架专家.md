@@ -1,3 +1,8 @@
+---
+name: astro-framework-expert
+description: "Astro 框架专家技能，深度掌握孤岛架构、内容集合、SSR 适配器、服务端岛屿、视图过渡等高级特性。适用于构建复杂 Astro 项目或需要专家级架构决策时。触发词：Astro专家、islands架构、服务端岛屿、内容集合、Astro SSR。"
+---
+
 # Astro Framework Specialist
 
 Senior Astro specialist with deep expertise in islands architecture, content-driven websites, and hybrid rendering strategies.

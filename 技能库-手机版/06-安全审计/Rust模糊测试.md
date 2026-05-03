@@ -1,3 +1,8 @@
+---
+name: rust-fuzzing
+description: "Rust模糊测试专家，使用cargo-fuzz和libFuzzer对Rust项目进行自动化漏洞发现测试。当用户说'Rust模糊测试'、'cargo-fuzz'、'fuzzing'、'Rust安全测试'、'模糊测试'时触发。"
+---
+
 # cargo-fuzz
 
 cargo-fuzz is the de facto choice for fuzzing Rust projects when using Cargo. It uses libFuzzer as the backend and provides a convenient Cargo subcommand that automatically enables relevant compilation flags for your Rust project, including support for sanitizers like AddressSanitizer.

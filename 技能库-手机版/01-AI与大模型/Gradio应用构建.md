@@ -1,3 +1,8 @@
+---
+name: gradio-app-builder
+description: "使用 Gradio Python 库快速构建机器学习演示和交互式 Web UI。当用户说「Gradio」「构建ML界面」「模型演示」「机器学习应用」时触发。"
+---
+
 # Gradio
 
 Gradio is a Python library for building interactive web UIs and ML demos. This skill covers the core API, patterns, and examples.

@@ -1,3 +1,8 @@
+---
+name: llamaindex-rag
+description: "使用 LlamaIndex 框架将 LLM 与私有数据连接，实现文档索引和检索增强生成（RAG）。当用户说「LlamaIndex」「文档检索」「RAG」「知识库问答」时触发。"
+---
+
 # LlamaIndex - Data Framework for LLM Applications
 
 The leading framework for connecting LLMs with your data.

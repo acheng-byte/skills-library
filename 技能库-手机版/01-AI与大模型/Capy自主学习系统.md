@@ -1,3 +1,8 @@
+---
+name: capy-autonomous-learning
+description: "基于 SQLite + FTS5 + TF-IDF 的持久化自主学习系统，自动管理和检索知识库。当用户说「Capy学习」「知识库」「自主学习」「记忆系统」时触发。"
+---
+
 # Capy Cortex - Autonomous Learning System
 
 You have a persistent learning brain powered by SQLite + FTS5 + sklearn TF-IDF.

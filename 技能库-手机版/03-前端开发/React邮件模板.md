@@ -1,3 +1,8 @@
+---
+name: react-email-template
+description: "使用 React Email 构建和发送 HTML 邮件，支持 Tailwind 样式、多语言、各大邮件客户端兼容。适用于创建欢迎邮件、密码重置、订单确认等邮件模板。触发词：React邮件、邮件模板、react-email、HTML邮件、邮件发送。"
+---
+
 # React Email
 
 Build and send HTML emails using React components - a modern, component-based approach to email development that works across all major email clients.

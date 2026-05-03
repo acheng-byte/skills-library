@@ -1,3 +1,8 @@
+---
+name: vc-thinking-refiner
+description: "将未经整理的碎片想法提炼为逻辑清晰的投资判断材料，输出核心命题、逻辑骨架、缺口扫描和反方视角。当用户提到整理思路、想法碎片、逻辑梳理、反方视角时触发。"
+---
+
 # VC Thinking Refiner
 
 ## When to use

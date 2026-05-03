@@ -1,3 +1,8 @@
+---
+name: slack-gif-creator
+description: "制作适配Slack的动态GIF图片，提供尺寸、帧率、颜色数量等规格指导和Python代码工具。当用户提到制作GIF、Slack表情包、GIF动图、Slack GIF时触发。"
+---
+
 # Slack GIF Creator
 
 A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.

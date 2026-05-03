@@ -1,3 +1,8 @@
+---
+name: vector-database-chroma
+description: "使用 Chroma 开源向量数据库为 LLM 应用提供长期记忆和语义检索能力。当用户说「向量数据库」「Chroma」「嵌入存储」「语义搜索」时触发。"
+---
+
 # Chroma - Open-Source Embedding Database
 
 The AI-native database for building LLM applications with memory.

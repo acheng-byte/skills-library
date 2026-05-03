@@ -1,3 +1,8 @@
+---
+name: obsidian-cli
+description: "通过 obsidian 命令行工具读写笔记、搜索内容、管理属性和开发调试插件。触发词：Obsidian命令行、obsidian CLI、Obsidian操作、vault管理。"
+---
+
 # Obsidian CLI
 
 ## Command reference

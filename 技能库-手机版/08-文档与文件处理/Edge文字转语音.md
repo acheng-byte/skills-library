@@ -1,3 +1,8 @@
+---
+name: edge-text-to-speech
+description: "使用微软 Edge 神经网络 TTS 服务生成高质量语音，支持多语言、多音色、速度和音调调节。当用户说「Edge语音」「微软TTS」「文字转语音」「生成配音」时触发。"
+---
+
 # Edge-TTS Skill
 
 ## Overview

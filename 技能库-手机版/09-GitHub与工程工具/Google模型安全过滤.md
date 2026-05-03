@@ -1,3 +1,8 @@
+---
+name: google-model-armor
+description: "使用 gws modelarmor 命令对 AI 模型的输入输出进行安全过滤和内容审核。触发词：模型安全、内容过滤、Model Armor、提示词净化。"
+---
+
 # modelarmor (v1)
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.

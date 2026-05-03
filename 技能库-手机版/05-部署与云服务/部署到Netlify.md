@@ -1,3 +1,8 @@
+---
+name: deploy-to-netlify
+description: "Netlify部署专家，自动化完成项目在Netlify平台的构建与发布流程。当用户说'部署到Netlify'、'Netlify部署'、'Netlify发布'、'Netlify托管'时触发。"
+---
+
 # Netlify Deployment Skill
 
 ## Overview

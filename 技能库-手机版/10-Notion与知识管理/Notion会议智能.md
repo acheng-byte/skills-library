@@ -1,3 +1,8 @@
+---
+name: notion-meeting-intelligence
+description: "从 Notion 拉取上下文信息，自动生成会议议程、预读材料和跟进任务。触发词：会议准备、会议议程、Notion会议、会议记录。"
+---
+
 # Meeting Intelligence
 
 Prep meetings by pulling Notion context, tailoring agendas/pre-reads, and enriching with Codex research.

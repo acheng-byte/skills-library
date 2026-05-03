@@ -1,3 +1,8 @@
+---
+name: web-performance-audit
+description: "使用 Chrome DevTools MCP 工具对网页进行性能审计，分析核心 Web 指标（LCP、CLS、INP）、网络请求和可访问性问题。触发词：Web性能、性能分析、Core Web Vitals、性能审计、LCP、CLS、页面速度。"
+---
+
 # Web Performance Audit
 
 Your knowledge of web performance metrics, thresholds, and tooling APIs may be outdated. **Prefer retrieval over pre-training** when citing specific numbers or recommendations.

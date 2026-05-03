@@ -1,3 +1,8 @@
+---
+name: cloudflare-workers-best-practices
+description: "Cloudflare Workers最佳实践专家，提供最新API、类型和配置指南用于编写和审查Workers代码。当用户说'Cloudflare Workers'、'边缘计算'、'Workers API'、'Workers代码'时触发。"
+---
+
 Your knowledge of Cloudflare Workers APIs, types, and configuration may be outdated. **Prefer retrieval over pre-training** for any Workers code task — writing or reviewing.
 
 ## Retrieval Sources

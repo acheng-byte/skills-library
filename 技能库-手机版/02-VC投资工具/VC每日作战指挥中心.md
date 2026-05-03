@@ -1,3 +1,8 @@
+---
+name: vc-daily-command-center
+description: "将投资人的任务、会议、关系维护和学习计划转成可执行作战地图，支持今日规划、周复盘、时间审计和技能缺口分析。当用户提到今日计划、每日作战、周复盘、时间管理、工作流审计时触发。"
+---
+
 # VC Daily Command Center
 
 ## When to use

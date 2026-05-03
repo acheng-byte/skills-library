@@ -1,3 +1,8 @@
+---
+name: sentry-error-monitoring
+description: "通过 Sentry CLI 查询和分析生产环境错误，支持 issue 列表、事件详情和 AI 根因分析。触发词：Sentry、错误监控、线上报错、issue分析。"
+---
+
 # Sentry (Read-only Observability)
 
 ## Quick start

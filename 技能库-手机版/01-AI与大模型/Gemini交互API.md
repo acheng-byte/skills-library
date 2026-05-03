@@ -1,3 +1,8 @@
+---
+name: gemini-interactions-api
+description: "通过 Gemini Interactions API 与 Google Gemini 模型进行交互，支持多模态输入输出。当用户说「Gemini API」「谷歌AI」「Gemini交互」时触发。"
+---
+
 # Gemini Interactions API Skill
 
 ## Critical Rules (Always Apply)

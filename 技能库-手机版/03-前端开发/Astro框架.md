@@ -1,3 +1,8 @@
+---
+name: astro-framework
+description: "Astro 框架快速参考指南，包含项目结构、常用命令和部署适配器配置。适用于使用 Astro 构建内容驱动网站时的查询。触发词：Astro、astro dev、astro build、astro框架、静态网站。"
+---
+
 # Astro Usage Guide
 
 **Always consult [docs.astro.build](https://docs.astro.build) for code examples and latest API.**

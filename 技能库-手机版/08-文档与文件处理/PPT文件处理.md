@@ -1,214 +1,232 @@
-# PPTX Skill
-
-## Quick Reference
-
-| Task | Guide |
-|------|-------|
-| Read/analyze content | `python -m markitdown presentation.pptx` |
-| Edit or create from template | Read [editing.md](editing.md) |
-| Create from scratch | Read [pptxgenjs.md](pptxgenjs.md) |
-
+---
+name: ppt-file-processing
+description: "在手机端使用 JavaScript（pptxgenjs）创建和处理 PPT 幻灯片，适用于 RikkaHub 环境。当用户说「PPT处理」「制作幻灯片」「生成PPT」「手机PPT」时触发。"
 ---
 
-## Reading Content
+# PPT 文件处理（手机版）
 
-# Text extraction
-python -m markitdown presentation.pptx
+## 环境说明
 
-# Visual overview
+手机端（RikkaHub）可执行 **JavaScript**，创建 PPT 使用 **pptxgenjs** 包。
 
-# Raw XML
+安装依赖：
+```
+npm install pptxgenjs
 ```
 
 ---
 
-## Editing Workflow
+## 快速参考
 
-**Read [editing.md](editing.md) for full details.**
-
-1. Analyze template with `thumbnail.py`
-2. Unpack → manipulate slides → edit content → clean → pack
-
----
-
-## Creating from Scratch
-
-**Read [pptxgenjs.md](pptxgenjs.md) for full details.**
-
-Use when no template or reference presentation is available.
+| 任务 | 方式 |
+|------|------|
+| 创建新演示文稿 | 用 `pptxgenjs`（见下方示例） |
+| 读取/分析内容 | 上传 .pptx 让 AI 直接分析 |
 
 ---
 
-## Design Ideas
+## 创建演示文稿
 
-**Don't create boring slides.** Plain bullets on a white background won't impress anyone. Consider ideas from this list for each slide.
+```javascript
+const pptxgen = require('pptxgenjs');
 
-### Before Starting
+const prs = new pptxgen();
 
-- **Pick a bold, content-informed color palette**: The palette should feel designed for THIS topic. If swapping your colors into a completely different presentation would still "work," you haven't made specific enough choices.
-- **Dominance over equality**: One color should dominate (60-70% visual weight), with 1-2 supporting tones and one sharp accent. Never give all colors equal weight.
-- **Dark/light contrast**: Dark backgrounds for title + conclusion slides, light for content ("sandwich" structure). Or commit to dark throughout for a premium feel.
-- **Commit to a visual motif**: Pick ONE distinctive element and repeat it — rounded image frames, icons in colored circles, thick single-side borders. Carry it across every slide.
+// 设置幻灯片尺寸（宽屏 16:9）
+prs.layout = 'LAYOUT_WIDE'; // 33.87cm x 19.05cm
 
-### Color Palettes
+// 封面页
+const slide1 = prs.addSlide();
+slide1.background = { color: '1E2761' }; // 深蓝色背景
 
-Choose colors that match your topic — don't default to generic blue. Use these palettes as inspiration:
+slide1.addText('项目标题', {
+  x: 1, y: 3, w: '80%', h: 1.5,
+  fontSize: 44, bold: true,
+  color: 'FFFFFF',
+  align: 'center'
+});
 
-| Theme | Primary | Secondary | Accent |
-|-------|---------|-----------|--------|
-| **Midnight Executive** | `1E2761` (navy) | `CADCFC` (ice blue) | `FFFFFF` (white) |
-| **Forest & Moss** | `2C5F2D` (forest) | `97BC62` (moss) | `F5F5F5` (cream) |
-| **Coral Energy** | `F96167` (coral) | `F9E795` (gold) | `2F3C7E` (navy) |
-| **Warm Terracotta** | `B85042` (terracotta) | `E7E8D1` (sand) | `A7BEAE` (sage) |
-| **Ocean Gradient** | `065A82` (deep blue) | `1C7293` (teal) | `21295C` (midnight) |
-| **Charcoal Minimal** | `36454F` (charcoal) | `F2F2F2` (off-white) | `212121` (black) |
-| **Teal Trust** | `028090` (teal) | `00A896` (seafoam) | `02C39A` (mint) |
-| **Berry & Cream** | `6D2E46` (berry) | `A26769` (dusty rose) | `ECE2D0` (cream) |
-| **Sage Calm** | `84B59F` (sage) | `69A297` (eucalyptus) | `50808E` (slate) |
-| **Cherry Bold** | `990011` (cherry) | `FCF6F5` (off-white) | `2F3C7E` (navy) |
+slide1.addText('副标题 · 2026年', {
+  x: 1, y: 5, w: '80%', h: 0.8,
+  fontSize: 20, color: 'CADCFC',
+  align: 'center'
+});
 
-### For Each Slide
+// 内容页
+const slide2 = prs.addSlide();
+slide2.background = { color: 'FFFFFF' };
 
-**Every slide needs a visual element** — image, chart, icon, or shape. Text-only slides are forgettable.
+// 标题
+slide2.addText('第一章：核心观点', {
+  x: 0.5, y: 0.3, w: '90%', h: 0.7,
+  fontSize: 36, bold: true, color: '1E2761'
+});
 
-**Layout options:**
-- Two-column (text left, illustration on right)
-- Icon + text rows (icon in colored circle, bold header, description below)
-- 2x2 or 2x3 grid (image on one side, grid of content blocks on other)
-- Half-bleed image (full left or right side) with content overlay
+// 要点列表
+const bullets = [
+  '核心发现一：重要观点说明',
+  '核心发现二：数据支撑内容',
+  '核心发现三：结论与建议'
+];
+bullets.forEach((text, i) => {
+  slide2.addText('• ' + text, {
+    x: 0.8, y: 1.5 + i * 0.8, w: '85%', h: 0.7,
+    fontSize: 16, color: '36454F'
+  });
+});
 
-**Data display:**
-- Large stat callouts (big numbers 60-72pt with small labels below)
-- Comparison columns (before/after, pros/cons, side-by-side options)
-- Timeline or process flow (numbered steps, arrows)
+// 保存
+prs.writeFile({ fileName: 'presentation.pptx' })
+  .then(() => console.log('PPT 已生成: presentation.pptx'));
+```
 
-**Visual polish:**
-- Icons in small colored circles next to section headers
-- Italic accent text for key stats or taglines
+---
 
-### Typography
+## 设计规范
 
-**Choose an interesting font pairing** — don't default to Arial. Pick a header font with personality and pair it with a clean body font.
+### 颜色搭配
 
-| Header Font | Body Font |
-|-------------|-----------|
+**不要用默认蓝色，选适合主题的颜色：**
+
+| 主题 | 主色 | 辅色 | 强调色 |
+|------|------|------|--------|
+| 商务深沉 | `1E2761` 深蓝 | `CADCFC` 冰蓝 | `FFFFFF` 白 |
+| 森林沉稳 | `2C5F2D` 深绿 | `97BC62` 苔绿 | `F5F5F5` 米白 |
+| 活力珊瑚 | `F96167` 珊瑚 | `F9E795` 金黄 | `2F3C7E` 深蓝 |
+| 暖陶土 | `B85042` 陶土 | `E7E8D1` 沙色 | `A7BEAE` 鼠尾草 |
+| 极简炭黑 | `36454F` 炭灰 | `F2F2F2` 白 | `212121` 黑 |
+
+**颜色法则：一种颜色主导（60-70%），1-2 种辅助色，一种强调色。**
+
+### 字体搭配
+
+| 标题字体 | 正文字体 |
+|----------|----------|
 | Georgia | Calibri |
 | Arial Black | Arial |
 | Calibri | Calibri Light |
-| Cambria | Calibri |
 | Trebuchet MS | Calibri |
-| Impact | Arial |
-| Palatino | Garamond |
-| Consolas | Calibri |
 
-| Element | Size |
-|---------|------|
-| Slide title | 36-44pt bold |
-| Section header | 20-24pt bold |
-| Body text | 14-16pt |
-| Captions | 10-12pt muted |
+| 元素 | 字号 |
+|------|------|
+| 幻灯片标题 | 36-44pt 加粗 |
+| 章节标题 | 20-24pt 加粗 |
+| 正文 | 14-16pt |
+| 注释 | 10-12pt 灰色 |
 
-### Spacing
+### 布局选项
 
-- 0.5" minimum margins
-- 0.3-0.5" between content blocks
-- Leave breathing room—don't fill every inch
+- **双栏**：文字左侧，图示右侧
+- **图标行**：彩色圆圈图标 + 粗标题 + 说明文字
+- **2×2 / 2×3 网格**：一侧图片，另一侧内容块
+- **大数字**：60-72pt 超大数字 + 小标签说明
 
-### Avoid (Common Mistakes)
+### 每张幻灯片必须有视觉元素
 
-- **Don't repeat the same layout** — vary columns, cards, and callouts across slides
-- **Don't center body text** — left-align paragraphs and lists; center only titles
-- **Don't skimp on size contrast** — titles need 36pt+ to stand out from 14-16pt body
-- **Don't default to blue** — pick colors that reflect the specific topic
-- **Don't mix spacing randomly** — choose 0.3" or 0.5" gaps and use consistently
-- **Don't style one slide and leave the rest plain** — commit fully or keep it simple throughout
-- **Don't create text-only slides** — add images, icons, charts, or visual elements; avoid plain title + bullets
-- **Don't forget text box padding** — when aligning lines or shapes with text edges, set `margin: 0` on the text box or offset the shape to account for padding
-- **Don't use low-contrast elements** — icons AND text need strong contrast against the background; avoid light text on light backgrounds or dark text on dark backgrounds
-- **NEVER use accent lines under titles** — these are a hallmark of AI-generated slides; use whitespace or background color instead
+**禁止纯文字幻灯片。** 每页都需要图形、图标、数据图表或形状。
 
 ---
 
-## QA (Required)
+## 完整示例：双栏内容页
 
-**Assume there are problems. Your job is to find them.**
+```javascript
+const slide = prs.addSlide();
+slide.background = { color: 'F8F9FA' };
 
-Your first render is almost never correct. Approach QA as a bug hunt, not a confirmation step. If you found zero issues on first inspection, you weren't looking hard enough.
+// 标题
+slide.addText('关键数据对比', {
+  x: 0.5, y: 0.2, w: '90%', h: 0.6,
+  fontSize: 36, bold: true, color: '1E2761'
+});
 
-### Content QA
+// 左栏
+slide.addShape(prs.ShapeType.rect, {
+  x: 0.5, y: 1.1, w: 4.5, h: 5.2,
+  fill: { color: '1E2761' },
+  line: { color: '1E2761' }
+});
+slide.addText('2023年\n\n$1.2B\n收入', {
+  x: 0.5, y: 1.1, w: 4.5, h: 5.2,
+  fontSize: 18, color: 'FFFFFF',
+  align: 'center', valign: 'middle',
+  bold: true
+});
 
-python -m markitdown output.pptx
-```
-
-Check for missing content, typos, wrong order.
-
-**When using templates, check for leftover placeholder text:**
-
-python -m markitdown output.pptx | grep -iE "xxxx|lorem|ipsum|this.*(page|slide).*layout"
-```
-
-If grep returns results, fix them before declaring success.
-
-### Visual QA
-
-**⚠️ USE SUBAGENTS** — even for 2-3 slides. You've been staring at the code and will see what you expect, not what's there. Subagents have fresh eyes.
-
-Convert slides to images (see [Converting to Images](#converting-to-images)), then use this prompt:
-
-```
-Visually inspect these slides. Assume there are issues — find them.
-
-Look for:
-- Overlapping elements (text through shapes, lines through words, stacked elements)
-- Text overflow or cut off at edges/box boundaries
-- Decorative lines positioned for single-line text but title wrapped to two lines
-- Source citations or footers colliding with content above
-- Elements too close (< 0.3" gaps) or cards/sections nearly touching
-- Uneven gaps (large empty area in one place, cramped in another)
-- Insufficient margin from slide edges (< 0.5")
-- Columns or similar elements not aligned consistently
-- Low-contrast text (e.g., light gray text on cream-colored background)
-- Low-contrast icons (e.g., dark icons on dark backgrounds without a contrasting circle)
-- Text boxes too narrow causing excessive wrapping
-- Leftover placeholder content
-
-For each slide, list issues or areas of concern, even if minor.
-
-Read and analyze these images:
-1. /path/to/slide-01.jpg (Expected: [brief description])
-2. /path/to/slide-02.jpg (Expected: [brief description])
-
-Report ALL issues found, including minor ones.
-```
-
-### Verification Loop
-
-1. Generate slides → Convert to images → Inspect
-2. **List issues found** (if none found, look again more critically)
-3. Fix issues
-4. **Re-verify affected slides** — one fix often creates another problem
-5. Repeat until a full pass reveals no new issues
-
-**Do not declare success until you've completed at least one fix-and-verify cycle.**
-
----
-
-## Converting to Images
-
-Convert presentations to individual slide images for visual inspection:
-
-pdftoppm -jpeg -r 150 output.pdf slide
-```
-
-This creates `slide-01.jpg`, `slide-02.jpg`, etc.
-
-To re-render specific slides after fixes:
-
-pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
+// 右栏
+slide.addShape(prs.ShapeType.rect, {
+  x: 5.3, y: 1.1, w: 4.5, h: 5.2,
+  fill: { color: 'CADCFC' },
+  line: { color: 'CADCFC' }
+});
+slide.addText('2024年\n\n$1.8B\n收入 +50%', {
+  x: 5.3, y: 1.1, w: 4.5, h: 5.2,
+  fontSize: 18, color: '1E2761',
+  align: 'center', valign: 'middle',
+  bold: true
+});
 ```
 
 ---
 
-## Dependencies
+## 常见布局：大数字统计
 
-- Poppler (`pdftoppm`) - PDF to images
+```javascript
+const slide = prs.addSlide();
+slide.background = { color: 'FFFFFF' };
+
+slide.addText('核心指标', {
+  x: 0.5, y: 0.3, w: '90%', h: 0.6,
+  fontSize: 36, bold: true, color: '1E2761'
+});
+
+// 三个大数字
+const stats = [
+  { num: '2.4x', label: 'ROI 回报倍数' },
+  { num: '68%', label: '客户留存率' },
+  { num: '$12M', label: '累计营收' }
+];
+
+stats.forEach((stat, i) => {
+  const x = 0.5 + i * 3.5;
+  slide.addText(stat.num, {
+    x, y: 1.8, w: 3, h: 1.5,
+    fontSize: 60, bold: true, color: '1E2761',
+    align: 'center'
+  });
+  slide.addText(stat.label, {
+    x, y: 3.4, w: 3, h: 0.6,
+    fontSize: 14, color: '666666',
+    align: 'center'
+  });
+});
+```
+
+---
+
+## 禁止事项
+
+- **不要重复相同布局** — 每张幻灯片变换布局
+- **正文不要居中** — 段落和列表左对齐，只有标题居中
+- **不要用默认蓝色** — 选择匹配主题的颜色
+- **不要纯文字幻灯片** — 加图形、图标或图表
+- **不要用标题下划线装饰线** — 这是典型 AI 生成特征
+- **封面和结尾用深色背景** — 内容页用浅色（"三明治"结构）
+
+---
+
+## QA 验证
+
+生成后回顾：
+- [ ] 字体大小对比足够（标题 36pt+ vs 正文 14-16pt）
+- [ ] 颜色对比度够强（文字 vs 背景）
+- [ ] 每张有视觉元素
+- [ ] 没有遗留占位符文字
+- [ ] 间距一致（0.3-0.5" 之间）
+
+---
+
+## 依赖
+
+```
+npm install pptxgenjs
+```

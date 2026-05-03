@@ -1,3 +1,8 @@
+---
+name: capy-send-email
+description: "通过AWS SES发送邮件，自动配置发件人地址，支持灵活指定收件人。当用户提到发送邮件、发邮件、邮件发送、send email时触发。"
+---
+
 # Send Email Skill
 
 Send emails using AWS SES (Amazon Simple Email Service) with automatic sender configuration and flexible recipient options.

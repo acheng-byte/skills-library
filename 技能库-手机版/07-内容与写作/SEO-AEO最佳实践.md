@@ -1,3 +1,8 @@
+---
+name: seo-aeo-best-practices
+description: "传统搜索引擎优化（SEO）和AI答案引擎优化（AEO）的最佳实践指南，涵盖EEAT原则、结构化数据、元数据优化和AI摘要准备。当用户提到SEO、AEO、搜索优化、结构化数据、内容排名时触发。"
+---
+
 # SEO & AEO Best Practices
 
 Principles for optimizing content for both traditional search engines (SEO) and AI-powered answer engines (AEO). Includes Google's EEAT guidelines and structured data implementation.

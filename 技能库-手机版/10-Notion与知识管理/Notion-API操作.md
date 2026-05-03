@@ -1,3 +1,8 @@
+---
+name: notion-api
+description: "通过 Notion REST API 对页面、数据库和块进行增删改查操作。触发词：Notion API、Notion操作、创建页面、查询数据库。"
+---
+
 # Notion API Skill
 
 This skill enables interaction with Notion workspaces through the Notion REST API. Use `curl` and `jq` for direct REST calls, or write ad-hoc scripts as appropriate for the task.

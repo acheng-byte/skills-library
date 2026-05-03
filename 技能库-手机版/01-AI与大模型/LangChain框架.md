@@ -1,3 +1,8 @@
+---
+name: langchain-framework
+description: "使用 LangChain 框架构建 LLM 驱动的应用，支持 Agent、RAG 检索增强生成等模式。当用户说「LangChain」「构建AI应用」「RAG框架」「智能体框架」时触发。"
+---
+
 # LangChain - Build LLM Applications with Agents & RAG
 
 The most popular framework for building LLM-powered applications.

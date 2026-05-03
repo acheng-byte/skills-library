@@ -1,3 +1,8 @@
+---
+name: ai-image-generation
+description: "使用 inference.sh CLI 调用 50+ 种 AI 模型生成图像。当用户说「生成图片」「AI作图」「图像生成」「画一张」时触发。"
+---
+
 # AI Image Generation
 
 Generate images with 50+ AI models via [inference.sh](https://inference.sh) CLI.

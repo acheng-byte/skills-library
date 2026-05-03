@@ -1,3 +1,8 @@
+---
+name: reddit-post-writer
+description: "生成真实感强的Reddit帖子，通过情感共鸣而非表面规则打造authentic内容，支持分享故事、寻求建议、发起讨论等多种帖子类型。当用户提到写Reddit帖子、Reddit内容、社区帖子时触发。"
+---
+
 # Reddit Post Writer
 
 Generate authentic Reddit posts through emotional truth, not cosmetic rules.

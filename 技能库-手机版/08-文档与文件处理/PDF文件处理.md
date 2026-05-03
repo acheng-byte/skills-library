@@ -1,301 +1,350 @@
-# PDF Processing Guide
+---
+name: pdf-file-processing
+description: "在手机端使用 JavaScript（pdf-lib）处理 PDF 文件，适用于 RikkaHub 环境。当用户说「PDF处理」「操作PDF」「生成PDF」「手机PDF」时触发。"
+---
 
-## Overview
+# PDF 文件处理（手机版）
 
-This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see REFERENCE.md. If you need to fill out a PDF form, read FORMS.md and follow its instructions.
+## 环境说明
 
-## Quick Start
+手机端（RikkaHub）可执行 **JavaScript**，处理 PDF 使用 **pdf-lib** 包。
 
-```python
-from pypdf import PdfReader, PdfWriter
-
-# Read a PDF
-reader = PdfReader("document.pdf")
-print(f"Pages: {len(reader.pages)}")
-
-# Extract text
-text = ""
-for page in reader.pages:
-    text += page.extract_text()
+安装依赖：
+```
+npm install pdf-lib
 ```
 
-## Python Libraries
+---
 
-### pypdf - Basic Operations
+## 快速参考
 
-#### Merge PDFs
-```python
-from pypdf import PdfWriter, PdfReader
+| 任务 | 方式 |
+|------|------|
+| 创建新 PDF | `pdf-lib`（见下方示例） |
+| 合并 PDF | `pdf-lib` PDFDocument.copyPages |
+| 拆分 PDF | `pdf-lib` 按页提取 |
+| 旋转页面 | `pdf-lib` page.setRotation |
+| 读取/分析内容 | 上传 PDF 让 AI 直接分析 |
 
-writer = PdfWriter()
-for pdf_file in ["doc1.pdf", "doc2.pdf", "doc3.pdf"]:
-    reader = PdfReader(pdf_file)
-    for page in reader.pages:
-        writer.add_page(page)
+---
 
-with open("merged.pdf", "wb") as output:
-    writer.write(output)
+## 创建新 PDF
+
+```javascript
+const { PDFDocument, rgb, StandardFonts, degrees } = require('pdf-lib');
+const fs = require('fs');
+
+async function createPdf() {
+  const pdfDoc = await PDFDocument.create();
+
+  // 嵌入字体（内置字体）
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+  // 添加第一页（A4：595 x 842 pt）
+  const page = pdfDoc.addPage([595, 842]);
+  const { width, height } = page.getSize();
+
+  // 标题
+  page.drawText('报告标题', {
+    x: 50,
+    y: height - 80,
+    size: 28,
+    font: boldFont,
+    color: rgb(0.12, 0.15, 0.38) // 深蓝色
+  });
+
+  // 分割线
+  page.drawLine({
+    start: { x: 50, y: height - 95 },
+    end: { x: width - 50, y: height - 95 },
+    thickness: 1,
+    color: rgb(0.8, 0.8, 0.8)
+  });
+
+  // 正文
+  page.drawText('这是 PDF 正文内容。可以包含多行文字和各种格式。', {
+    x: 50,
+    y: height - 130,
+    size: 12,
+    font,
+    color: rgb(0, 0, 0)
+  });
+
+  // 保存
+  const pdfBytes = await pdfDoc.save();
+  fs.writeFileSync('output.pdf', pdfBytes);
+  console.log('PDF 已生成: output.pdf');
+}
+
+createPdf();
 ```
 
-#### Split PDF
-```python
-reader = PdfReader("input.pdf")
-for i, page in enumerate(reader.pages):
-    writer = PdfWriter()
-    writer.add_page(page)
-    with open(f"page_{i+1}.pdf", "wb") as output:
-        writer.write(output)
+---
+
+## 多页文档
+
+```javascript
+const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
+const fs = require('fs');
+
+async function multiPagePdf() {
+  const pdfDoc = await PDFDocument.create();
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+  const sections = [
+    { title: '第一章：概述', content: '本章介绍主要内容和背景信息。' },
+    { title: '第二章：分析', content: '本章进行详细的数据分析。' },
+    { title: '第三章：结论', content: '本章总结主要发现和建议。' }
+  ];
+
+  sections.forEach((section, i) => {
+    const page = pdfDoc.addPage([595, 842]);
+    const { width, height } = page.getSize();
+
+    // 章节标题
+    page.drawText(section.title, {
+      x: 50, y: height - 80,
+      size: 24, font: boldFont,
+      color: rgb(0.12, 0.15, 0.38)
+    });
+
+    // 内容
+    page.drawText(section.content, {
+      x: 50, y: height - 130,
+      size: 12, font,
+      color: rgb(0, 0, 0)
+    });
+
+    // 页码
+    page.drawText(`第 ${i + 1} 页`, {
+      x: width / 2 - 20, y: 30,
+      size: 10, font,
+      color: rgb(0.5, 0.5, 0.5)
+    });
+  });
+
+  const pdfBytes = await pdfDoc.save();
+  fs.writeFileSync('multi_page.pdf', pdfBytes);
+}
+
+multiPagePdf();
 ```
 
-#### Extract Metadata
-```python
-reader = PdfReader("document.pdf")
-meta = reader.metadata
-print(f"Title: {meta.title}")
-print(f"Author: {meta.author}")
-print(f"Subject: {meta.subject}")
-print(f"Creator: {meta.creator}")
+---
+
+## 合并多个 PDF
+
+```javascript
+const { PDFDocument } = require('pdf-lib');
+const fs = require('fs');
+
+async function mergePdfs(inputFiles, outputFile) {
+  const mergedDoc = await PDFDocument.create();
+
+  for (const filePath of inputFiles) {
+    const pdfBytes = fs.readFileSync(filePath);
+    const pdf = await PDFDocument.load(pdfBytes);
+    const pages = await mergedDoc.copyPages(pdf, pdf.getPageIndices());
+    pages.forEach(page => mergedDoc.addPage(page));
+  }
+
+  const mergedBytes = await mergedDoc.save();
+  fs.writeFileSync(outputFile, mergedBytes);
+  console.log(`已合并 ${inputFiles.length} 个文件 → ${outputFile}`);
+}
+
+// 使用示例
+mergePdfs(['file1.pdf', 'file2.pdf', 'file3.pdf'], 'merged.pdf');
 ```
 
-#### Rotate Pages
-```python
-reader = PdfReader("input.pdf")
-writer = PdfWriter()
+---
 
-page = reader.pages[0]
-page.rotate(90)  # Rotate 90 degrees clockwise
-writer.add_page(page)
+## 拆分 PDF
 
-with open("rotated.pdf", "wb") as output:
-    writer.write(output)
+```javascript
+const { PDFDocument } = require('pdf-lib');
+const fs = require('fs');
+
+async function splitPdf(inputFile) {
+  const pdfBytes = fs.readFileSync(inputFile);
+  const pdf = await PDFDocument.load(pdfBytes);
+  const totalPages = pdf.getPageCount();
+
+  for (let i = 0; i < totalPages; i++) {
+    const newDoc = await PDFDocument.create();
+    const [page] = await newDoc.copyPages(pdf, [i]);
+    newDoc.addPage(page);
+
+    const pageBytes = await newDoc.save();
+    fs.writeFileSync(`page_${i + 1}.pdf`, pageBytes);
+  }
+
+  console.log(`已拆分为 ${totalPages} 个文件`);
+}
+
+splitPdf('input.pdf');
 ```
 
-### pdfplumber - Text and Table Extraction
+---
 
-#### Extract Text with Layout
-```python
-import pdfplumber
+## 旋转页面
 
-with pdfplumber.open("document.pdf") as pdf:
-    for page in pdf.pages:
-        text = page.extract_text()
-        print(text)
+```javascript
+const { PDFDocument, degrees } = require('pdf-lib');
+const fs = require('fs');
+
+async function rotatePage(inputFile, pageIndex, rotationDeg) {
+  const pdfBytes = fs.readFileSync(inputFile);
+  const pdfDoc = await PDFDocument.load(pdfBytes);
+
+  const page = pdfDoc.getPage(pageIndex);
+  page.setRotation(degrees(rotationDeg)); // 90, 180, 270
+
+  const rotatedBytes = await pdfDoc.save();
+  fs.writeFileSync('rotated.pdf', rotatedBytes);
+}
+
+rotatePage('input.pdf', 0, 90); // 旋转第一页 90 度
 ```
 
-#### Extract Tables
-```python
-with pdfplumber.open("document.pdf") as pdf:
-    for i, page in enumerate(pdf.pages):
-        tables = page.extract_tables()
-        for j, table in enumerate(tables):
-            print(f"Table {j+1} on page {i+1}:")
-            for row in table:
-                print(row)
+---
+
+## 添加水印
+
+```javascript
+const { PDFDocument, rgb, StandardFonts, degrees } = require('pdf-lib');
+const fs = require('fs');
+
+async function addWatermark(inputFile, watermarkText) {
+  const pdfBytes = fs.readFileSync(inputFile);
+  const pdfDoc = await PDFDocument.load(pdfBytes);
+  const font = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+  const pages = pdfDoc.getPages();
+  pages.forEach(page => {
+    const { width, height } = page.getSize();
+    page.drawText(watermarkText, {
+      x: width / 4,
+      y: height / 2,
+      size: 60,
+      font,
+      color: rgb(0.8, 0.8, 0.8),
+      opacity: 0.3,
+      rotate: degrees(45)
+    });
+  });
+
+  const watermarkedBytes = await pdfDoc.save();
+  fs.writeFileSync('watermarked.pdf', watermarkedBytes);
+}
+
+addWatermark('input.pdf', '机密');
 ```
 
-#### Advanced Table Extraction
-```python
-import pandas as pd
+---
 
-with pdfplumber.open("document.pdf") as pdf:
-    all_tables = []
-    for page in pdf.pages:
-        tables = page.extract_tables()
-        for table in tables:
-            if table:  # Check if table is not empty
-                df = pd.DataFrame(table[1:], columns=table[0])
-                all_tables.append(df)
+## 插入图片
 
-# Combine all tables
-if all_tables:
-    combined_df = pd.concat(all_tables, ignore_index=True)
-    combined_df.to_excel("extracted_tables.xlsx", index=False)
+```javascript
+const { PDFDocument } = require('pdf-lib');
+const fs = require('fs');
+
+async function addImage(pdfFile, imageFile) {
+  const pdfBytes = fs.readFileSync(pdfFile);
+  const pdfDoc = await PDFDocument.load(pdfBytes);
+
+  // 支持 PNG 和 JPG
+  const imgBytes = fs.readFileSync(imageFile);
+  const image = imageFile.endsWith('.png')
+    ? await pdfDoc.embedPng(imgBytes)
+    : await pdfDoc.embedJpg(imgBytes);
+
+  const page = pdfDoc.getPage(0);
+  const { width, height } = page.getSize();
+
+  // 按比例缩放图片
+  const imgDims = image.scale(0.5); // 缩放到 50%
+  page.drawImage(image, {
+    x: 50,
+    y: height - imgDims.height - 100,
+    width: imgDims.width,
+    height: imgDims.height
+  });
+
+  const pdfBytesOut = await pdfDoc.save();
+  fs.writeFileSync('with_image.pdf', pdfBytesOut);
+}
+
+addImage('input.pdf', 'logo.png');
 ```
 
-### reportlab - Create PDFs
+---
 
-#### Basic PDF Creation
-```python
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+## 提取页面信息
 
-c = canvas.Canvas("hello.pdf", pagesize=letter)
-width, height = letter
+```javascript
+const { PDFDocument } = require('pdf-lib');
+const fs = require('fs');
 
-# Add text
-c.drawString(100, height - 100, "Hello World!")
-c.drawString(100, height - 120, "This is a PDF created with reportlab")
+async function getPdfInfo(filePath) {
+  const pdfBytes = fs.readFileSync(filePath);
+  const pdfDoc = await PDFDocument.load(pdfBytes);
 
-# Add a line
-c.line(100, height - 140, 400, height - 140)
+  console.log(`总页数: ${pdfDoc.getPageCount()}`);
+  console.log(`标题: ${pdfDoc.getTitle() || '未设置'}`);
+  console.log(`作者: ${pdfDoc.getAuthor() || '未设置'}`);
+  console.log(`创建时间: ${pdfDoc.getCreationDate()}`);
 
-# Save
-c.save()
+  pdfDoc.getPages().forEach((page, i) => {
+    const { width, height } = page.getSize();
+    console.log(`第 ${i + 1} 页: ${width.toFixed(0)} x ${height.toFixed(0)} pt`);
+  });
+}
+
+getPdfInfo('document.pdf');
 ```
 
-#### Create PDF with Multiple Pages
-```python
-from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
-from reportlab.lib.styles import getSampleStyleSheet
+---
 
-doc = SimpleDocTemplate("report.pdf", pagesize=letter)
-styles = getSampleStyleSheet()
-story = []
+## 常用页面尺寸（pt 单位）
 
-# Add content
-title = Paragraph("Report Title", styles['Title'])
-story.append(title)
-story.append(Spacer(1, 12))
+| 纸张 | 宽 (pt) | 高 (pt) |
+|------|---------|---------|
+| A4 | 595 | 842 |
+| A3 | 842 | 1191 |
+| US Letter | 612 | 792 |
+| US Legal | 612 | 1008 |
 
-body = Paragraph("This is the body of the report. " * 20, styles['Normal'])
-story.append(body)
-story.append(PageBreak())
+---
 
-# Page 2
-story.append(Paragraph("Page 2", styles['Heading1']))
-story.append(Paragraph("Content for page 2", styles['Normal']))
+## 内置字体
 
-# Build PDF
-doc.build(story)
+```javascript
+const { StandardFonts } = require('pdf-lib');
+
+// 可用字体
+StandardFonts.Helvetica
+StandardFonts.HelveticaBold
+StandardFonts.HelveticaOblique
+StandardFonts.HelveticaBoldOblique
+StandardFonts.TimesRoman
+StandardFonts.TimesRomanBold
+StandardFonts.Courier
+StandardFonts.CourierBold
 ```
 
-#### Subscripts and Superscripts
-
-**IMPORTANT**: Never use Unicode subscript/superscript characters (₀₁₂₃₄₅₆₇₈₉, ⁰¹²³⁴⁵⁶⁷⁸⁹) in ReportLab PDFs. The built-in fonts do not include these glyphs, causing them to render as solid black boxes.
-
-Instead, use ReportLab's XML markup tags in Paragraph objects:
-```python
-from reportlab.platypus import Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
-
-styles = getSampleStyleSheet()
-
-# Subscripts: use <sub> tag
-chemical = Paragraph("H<sub>2</sub>O", styles['Normal'])
-
-# Superscripts: use <super> tag
-squared = Paragraph("x<super>2</super> + y<super>2</super>", styles['Normal'])
+**注意：内置字体不支持中文。** 如需中文，需嵌入支持中文的 TTF 字体：
+```javascript
+const fontBytes = fs.readFileSync('NotoSansCJK.ttf');
+const customFont = await pdfDoc.embedFont(fontBytes);
 ```
 
-## Command-Line Tools
+---
 
-### pdftotext (poppler-utils)
-# Extract text
-pdftotext input.pdf output.txt
+## 依赖
 
-# Extract text preserving layout
-pdftotext -layout input.pdf output.txt
-
-# Extract specific pages
-pdftotext -f 1 -l 5 input.pdf output.txt  # Pages 1-5
 ```
-
-### qpdf
-# Merge PDFs
-qpdf --empty --pages file1.pdf file2.pdf -- merged.pdf
-
-# Split pages
-qpdf input.pdf --pages . 1-5 -- pages1-5.pdf
-qpdf input.pdf --pages . 6-10 -- pages6-10.pdf
-
-# Rotate pages
-qpdf input.pdf output.pdf --rotate=+90:1  # Rotate page 1 by 90 degrees
-
-# Remove password
-qpdf --password=mypassword --decrypt encrypted.pdf decrypted.pdf
+npm install pdf-lib
 ```
-
-### pdftk (if available)
-# Merge
-pdftk file1.pdf file2.pdf cat output merged.pdf
-
-# Split
-pdftk input.pdf burst
-
-# Rotate
-pdftk input.pdf rotate 1east output rotated.pdf
-```
-
-## Common Tasks
-
-### Extract Text from Scanned PDFs
-```python
-import pytesseract
-from pdf2image import convert_from_path
-
-# Convert PDF to images
-images = convert_from_path('scanned.pdf')
-
-# OCR each page
-text = ""
-for i, image in enumerate(images):
-    text += f"Page {i+1}:\n"
-    text += pytesseract.image_to_string(image)
-    text += "\n\n"
-
-print(text)
-```
-
-### Add Watermark
-```python
-from pypdf import PdfReader, PdfWriter
-
-# Create watermark (or load existing)
-watermark = PdfReader("watermark.pdf").pages[0]
-
-# Apply to all pages
-reader = PdfReader("document.pdf")
-writer = PdfWriter()
-
-for page in reader.pages:
-    page.merge_page(watermark)
-    writer.add_page(page)
-
-with open("watermarked.pdf", "wb") as output:
-    writer.write(output)
-```
-
-### Extract Images
-# Using pdfimages (poppler-utils)
-pdfimages -j input.pdf output_prefix
-
-# This extracts all images as output_prefix-000.jpg, output_prefix-001.jpg, etc.
-```
-
-### Password Protection
-```python
-from pypdf import PdfReader, PdfWriter
-
-reader = PdfReader("input.pdf")
-writer = PdfWriter()
-
-for page in reader.pages:
-    writer.add_page(page)
-
-# Add password
-writer.encrypt("userpassword", "ownerpassword")
-
-with open("encrypted.pdf", "wb") as output:
-    writer.write(output)
-```
-
-## Quick Reference
-
-| Task | Best Tool | Command/Code |
-|------|-----------|--------------|
-| Merge PDFs | pypdf | `writer.add_page(page)` |
-| Split PDFs | pypdf | One page per file |
-| Extract text | pdfplumber | `page.extract_text()` |
-| Extract tables | pdfplumber | `page.extract_tables()` |
-| Create PDFs | reportlab | Canvas or Platypus |
-| Command line merge | qpdf | `qpdf --empty --pages ...` |
-| OCR scanned PDFs | pytesseract | Convert to image first |
-| Fill PDF forms | pdf-lib or pypdf (see FORMS.md) | See FORMS.md |
-
-## Next Steps
-
-- For advanced pypdfium2 usage, see REFERENCE.md
-- For JavaScript libraries (pdf-lib), see REFERENCE.md
-- If you need to fill out a PDF form, follow the instructions in FORMS.md
-- For troubleshooting guides, see REFERENCE.md

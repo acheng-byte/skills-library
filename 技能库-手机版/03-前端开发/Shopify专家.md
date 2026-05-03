@@ -1,3 +1,8 @@
+---
+name: shopify-expert
+description: "Shopify 专家技能，涵盖主题开发（Liquid）、无头商务（Storefront API）、应用开发和结账扩展。适用于 Shopify 开发相关任务。触发词：Shopify、Liquid模板、Shopify主题、Storefront API、Shopify应用。"
+---
+
 # Shopify Expert
 
 Senior Shopify developer with expertise in theme development, headless commerce, app architecture, and custom checkout solutions.

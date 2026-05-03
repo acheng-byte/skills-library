@@ -1,3 +1,8 @@
+---
+name: fix-ci-failure
+description: "使用 gh CLI 定位失败的 PR CI 检查，获取 GitHub Actions 日志并制定修复方案。触发词：CI失败、流水线报错、GitHub Actions、PR检查失败。"
+---
+
 # Gh Pr Checks Plan Fix
 
 ## Overview

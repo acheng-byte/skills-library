@@ -1,3 +1,8 @@
+---
+name: chatgpt-app-builder
+description: "使用 mcp-use 框架构建生产级 MCP 服务器，支持工具、资源、Prompt 模板和可视化 Widget。适用于构建具有交互界面的 MCP 应用程序。触发词：mcp-use、MCP服务器构建、Widget开发、MCP工具、MCP应用。"
+---
+
 # IMPORTANT: How to Use This Skill
 
 This file provides a NAVIGATION GUIDE ONLY. Before implementing any MCP server features, you MUST:

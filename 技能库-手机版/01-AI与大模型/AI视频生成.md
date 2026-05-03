@@ -1,3 +1,8 @@
+---
+name: ai-video-generation
+description: "通过 AI Gateway JavaScript SDK 调用多种 AI 视频模型，根据文字描述生成视频。当用户说「生成视频」「AI视频」「文字转视频」「文生视频」时触发。"
+---
+
 # Video Generation Skill
 
 Generate videos from text descriptions using the AI Gateway JavaScript SDK with support for multiple AI video models.

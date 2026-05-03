@@ -1,3 +1,8 @@
+---
+name: aws-solution-architect
+description: "AWS解决方案架构专家，设计可扩展、低成本的云架构并生成基础设施即代码模板。当用户说'AWS架构'、'云架构设计'、'AWS方案'、'基础设施即代码'、'IaC模板'时触发。"
+---
+
 # AWS Solution Architect
 
 Design scalable, cost-effective AWS architectures for startups with infrastructure-as-code templates.

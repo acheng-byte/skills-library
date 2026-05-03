@@ -1,3 +1,8 @@
+---
+name: openai-docs-assistant
+description: "通过 OpenAI 开发者文档 MCP 服务器获取权威最新的 API 文档和模型迁移指南。当用户说「OpenAI文档」「API文档」「模型升级」「OpenAI用法」时触发。"
+---
+
 # OpenAI Docs
 
 Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill also owns model selection, API model migration, and prompt-upgrade guidance. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.

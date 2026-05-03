@@ -1,3 +1,8 @@
+---
+name: kubernetes-specialist
+description: "Kubernetes专家，涵盖工作负载部署、集群管理、故障排查及云原生最佳实践。当用户说'Kubernetes'、'K8s'、'容器编排'、'Pod部署'、'集群管理'时触发。"
+---
+
 # Kubernetes Specialist
 
 ## When to Use This Skill

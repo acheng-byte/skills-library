@@ -1,3 +1,8 @@
+---
+name: native-ui-expo
+description: "使用 Expo 和 expo-router 构建原生 iOS/Android UI，遵循 Apple Human Interface Guidelines，支持动画、手势、SF Symbols 等原生特性。触发词：Expo、React Native、原生UI、expo-router、iOS开发、移动端UI。"
+---
+
 # Expo UI Guidelines
 
 ## References

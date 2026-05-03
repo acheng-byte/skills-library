@@ -1,3 +1,8 @@
+---
+name: cloudflare-deploy
+description: "Cloudflare部署专家，整合Cloudflare平台产品进行项目部署，包括Pages、Workers等。当用户说'部署到Cloudflare'、'Cloudflare部署'、'Cloudflare Pages部署'、'发布到CF'时触发。"
+---
+
 # Cloudflare Deploy
 
 Consolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.

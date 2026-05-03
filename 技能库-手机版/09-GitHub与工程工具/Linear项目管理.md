@@ -1,3 +1,8 @@
+---
+name: linear-project-management
+description: "通过 Linear MCP 管理项目议题、冲刺计划、团队工作负载和文档。触发词：Linear、项目管理、issue管理、冲刺计划、任务跟踪。"
+---
+
 # Linear
 
 ## Overview

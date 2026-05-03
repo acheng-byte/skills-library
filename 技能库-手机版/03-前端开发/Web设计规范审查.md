@@ -1,3 +1,8 @@
+---
+name: web-design-guidelines-review
+description: "根据 Web Interface Guidelines 规范审查前端代码，检查设计规范合规性并输出 file:line 格式报告。触发词：Web设计规范、界面规范审查、设计规范检查、UI规范、Web Interface Guidelines。"
+---
+
 # Web Interface Guidelines
 
 Review files for compliance with Web Interface Guidelines.

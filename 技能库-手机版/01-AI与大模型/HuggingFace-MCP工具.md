@@ -1,3 +1,8 @@
+---
+name: huggingface-mcp
+description: "通过 MCP 服务器将 AI 助手连接到 Hugging Face Hub，访问模型、数据集和 Space。当用户说「HuggingFace」「HF模型」「模型仓库」「Hugging Face」时触发。"
+---
+
 # Hugging Face MCP Server
 
 Connect AI assistants to the Hugging Face Hub. Setup: https://huggingface.co/settings/mcp

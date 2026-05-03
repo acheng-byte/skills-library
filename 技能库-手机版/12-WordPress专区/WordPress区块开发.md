@@ -1,3 +1,8 @@
+---
+name: wordpress-block-development
+description: "开发和维护 WordPress Gutenberg 区块，包括 block.json 配置、动态渲染、属性序列化和版本迁移。触发词：区块开发、Block开发、Gutenberg区块、block.json。"
+---
+
 # WP Block Development
 
 ## When to use

@@ -1,3 +1,8 @@
+---
+name: notion-research-docs
+description: "搜索并整合 Notion 中的相关页面，生成带引用链接的研究简报或综合报告。触发词：研究文档、Notion调研、生成报告、知识整合。"
+---
+
 # Research & Documentation
 
 Pull relevant Notion pages, synthesize findings, and publish clear briefs or reports (with citations and links to sources).

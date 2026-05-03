@@ -1,3 +1,8 @@
+---
+name: jupyter-notebook
+description: "创建整洁、可复现的 Jupyter 笔记本，用于实验探索和数据分析报告。当用户说「Jupyter笔记本」「ipynb」「数据分析笔记本」「创建notebook」时触发。"
+---
+
 # Jupyter Notebook Skill
 
 Create clean, reproducible Jupyter notebooks for two primary modes:

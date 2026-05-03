@@ -1,3 +1,8 @@
+---
+name: nextjs-upgrade-assistant
+description: "协助将 Next.js 项目升级到最新版本，按照官方迁移指南执行 Codemod、依赖更新和破坏性变更修复。触发词：升级Next.js、Next.js迁移、nextjs upgrade、Next.js版本升级。"
+---
+
 # Upgrade Next.js
 
 Upgrade the current project to the latest Next.js version following official migration guides.

@@ -1,3 +1,8 @@
+---
+name: stripe-version-upgrade
+description: "指导 Stripe API 版本升级，涵盖服务端 SDK、Stripe.js 和移动端 SDK 的版本迁移方案。触发词：Stripe升级、Stripe版本、API版本迁移。"
+---
+
 The latest Stripe API version is 2026-04-22.dahlia - use this version when upgrading unless the user specifies a different target version.
 
 # Upgrading Stripe Versions

@@ -1,3 +1,8 @@
+---
+name: instagram-carousel-generator
+description: "生成世界级的 Instagram 轮播图内容，包含内容结构、视觉设计和叙事弧线，7种轮播原型自动匹配。适用于需要制作高质量 Instagram 内容的场景。触发词：Instagram轮播图、carousel生成、社交媒体内容、轮播图设计、Instagram图文。"
+---
+
 # World-Class Instagram Carousel Generator
 
 Generate Instagram carousels that are genuinely world-class: content people save, share, and come back to. Not engagement bait. Not AI slop. Actual value, delivered through precise visual design and narrative structure.

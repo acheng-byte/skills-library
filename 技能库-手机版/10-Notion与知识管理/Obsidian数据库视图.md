@@ -1,3 +1,8 @@
+---
+name: obsidian-database-view
+description: "创建和配置 Obsidian Bases (.base) 文件，实现表格、卡片和列表等数据库视图展示笔记集合。触发词：Obsidian数据库、Bases视图、笔记数据库、动态视图。"
+---
+
 # Obsidian Bases Skill
 
 ## Workflow

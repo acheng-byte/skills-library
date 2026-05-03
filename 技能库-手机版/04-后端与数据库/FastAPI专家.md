@@ -1,3 +1,8 @@
+---
+name: fastapi-expert
+description: "FastAPI专家，深度掌握异步Python、Pydantic V2及生产级API开发。当用户说'FastAPI'、'Python API'、'Pydantic'、'异步API开发'、'Python后端'时触发。"
+---
+
 # FastAPI Expert
 
 Deep expertise in async Python, Pydantic V2, and production-grade API development with FastAPI.

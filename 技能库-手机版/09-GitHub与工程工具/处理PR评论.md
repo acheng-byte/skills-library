@@ -1,3 +1,8 @@
+---
+name: handle-pr-comments
+description: "查找当前分支的 PR，整理 review 评论并引导用户选择需要处理的条目后逐一修复。触发词：处理PR评论、review意见、PR反馈、代码审查。"
+---
+
 # PR Comment Handler
 
 Guide to find the open PR for the current branch and address its comments with gh CLI. Run all `gh` commands with elevated network access.

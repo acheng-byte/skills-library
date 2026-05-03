@@ -1,3 +1,8 @@
+---
+name: stripe-integration-expert
+description: "生产级Stripe集成专家，实现订阅管理、试用期处理、一次性支付、用量计费、Webhook处理和客户门户，支持Next.js、Express和Django。当用户提到Stripe集成、支付系统开发、订阅功能、Stripe代码实现时触发。"
+---
+
 # Stripe Integration Expert
 
 **Tier:** POWERFUL  

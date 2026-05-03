@@ -1,3 +1,8 @@
+---
+name: x402-payment-protocol
+description: "使用 X402 付费 API 协议通过 USDC 在 Base 链上发现、检查和调用付费 API 端点。当用户说「X402」「付费API」「加密支付接口」「USDC付款」时触发。"
+---
+
 # x402 Payment Protocol
 
 Use the `npx awal@2.8.2 x402` commands to discover, inspect, and call paid API endpoints using the X402 payment protocol. Payments are made in USDC on Base.

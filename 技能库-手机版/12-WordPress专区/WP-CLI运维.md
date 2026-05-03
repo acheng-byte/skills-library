@@ -1,3 +1,8 @@
+---
+name: wp-cli-operations
+description: "使用 WP-CLI 执行 WordPress 运维任务，包括数据库迁移、插件管理、多站点操作和自动化脚本。触发词：WP-CLI、WordPress运维、wp命令、数据库迁移。"
+---
+
 ## When to use
 
 Use this skill when the task involves WordPress operational work via WP-CLI, including:

@@ -1,3 +1,8 @@
+---
+name: a-share-value-analysis
+description: "基于价值投资理论的中国A股分析工具，支持个股分析、估值计算、财务健康状况检测和财务异常风险识别。当用户提到A股、股票分析、价值投资、股票估值、财务分析时触发。"
+---
+
 # China Stock Analysis Skill
 
 基于价值投资理论的中国A股分析工具，面向低频交易的普通投资者。

@@ -1,3 +1,8 @@
+---
+name: nextjs-best-practices
+description: "Next.js 开发最佳实践参考，涵盖 RSC 边界、异步模式、路由、数据获取、图片优化等核心规范。适用于编写或审查 Next.js 代码时。触发词：Next.js最佳实践、nextjs规范、React Server Components、nextjs路由、app router。"
+---
+
 # Next.js Best Practices
 
 Apply these rules when writing or reviewing Next.js code.
