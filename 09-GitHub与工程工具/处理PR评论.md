@@ -5,7 +5,7 @@ metadata:
   short-description: Address comments in a GitHub PR review
 ---
 
-```
+`````
 # PR Comment Handler
 
 Guide to find the open PR for the current branch and address its comments with gh CLI. Run all `gh` commands with elevated network access.
@@ -24,4 +24,4 @@ Prereq: ensure `gh` is authenticated (for example, run `gh auth login` once), th
 
 Notes:
 - If gh hits auth/rate issues mid-run, prompt the user to re-authenticate with `gh auth login`, then retry.
-```
+`````

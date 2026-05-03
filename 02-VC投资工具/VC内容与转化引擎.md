@@ -5,7 +5,7 @@ metadata:
   short-description: 投资人 IP、销售文案和内容弹药库
 ---
 
-```
+`````
 # VC Content Engine
 
 ## When to use
@@ -38,4 +38,4 @@ metadata:
 ## Templates and scripts
 - 模板：`../../templates/content-ammo-bank.md`、`../../templates/opening-hooks.md`、`../../templates/personal-ip.md`、`../../templates/sales-copy.md`、`../../templates/offer-polish.md`
 - 报告生成：`../../scripts/new_report.py`
-```
+`````

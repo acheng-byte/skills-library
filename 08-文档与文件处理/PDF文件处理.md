@@ -8,7 +8,7 @@ lastSyncedDate: 2026-04-07
 localModifications: false
 ---
 
-```
+`````
 # PDF Processing Guide
 
 ## Overview
@@ -317,4 +317,4 @@ with open("encrypted.pdf", "wb") as output:
 - For JavaScript libraries (pdf-lib), see REFERENCE.md
 - If you need to fill out a PDF form, follow the instructions in FORMS.md
 - For troubleshooting guides, see REFERENCE.md
-```
+`````

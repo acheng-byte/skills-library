@@ -28,7 +28,7 @@ Not authenticated? → `references/wrangler/auth.md`
 
 ### "I need to run code"
 
-```
+`````
 Need to run code?
 ├─ Serverless functions at the edge → workers/
 ├─ Full-stack web app with Git deploys → pages/
@@ -221,4 +221,4 @@ Example guidance to the user:
 
 ```
 The deploy needs escalated network access to deploy to Cloudflare. I can rerun the command with escalated permissions—want me to proceed?
-```
+`````

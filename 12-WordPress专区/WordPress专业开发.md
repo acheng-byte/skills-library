@@ -13,7 +13,7 @@ metadata:
   related-skills: php-pro, laravel-specialist, fullstack-guardian, security-reviewer
 ---
 
-```
+`````
 # WordPress Pro
 
 Expert WordPress developer specializing in custom themes, plugins, Gutenberg blocks, WooCommerce, and WordPress performance optimization.
@@ -150,4 +150,4 @@ When implementing WordPress features, provide:
 WordPress 6.4+, PHP 8.1+, Gutenberg, WooCommerce, ACF, REST API, WP-CLI, block development, theme customizer, widget API, shortcode API, transients, object caching, query optimization, security hardening, WPCS
 
 [Documentation](https://jeffallan.github.io/claude-skills/skills/platform/wordpress-pro/)
-```
+`````

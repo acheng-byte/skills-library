@@ -5,7 +5,7 @@ metadata:
   short-description: Prep meetings with Notion context and tailored agendas
 ---
 
-```
+`````
 # Meeting Intelligence
 
 Prep meetings by pulling Notion context, tailoring agendas/pre-reads, and enriching with Codex research.
@@ -59,4 +59,4 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `reference/` — template picker and meeting templates (e.g., `template-selection-guide.md`, `status-update-template.md`, `decision-meeting-template.md`, `sprint-planning-template.md`, `one-on-one-template.md`, `retrospective-template.md`, `brainstorming-template.md`).
 - `examples/` — end-to-end meeting preps (e.g., `executive-review.md`, `project-decision.md`, `sprint-planning.md`, `customer-meeting.md`).
-```
+`````

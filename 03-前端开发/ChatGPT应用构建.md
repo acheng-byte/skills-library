@@ -15,7 +15,7 @@ description: |
   Always consult the relevant reference files BEFORE implementing MCP features.
 ---
 
-```
+`````
 # IMPORTANT: How to Use This Skill
 
 This file provides a NAVIGATION GUIDE ONLY. Before implementing any MCP server features, you MUST:
@@ -382,4 +382,4 @@ server.listen();
 - `server.use('mcp:tools/call', fn)` - MCP middleware (tools, resources, prompts, list ops)
 - `server.use('mcp:*', fn)` - Catch-all MCP middleware
 - `server.use(fn)` - HTTP middleware (Hono)
-```
+`````

@@ -8,7 +8,7 @@ tags: [Agents, LlamaIndex, RAG, Document Ingestion, Vector Indices, Query Engine
 dependencies: [llama-index, openai, anthropic]
 ---
 
-```
+`````
 # LlamaIndex - Data Framework for LLM Applications
 
 The leading framework for connecting LLMs with your data.
@@ -566,4 +566,4 @@ while True:
 - **Discord**: https://discord.gg/dGcwcsnxhU
 - **Version**: 0.14.7+
 - **License**: MIT
-```
+`````

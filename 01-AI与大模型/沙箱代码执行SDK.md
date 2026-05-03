@@ -3,7 +3,7 @@ name: sandbox-sdk
 description: Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
 ---
 
-```
+`````
 # Cloudflare Sandbox SDK
 
 Build secure, isolated code execution environments on Cloudflare Workers.
@@ -176,4 +176,4 @@ See `examples/openai-agents` for complete integration pattern.
 
 - **[references/api-quick-ref.md](references/api-quick-ref.md)** - Full API with options and return types
 - **[references/examples.md](references/examples.md)** - Example index with use cases
-```
+`````

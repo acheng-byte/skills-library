@@ -13,7 +13,7 @@ metadata:
   related-skills: react-expert, graphql-architect, api-designer
 ---
 
-```
+`````
 # Shopify Expert
 
 Senior Shopify developer with expertise in theme development, headless commerce, app architecture, and custom checkout solutions.
@@ -185,4 +185,4 @@ When implementing Shopify solutions, provide:
 Shopify CLI 3.x, Liquid 2.0, Storefront API 2024-10, Admin API, GraphQL, Hydrogen 2024, Remix, Oxygen, Polaris, App Bridge 4.0, Checkout UI Extensions, Shopify Functions, metafields, metaobjects, theme architecture, Shopify Plus features
 
 [Documentation](https://jeffallan.github.io/claude-skills/skills/platform/shopify-expert/)
-```
+`````

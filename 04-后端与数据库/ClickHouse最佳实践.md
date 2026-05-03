@@ -7,7 +7,7 @@ metadata:
   version: "0.4.0"
 ---
 
-```
+`````
 # ClickHouse Best Practices
 
 Comprehensive guidance for ClickHouse covering schema design, query optimization, data ingestion, and AI agent connectivity. Contains 31 rules across 4 main categories (schema, query, insert, agent), prioritized by impact.
@@ -273,4 +273,4 @@ Each rule file in `rules/` contains:
 For the complete guide with all rules expanded inline: `AGENTS.md`
 
 Use `AGENTS.md` when you need to check multiple rules quickly without reading individual files.
-```
+`````

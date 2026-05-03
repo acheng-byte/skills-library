@@ -8,7 +8,7 @@ tags: [Agents, LangChain, RAG, Tool Calling, ReAct, Memory Management, Vector St
 dependencies: [langchain, langchain-core, langchain-openai, langchain-anthropic]
 ---
 
-```
+`````
 # LangChain - Build LLM Applications with Agents & RAG
 
 The most popular framework for building LLM-powered applications.
@@ -477,4 +477,4 @@ splitter = SemanticChunker(OpenAIEmbeddings())
 - **LangSmith**: https://smith.langchain.com (observability)
 - **Version**: 0.3+ (stable)
 - **License**: MIT
-```
+`````

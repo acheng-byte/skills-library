@@ -5,7 +5,7 @@ metadata:
   short-description: Research Notion content and produce briefs/reports
 ---
 
-```
+`````
 # Research & Documentation
 
 Pull relevant Notion pages, synthesize findings, and publish clear briefs or reports (with citations and links to sources).
@@ -58,4 +58,4 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `reference/` — search tactics, format selection, templates, and citation rules (e.g., `advanced-search.md`, `format-selection-guide.md`, `research-summary-template.md`, `comparison-template.md`, `citations.md`).
 - `examples/` — end-to-end walkthroughs (e.g., `competitor-analysis.md`, `technical-investigation.md`, `market-research.md`, `trip-planning.md`).
-```
+`````

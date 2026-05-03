@@ -3,7 +3,7 @@ name: china-stock-analysis
 description: A股价值投资分析工具，提供股票筛选、个股深度分析、行业对比和估值计算功能。基于价值投资理论，使用akshare获取公开财务数据，适合低频交易的普通投资者。
 ---
 
-```
+`````
 # China Stock Analysis Skill
 
 基于价值投资理论的中国A股分析工具，面向低频交易的普通投资者。
@@ -400,4 +400,4 @@ python scripts/valuation_calculator.py \
 - 所有分析基于公开财务数据，不涉及任何内幕信息
 - 估值模型的参数假设对结果影响较大，需向用户说明
 - A股市场受政策影响较大，定量分析需结合定性判断
-```
+`````

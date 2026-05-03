@@ -5,7 +5,7 @@ metadata:
   short-description: Turn Notion specs into implementation plans, tasks, and progress tracking
 ---
 
-```
+`````
 # Spec to Implementation
 
 Convert a Notion spec into linked implementation plans, tasks, and ongoing status updates.
@@ -57,4 +57,4 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `reference/` — parsing patterns, plan/task templates, progress cadence (e.g., `spec-parsing.md`, `standard-implementation-plan.md`, `task-creation.md`, `progress-tracking.md`).
 - `examples/` — end-to-end walkthroughs (e.g., `ui-component.md`, `api-feature.md`, `database-migration.md`).
-```
+`````

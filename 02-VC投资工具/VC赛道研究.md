@@ -5,7 +5,7 @@ metadata:
   short-description: 赛道研究、技术入门和研报压缩
 ---
 
-```
+`````
 # VC Sector Research
 
 ## When to use
@@ -40,4 +40,4 @@ metadata:
 - 模板：`../../templates/sector-research.md`、`../../templates/report-distillation.md`
 - 文件提取：`../../scripts/extract_input.py`
 - 报告生成：`../../scripts/new_report.py`
-```
+`````

@@ -4,7 +4,7 @@ description: Generate videos using AI Gateway API. Use when the user asks to cre
 allowed-tools: Bash, Read
 ---
 
-```
+`````
 # Video Generation Skill
 
 Generate videos from text descriptions using the AI Gateway JavaScript SDK with support for multiple AI video models.
@@ -259,4 +259,4 @@ Check the error message for details. Common causes include:
 - Invalid or unclear prompts
 - Requested duration too long for the model
 - API service issues
-```
+`````

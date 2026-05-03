@@ -13,7 +13,7 @@ metadata:
   related-skills: devops-engineer, cloud-architect, sre-engineer, terraform-engineer, security-reviewer, chaos-engineer
 ---
 
-```
+`````
 # Kubernetes Specialist
 
 ## When to Use This Skill
@@ -242,4 +242,4 @@ When implementing Kubernetes resources, provide:
 4. Brief explanation of design decisions and security considerations
 
 [Documentation](https://jeffallan.github.io/claude-skills/skills/infrastructure/kubernetes-specialist/)
-```
+`````

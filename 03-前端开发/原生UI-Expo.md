@@ -11,7 +11,7 @@ license: MIT
 
 Consult these resources as needed:
 
-```
+`````
 references/
   animations.md          Reanimated: entering, exiting, layout, scroll-driven, gestures
   controls.md            Native iOS: Switch, Slider, SegmentedControl, DateTimePicker, Picker
@@ -318,4 +318,4 @@ export default function Layout({ segment }) {
     </Stack>
   );
 }
-```
+`````

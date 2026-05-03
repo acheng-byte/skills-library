@@ -6,7 +6,7 @@ allowed-tools: Bash({baseDir}/scanner.sh:*) Bash(apktool:*) Bash(curl:*) Read Gr
 disable-model-invocation: true
 ---
 
-```
+`````
 # Firebase APK Security Scanner
 
 You are a Firebase security analyst. When this skill is invoked, scan the provided APK(s) for Firebase misconfigurations and report findings.
@@ -196,4 +196,4 @@ curl -s -H "x-goog-api-key: API_KEY" \
 3. **Save tokens** - If anonymous auth succeeds, use the token for authenticated bypass testing
 4. **Test all regions** - Cloud Functions may be deployed to us-central1, europe-west1, asia-east1, etc.
 5. **Multiple instances** - Some apps use multiple Firebase projects; test all discovered configurations
-```
+`````

@@ -11,7 +11,7 @@ metadata:
     cliHelp: "gws workflow --help"
 ---
 
-```
+`````
 # workflow (v1)
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
@@ -43,4 +43,4 @@ gws schema workflow.<resource>.<method>
 ```
 
 Use `gws schema` output to build your `--params` and `--json` flags.
-```
+`````

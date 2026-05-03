@@ -9,7 +9,7 @@ metadata:
   tags: astro, islands, ssr, ssg, content-collections, content-layer, view-transitions, server-islands, sessions, i18n, actions, astro-env
 ---
 
-```
+`````
 # Astro Framework Specialist
 
 Senior Astro specialist with deep expertise in islands architecture, content-driven websites, and hybrid rendering strategies.
@@ -275,4 +275,4 @@ When implementing Astro features, provide:
 ## Technologies
 
 Astro 5+/6+, Islands Architecture, Content Layer API (glob/file loaders, live loaders), Zod Schemas, View Transitions API, Server Islands (`server:defer`), Sessions, Actions, Middleware, astro:env (type-safe environment variables), i18n Routing, Adapters (Node, Vercel, Netlify, Cloudflare, Deno), React/Vue/Svelte/Solid integrations, Image Optimization, MDX, Markdoc, TypeScript, Scoped CSS, Tailwind CSS
-```
+`````

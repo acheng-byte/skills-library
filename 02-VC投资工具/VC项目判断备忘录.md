@@ -5,7 +5,7 @@ metadata:
   short-description: BP 分析、死亡笔记和决策压力测试
 ---
 
-```
+`````
 # VC Deal Memo
 
 ## When to use
@@ -36,4 +36,4 @@ metadata:
 - 模板：`../../templates/deal-death-note.md`、`../../templates/decision-stress-test.md`、`../../templates/user-anatomy.md`
 - 文件提取：`../../scripts/extract_input.py`
 - 报告生成：`../../scripts/new_report.py`
-```
+`````

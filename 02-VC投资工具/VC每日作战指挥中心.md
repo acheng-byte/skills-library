@@ -5,7 +5,7 @@ metadata:
   short-description: 每日作战地图、周复盘和时间审计
 ---
 
-```
+`````
 # VC Daily Command Center
 
 ## When to use
@@ -34,4 +34,4 @@ metadata:
 ## Templates and scripts
 - 模板：`../../templates/daily-command-map.md`、`../../templates/weekly-review.md`、`../../templates/workflow-audit.md`、`../../templates/skill-gap-map.md`
 - 落盘脚本：`../../scripts/new_report.py`
-```
+`````

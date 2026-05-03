@@ -4,7 +4,7 @@ description: "Use when building or debugging WordPress Interactivity API feature
 compatibility: "Targets WordPress 6.9+ (PHP 7.2.24+). Filesystem-based agent with bash + node. Some workflows require WP-CLI."
 ---
 
-```
+`````
 # WP Interactivity API
 
 ## When to use
@@ -178,4 +178,4 @@ See `references/debugging.md`.
   - `references/server-side-rendering.md`
   - `references/directives-quickref.md`
   - `references/debugging.md`
-```
+`````

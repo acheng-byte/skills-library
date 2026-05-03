@@ -3,7 +3,7 @@ name: md-toc
 description: "Automatically generates table of contents for Markdown documents using Obsidian link format [[#heading]], and enforces consistent file naming convention (序号-名称-类型-YYYYMMDD.md). Use when user mentions MD, Markdown, .md files, or requests to generate/edit markdown documents."
 ---
 
-```
+`````
 # Markdown 文档目录生成规范
 
 ## 触发条件
@@ -188,4 +188,4 @@ description: "Automatically generates table of contents for Markdown documents u
 6. **目录标题**：使用 `## 目录`
 7. **保留原样**：标题中的 emoji 和特殊字符完整保留（Obsidian 格式）
 8. **分隔线**：目录后添加 `---` 分隔线，区分目录和正文
-```
+`````

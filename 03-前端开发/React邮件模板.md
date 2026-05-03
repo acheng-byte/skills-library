@@ -7,7 +7,7 @@ metadata:
   version: "1.1.0"
 ---
 
-```
+`````
 # React Email
 
 Build and send HTML emails using React components - a modern, component-based approach to email development that works across all major email clients.
@@ -528,4 +528,4 @@ See [references/PATTERNS.md](references/PATTERNS.md) for complete examples inclu
 - Component Reference: [references/COMPONENTS.md](references/COMPONENTS.md)
 - Internationalization Guide: [references/I18N.md](references/I18N.md)
 - Common Patterns: [references/PATTERNS.md](references/PATTERNS.md)
-```
+`````

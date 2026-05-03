@@ -5,7 +5,7 @@ metadata:
   short-description: 碎片想法炼金和逻辑骨架重组
 ---
 
-```
+`````
 # VC Thinking Refiner
 
 ## When to use
@@ -32,4 +32,4 @@ metadata:
 - 模板：`../../templates/thinking-refiner.md`
 - 文件提取：`../../scripts/extract_input.py`
 - 报告生成：`../../scripts/new_report.py`
-```
+`````
