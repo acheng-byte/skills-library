@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "e20a0c76-303a-4b3b-962d-231dc1c2fb09",
+    "name": "Linear项目管理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Linear\n\n## Overview\n\nThis skill provides a structured workflow for managing issues, projects & team workflows in Linear. It ensures consistent integration with the Linear MCP server, which offers natural-language project management for issues, projects, documentation, and team collaboration.\n\n## Prerequisites\n- Linear MCP server must be connected and accessible via OAuth\n- Confirm access to the relevant Linear workspace, teams, and projects\n\n## Required Workflow\n\n**Follow these steps in order. Do not skip steps.**\n\n### Step 0: Set up Linear MCP (if not already configured)\n\nIf any MCP call fails because Linear MCP is not connected, pause and set it up:\n\n1. Add the Linear MCP:\n   - `codex mcp add linear --url https://mcp.linear.app/mcp`\n2. Enable remote MCP client:\n   - Set `[features] rmcp_client = true` in `config.toml` **or** run `codex --enable rmcp_client`\n3. Log in with OAuth:\n   - `codex mcp login linear`\n\nAfter successful login, the user will have to restart codex. You should finish your answer and tell them so when they try again they can continue with Step 1.\n\n**Windows/WSL note:** If you see connection errors on Windows, try configuring the Linear MCP to run via WSL:\n{\"mcpServers\": {\"linear\": {\"command\": \"wsl\", \"args\": [\"npx\", \"-y\", \"mcp-remote\", \"https://mcp.linear.app/sse\", \"--transport\", \"sse-only\"]}}}\n\n### Step 1\nClarify the user's goal and scope (e.g., issue triage, sprint planning, documentation audit, workload balance). Confirm team/project, priority, labels\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

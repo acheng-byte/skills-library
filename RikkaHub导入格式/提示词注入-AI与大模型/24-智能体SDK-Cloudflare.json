@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "8810cc2c-cb3f-44d3-bac3-c506139b718b",
+    "name": "智能体SDK-Cloudflare",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Core\n- **[references/state-scheduling.md](references/state-scheduling.md)** — State persistence, scheduling, SQL\n- **[references/callable.md](references/callable.md)** — RPC methods, streaming, timeouts\n- **[references/routing.md](references/routing.md)** — URL patterns, custom routing, `getAgentByName`\n- **[references/configuration.md](references/configuration.md)** — Wrangler config, bindings, Vite setup",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

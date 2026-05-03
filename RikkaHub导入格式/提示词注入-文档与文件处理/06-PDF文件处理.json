@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "a1a7cd6a-6a21-4e3b-829f-fafa3d4847cd",
+    "name": "PDF文件处理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# PDF 文件处理（手机版）\n\n## 环境说明\n\n手机端（RikkaHub）可执行 **JavaScript**，处理 PDF 使用 **pdf-lib** 包。\n\n安装依赖：\nnpm install pdf-lib\n\n---\n\n## 快速参考\n\n| 任务 | 方式 |\n|------|------|\n| 创建新 PDF | `pdf-lib`（见下方示例） |\n| 合并 PDF | `pdf-lib` PDFDocument.copyPages |\n| 拆分 PDF | `pdf-lib` 按页提取 |\n| 旋转页面 | `pdf-lib` page.setRotation |\n| 读取/分析内容 | 上传 PDF 让 AI 直接分析 |\n\n---\n\n## 创建新 PDF\n\nconst { PDFDocument, rgb, StandardFonts, degrees } = require('pdf-lib');\nconst fs = require('fs');\n\nasync function createPdf() {\n  const pdfDoc = await PDFDocument.create();\n\n  // 嵌入字体（内置字体）\n  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);\n  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);\n\n  // 添加第一页（A4：595 x 842 pt）\n  const page = pdfDoc.addPage([595, 842]);\n  const { width, height } = page.getSize();\n\n  // 标题\n  page.drawText('报告标题', {\n    x: 50,\n    y: height - 80,\n    size: 28,\n    font: boldFont,\n    color: rgb(0.12, 0.15, 0.38) // 深蓝色\n  });\n\n  // 分割线\n  page.drawLine({\n    start: { x: 50, y: height - 95 },\n    end: { x: width - 50, y: height - 95 },\n    thickness: 1,\n    color: rgb(0.8, 0.8, 0.8)\n  });\n\n  // 正文\n  page.drawText('这是 PDF 正文内容。可以包含多行文字和各种格式。', {\n    x: 50,\n    y: height - 130,\n    size: 12,\n    font,\n    color: rgb(0, 0, 0)\n  });\n\n  // 保存\n  const pdfBytes = await pdfDoc.save();\n  fs.writeFileSync('output.pdf', pdfBytes);\n  console.log('PDF 已生成: output.pdf');\n}\n\ncreatePdf();\n\n---\n\n## 多页文档\n\nconst { PDFDocument, rgb, StandardFonts } = require('pdf-lib');\nconst fs = require('fs');\n\nasync f\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

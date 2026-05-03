@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0bc0c211-71b4-4db3-828b-f6cef60828a9",
+    "name": "沙箱代码执行SDK",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Cloudflare Sandbox SDK\n\nBuild secure, isolated code execution environments on Cloudflare Workers.\n\n## FIRST: Verify Installation\n\ndocker info  # Must succeed - Docker required for local dev\n\n## Retrieval Sources\n\nYour knowledge of the Sandbox SDK may be outdated. **Prefer retrieval over pre-training** for any Sandbox SDK task.\n\n| Resource | URL |\n|----------|-----|\n| Docs | https://developers.cloudflare.com/sandbox/ |\n| API Reference | https://developers.cloudflare.com/sandbox/api/ |\n| Examples | https://github.com/cloudflare/sandbox-sdk/tree/main/examples |\n| Get Started | https://developers.cloudflare.com/sandbox/get-started/ |\n\nWhen implementing features, fetch the relevant doc page or example first.\n\n## Required Configuration\n\n**wrangler.jsonc** (exact - do not modify structure):\n\njsonc\n{\n  \"containers\": [{\n    \"class_name\": \"Sandbox\",\n    \"image\": \"./Dockerfile\",\n    \"instance_type\": \"lite\",\n    \"max_instances\": 1\n  }],\n  \"durable_objects\": {\n    \"bindings\": [{ \"class_name\": \"Sandbox\", \"name\": \"Sandbox\" }]\n  },\n  \"migrations\": [{ \"new_sqlite_classes\": [\"Sandbox\"], \"tag\": \"v1\" }]\n}\n\n**Worker entry** - must re-export Sandbox class:\n\ntypescript\nimport { getSandbox } from '@cloudflare/sandbox';\nexport { Sandbox } from '@cloudflare/sandbox';  // Required export\n\n## Quick Reference\n\n| Task | Method |\n|------|--------|\n| Get sandbox | `getSandbox(env.Sandbox, 'user-123')` |\n| Run command | `await sandbox.exec('python script.py')` |\n| Run code (interpreter) | `await sandbox.ru\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

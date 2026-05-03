@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "d093b240-28e1-4225-8ae4-323f583a657b",
+    "name": "Gemini图像生成",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Nano Banana Pro (Gemini 3 Pro Image)\n\nGenerate or edit images using Gemini 3 Pro Image via AI Gateway or direct API.\n\n## Quick Start\n\nGenerate an image:\n\n  --prompt \"your image description\" \\\n  --filename \"output.png\" \\\n  --resolution 1K\n\n## Usage Examples\n\n### Generate Image\n\n  --prompt \"a cute cat sitting on a wooden floor\" \\\n  --filename \"cat.png\"\n\n### Edit Image (requires GEMINI_API_KEY)\n\n**Note**: Image editing currently requires direct Gemini API access.\n\nexport GEMINI_API_KEY=\"your-gemini-key\"\n  --prompt \"make it more colorful\" \\\n  --filename \"cat-colorful.png\" \\\n  -i \"cat.png\"\n\n### Multi-image Composition (up to 14 images, requires GEMINI_API_KEY)\n\n  --prompt \"combine these into one scene\" \\\n  --filename \"combined.png\" \\\n  -i img1.png -i img2.png -i img3.png\n\n## API Key Configuration\n\nThe skill automatically detects API keys in this priority order:\n\n1. **`AI_GATEWAY_API_KEY`** (recommended) - Uses AI Gateway\n2. **`GEMINI_API_KEY`** - Direct Gemini API access\n3. **`--api-key` argument** - Manual key override\n\n### Recommended: AI Gateway (default)\n\nexport AI_GATEWAY_API_KEY=\"your-gateway-key\"  # Usually pre-configured\n\n✅ No additional dependencies required\n✅ Cost-efficient and unified API management\n❌ Image editing not currently supported\n\n### Alternative: Direct Gemini API\n\nexport GEMINI_API_KEY=\"your-gemini-key\"\n\n✅ Supports image editing and multi-image composition\n\n## Options\n\n- `--prompt, -p`: Image description (required)\n- `--filename, -f`: Output filename (requi\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

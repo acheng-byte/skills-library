@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "cea7b5d0-0c74-466e-8814-6a60d9abb25b",
+    "name": "Word文档处理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Word 文档处理（手机版）\n\n## 环境说明\n\n手机端（RikkaHub）可执行 **JavaScript**，创建 Word 文档使用 **docx** 包。\n\n安装依赖：\nnpm install docx\n\n---\n\n## 快速参考\n\n| 任务 | 方式 |\n|------|------|\n| 创建新文档 | 用 `docx` 包（见下方示例） |\n| 读取文档内容 | 将 .docx 上传后让 AI 分析 |\n| 编辑已有文档 | 读取内容 → AI 修改 → 重新生成 |\n\n---\n\n## 创建新文档\n\nconst {\n  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,\n  Header, Footer, AlignmentType, PageOrientation, LevelFormat,\n  ExternalHyperlink, InternalHyperlink, Bookmark, FootnoteReferenceRun,\n  PositionalTab, PositionalTabAlignment, PositionalTabRelativeTo,\n  PositionalTabLeader, TabStopType, TabStopPosition, Column, SectionType,\n  TableOfContents, HeadingLevel, BorderStyle, WidthType, ShadingType,\n  VerticalAlign, PageNumber, PageBreak\n} = require('docx');\nconst fs = require('fs');\n\nconst doc = new Document({\n  sections: [{\n    properties: {\n      page: {\n        size: {\n          width: 11906,  // A4 宽（DXA）\n          height: 16838  // A4 高（DXA）\n        },\n        margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } // 2.54cm 页边距\n      }\n    },\n    children: [\n      new Paragraph({\n        heading: HeadingLevel.HEADING_1,\n        children: [new TextRun('文档标题')]\n      }),\n      new Paragraph({\n        children: [new TextRun('正文内容示例。')]\n      })\n    ]\n  }]\n});\n\nPacker.toBuffer(doc).then(buffer => {\n  fs.writeFileSync('output.docx', buffer);\n  console.log('文档已生成: output.docx');\n});\n\n---\n\n## 页面尺寸（DXA 单位，1440 DXA = 1 英寸）\n\n| 纸张 | 宽 | 高 | 内容宽（2.54cm 页边距）|\n|------|----|----|----------------------|\n|\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

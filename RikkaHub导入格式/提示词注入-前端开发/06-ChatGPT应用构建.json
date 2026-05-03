@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "5c863d9c-e34f-483c-9d5d-8d11cc009b0b",
+    "name": "ChatGPT应用构建",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# IMPORTANT: How to Use This Skill\n\nThis file provides a NAVIGATION GUIDE ONLY. Before implementing any MCP server features, you MUST:\n\n1. Read this overview to understand which reference files are relevant\n2. **ALWAYS read the specific reference file(s)** for the features you're implementing\n3. Apply the detailed patterns from those files to your implementation\n\n**Do NOT rely solely on the quick reference examples in this file** - they are minimal examples only. The reference files contain critical best practices, security considerations, and advanced patterns.\n\n---\n\n# MCP Server Best Practices\n\nComprehensive guide for building production-ready MCP servers with tools, resources, prompts, and widgets using mcp-use.\n\n## ⚠️ FIRST: New Project or Existing Project?\n\n**Before doing anything else, determine whether you are inside an existing mcp-use project.**\n\n**Detection:** Check the workspace for a `package.json` that lists `\"mcp-use\"` as a dependency, OR any `.ts` file that imports from `\"mcp-use/server\"`.\n\n├─ mcp-use project FOUND → Do NOT scaffold. You are already in a project.\n│  └─ Skip to \"Quick Navigation\" below to add features.\n│\n├─ NO mcp-use project (empty dir, unrelated project, or greenfield)\n│  └─ Scaffold first with npx create-mcp-use-app, then add features.\n│     See \"Scaffolding a New Project\" below.\n│\n└─ Inside an UNRELATED project (e.g. Next.js app) and user wants an MCP server\n   └─ Ask the user where to create it, then scaffold in that directory.\n      Do NOT\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

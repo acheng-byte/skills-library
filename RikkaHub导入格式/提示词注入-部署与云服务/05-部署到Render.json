@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "bec10a0e-9b92-4056-b2c1-2df26c26e29f",
+    "name": "部署到Render",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Deploy to Render\n\nRender supports **Git-backed** services and **prebuilt Docker image** services.\n\nThis skill covers **Git-backed** flows:\n1. **Blueprint Method** - Generate render.yaml for Infrastructure-as-Code deployments\n2. **Direct Creation** - Create services instantly via MCP tools\n\nBlueprints can also run a **prebuilt Docker image** by using `runtime: image`, but the `render.yaml` still must live in a Git repo.\n\nIf there is no Git remote, stop and ask the user to either:\n- Create/push a Git remote (can be minimal if only the Blueprint is needed), or\n- Use the Render Dashboard/API to deploy a prebuilt Docker image (MCP cannot create image-backed services).\n\n## Prerequisites\n\n- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.\n- The deployment might take a few minutes. Use appropriate timeout values.\n\n## When to Use This Skill\n\nActivate this skill when users want to:\n- Deploy an application to Render\n- Create a render.yaml Blueprint file\n- Set up Render deployment for their project\n- Host or publish their application on Render's cloud platform\n- Create databases, cron jobs, or other Render resources\n\n## Happy Path (New Users)\n\nUse this short prompt sequence before deep analysis to reduce friction:\n1. Ask whether they want to deploy from a Git repo or a prebuilt Docker image.\n2. Ask whether Render should provision everything the app needs (based on what seems likely from the user's description) or only the app whil\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "779a99e6-b404-4700-8981-21c5e0dc0d74",
+    "name": "文档与文件处理技能触发库",
+    "description": "文档与文件处理分类共10个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "4d92ab39-458d-4f63-b62c-2f8514b851de",
+        "name": "Edge文字转语音",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "1. **Detect intent**: Check for \"tts\" trigger or keyword in user message\n2. **Generate audio**: Convert the target text (message, search results, summary)\n3. **Return to user**: The tts tool returns a MEDIA: path; Clawdbot handles delivery",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Edge语音",
+          "微软TTS",
+          "文字转语音",
+          "生成配音"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "13841bd3-b3d4-4b33-97b5-7524b0b5b668",
+        "name": "Excel文件处理",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "手机端（RikkaHub）可执行 **JavaScript**，生成 Excel 文件使用 **ExcelJS**。\n安装依赖：\n---\n- 使用专业字体（Arial、Times New Roman 等）\n- 每个 Excel 模型必须 **零公式错误**（#REF! #DIV/0! #VALUE! #N/A #NAME?）\n- 修改模板时，严格匹配已有格式、风格和约定，已有约定始终优先\n| 颜色",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Excel处理",
+          "生成表格",
+          "创建Excel",
+          "手机Excel"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9cc2025b-e861-4802-ba9c-9d9273fb03d5",
+        "name": "Jupyter笔记本",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Create a new `.ipynb` notebook from scratch.\n1. Lock the intent.\n2. Scaffold from the template.\n3. Fill the notebook with small, runnable steps.\n4. Apply the right pattern.\n5. Edit safely when working with existing notebooks.\n6. Validate the result.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Jupyter笔记本",
+          "ipynb",
+          "数据分析笔记本",
+          "创建notebook"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "a503b2d9-82f1-4353-a7c8-16093cca9828",
+        "name": "LaTeX文档",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "Create any LaTeX document, compile to PDF, and generate PNG previews. Convert PDFs of any type to LaTeX.\n1. Determine document type (resume, report, letter, invoice, article, thesis, academic CV, pres",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "LaTeX文档",
+          "编写论文",
+          "生成PDF",
+          "数学公式排版"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "177d1412-494d-42ba-b6f6-7477ca7b5b65",
+        "name": "Markdown目录生成",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "**此技能在用户提到以下任何关键词时自动生效**：\n- \"MD文档\" / \"md文档\"\n- \"Markdown\" / \"markdown\"\n- \"MD格式\" / \"md格式\"\n- \".md文件\" / \".md\"\n- \"生成文档\"（如果上下文涉及markdown）\n- \"创建文档\"（如果是.md文件）\n- 或任何涉及Markdown文档的操作\n**触发条件已放宽**：只要提到MD/Markdown相",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "生成目录",
+          "Markdown目录",
+          "文档大纲",
+          "TOC"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "7b59d1da-a904-4cde-a061-44a462a67c57",
+        "name": "PDF文件处理",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "手机端（RikkaHub）可执行 **JavaScript**，处理 PDF 使用 **pdf-lib** 包。\n安装依赖：\n---\n| 任务 | 方式 |\n|------|------|\n| 创建新 PDF | `pdf-lib`（见下方示例） |\n| 合并 PDF | `pdf-lib` PDFDocument.copyPages |\n| 拆分 PDF | `pdf-lib` 按页提取 |\n|",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "PDF处理",
+          "操作PDF",
+          "生成PDF",
+          "手机PDF"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "fa19ca07-b834-4ecb-8f3b-83d262d18468",
+        "name": "PPT文件处理",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "手机端（RikkaHub）可执行 **JavaScript**，创建 PPT 使用 **pptxgenjs** 包。\n安装依赖：\n---\n| 任务 | 方式 |\n|------|------|\n| 创建新演示文稿 | 用 `pptxgenjs`（见下方示例） |\n| 读取/分析内容 | 上传 .pptx 让 AI 直接分析 |\n---\n---\n**不要用默认蓝色，选适合主题的颜色：**\n| 主题 ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "PPT处理",
+          "制作幻灯片",
+          "生成PPT",
+          "手机PPT"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "fd2e9e6a-9fbd-46e3-83e2-bd9cccb11d98",
+        "name": "Word文档处理",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "手机端（RikkaHub）可执行 **JavaScript**，创建 Word 文档使用 **docx** 包。\n安装依赖：\n---\n| 任务 | 方式 |\n|------|------|\n| 创建新文档 | 用 `docx` 包（见下方示例） |\n| 读取文档内容 | 将 .docx 上传后让 AI 分析 |\n| 编辑已有文档 | 读取内容 → AI 修改 → 重新生成 |\n---\n---\n| ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Word处理",
+          "创建Word",
+          "生成文档",
+          "手机Word"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "7f3c275b-9a22-46ce-ab34-0ff15285d723",
+        "name": "学术引用管理",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "Manage citations systematically throughout the research and writing process. This skill provides tools and strategies for searching academic databases (Google Scholar, PubMed), extracting accurate met",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "学术引用",
+          "文献管理",
+          "BibTeX",
+          "参考文献"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "8b3f4839-016a-4bfe-b7b5-2de7d34fa4f7",
+        "name": "视频帧提取",
+        "enabled": true,
+        "priority": 77,
+        "position": "after_system_prompt",
+        "content": "Extract a single frame from a video, or create quick thumbnails for inspection.\nFirst frame:\n- Prefer `--time` for “what is happening around here?”.\n- Use a `.jpg` for quick share; use `.png` for cris",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "提取视频帧",
+          "视频截图",
+          "生成缩略图",
+          "ffmpeg帧提取"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

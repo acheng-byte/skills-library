@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "4bba5435-c91d-4121-ac4f-0e3d758624cd",
+    "name": "快速分词器",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# HuggingFace Tokenizers - Fast Tokenization for NLP\n\nFast, production-ready tokenizers with Rust performance and Python ease-of-use.\n\n## When to use HuggingFace Tokenizers\n\n**Use HuggingFace Tokenizers when:**\n- Need extremely fast tokenization (<20s per GB of text)\n- Training custom tokenizers from scratch\n- Want alignment tracking (token → original text position)\n- Building production NLP pipelines\n- Need to tokenize large corpora efficiently\n\n**Performance**:\n- **Speed**: <20 seconds to tokenize 1GB on CPU\n- **Implementation**: Rust core with Python/Node.js bindings\n- **Efficiency**: 10-100× faster than pure Python implementations\n\n**Use alternatives instead**:\n- **SentencePiece**: Language-independent, used by T5/ALBERT\n- **tiktoken**: OpenAI's BPE tokenizer for GPT models\n- **transformers AutoTokenizer**: Loading pretrained only (uses this library internally)\n\n## Quick start\n\n### Installation\n\n# Install tokenizers\n\n# With transformers integration\n\n### Load pretrained tokenizer\n\npython\nfrom tokenizers import Tokenizer\n\n# Load from HuggingFace Hub\ntokenizer = Tokenizer.from_pretrained(\"bert-base-uncased\")\n\n# Encode text\noutput = tokenizer.encode(\"Hello, how are you?\")\nprint(output.tokens)  # ['hello', ',', 'how', 'are', 'you', '?']\nprint(output.ids)     # [7592, 1010, 2129, 2024, 2017, 1029]\n\n# Decode back\ntext = tokenizer.decode(output.ids)\nprint(text)  # \"hello, how are you?\"\n\n### Train custom BPE tokenizer\n\npython\nfrom tokenizers import Tokenizer\nfrom tokenizers.models\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

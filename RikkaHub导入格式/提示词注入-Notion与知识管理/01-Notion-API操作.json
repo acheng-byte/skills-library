@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "289c6dba-edc4-400d-9bf3-08cd3873756d",
+    "name": "Notion-API操作",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Notion API Skill\n\nThis skill enables interaction with Notion workspaces through the Notion REST API. Use `curl` and `jq` for direct REST calls, or write ad-hoc scripts as appropriate for the task.\n\n## Authentication\n\n### API Key Handling\n\n1. **Environment Variable**: Check if `NOTION_API_TOKEN` is available in the environment\n2. **User-Provided Key**: If the user provides an API key in context, use that instead\n3. **No Key Available**: If neither is available, use AskUserQuestion (or equivalent) to request the API key from the user\n\n**IMPORTANT**: Never display, log, or send `NOTION_API_TOKEN` anywhere except in the `Authorization` header. Confirm its existence, ask if missing, use it in requests—but never echo or expose it.\n\n### Request Headers\n\nAll requests require these headers:\n\n-H \"Authorization: Bearer $NOTION_API_TOKEN\" \\\n-H \"Notion-Version: 2025-09-03\" \\\n-H \"Content-Type: application/json\"\n\n### Verifying Authentication\n\nTest the API key by retrieving the bot user:\n\ncurl -s \"https://api.notion.com/v1/users/me\" \\\n  -H \"Authorization: Bearer $NOTION_API_TOKEN\" \\\n  -H \"Notion-Version: 2025-09-03\" | jq\n\n## Base URL and Conventions\n\n- **Base URL**: `https://api.notion.com`\n- **API Version**: `2025-09-03` (required header)\n- **Data Format**: JSON for all request/response bodies\n- **IDs**: UUIDv4 format (dashes optional in requests)\n- **Timestamps**: ISO 8601 format (`2020-08-12T02:12:33.231Z`)\n- **Property Names**: `snake_case`\n- **Empty Values**: Use `null` instead of emp\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

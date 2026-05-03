@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "e9270347-21b1-484e-b2ec-7beac668c316",
+    "name": "AI图像生成",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# AI Image Generation\n\nGenerate images with 50+ AI models via [inference.sh](https://inference.sh) CLI.\n\n![AI Image Generation](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kg0v0nz7wv0qwqjtq1cam52z.jpeg)\n\n## Quick Start\n\nbelt login\n\n# Generate an image with FLUX\nbelt app run falai/flux-dev-lora --input '{\"prompt\": \"a cat astronaut in space\"}'\n\n## Available Models\n\n| Model | App ID | Best For |\n|-------|--------|----------|\n| **GPT-Image-2** | `openai/gpt-image-2` | Text-to-image, editing, inpainting |\n| FLUX Dev LoRA | `falai/flux-dev-lora` | High quality with custom styles |\n| FLUX.2 Klein LoRA | `falai/flux-2-klein-lora` | Fast with LoRA support (4B/9B) |\n| **P-Image** | `pruna/p-image` | Fast, economical, multiple aspects |\n| **P-Image-LoRA** | `pruna/p-image-lora` | Fast with preset LoRA styles |\n| **P-Image-Edit** | `pruna/p-image-edit` | Fast image editing |\n| Gemini 3 Pro | `google/gemini-3-pro-image-preview` | Google's latest |\n| Gemini 2.5 Flash | `google/gemini-2-5-flash-image` | Fast Google model |\n| Grok Imagine | `xai/grok-imagine-image` | xAI's model, multiple aspects |\n| Seedream 4.5 | `bytedance/seedream-4-5` | 2K-4K cinematic quality |\n| Seedream 4.0 | `bytedance/seedream-4-0` | High quality 2K-4K |\n| Seedream 3.0 | `bytedance/seedream-3-0-t2i` | Accurate text rendering |\n| Reve | `falai/reve` | Natural language editing, text rendering |\n| ImagineArt 1.5 Pro | `falai/imagine-art-1-5-pro-preview` | Ultra-high-fidelity 4K |\n| FLUX Klein 4\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

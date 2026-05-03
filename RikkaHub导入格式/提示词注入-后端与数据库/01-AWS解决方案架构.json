@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "3b8bdcc6-8816-42f8-8f48-9d640acf7ed7",
+    "name": "AWS解决方案架构",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n### Step 1: Gather Requirements\n\nCollect application specifications:\n\n- Application type (web app, mobile backend, data pipeline, SaaS)\n- Expected users and requests per second\n- Budget constraints (monthly spend limit)\n- Team size and AWS experience level\n- Compliance requirements (GDPR, HIPAA, SOC 2)\n- Availability requirements (SLA, RPO/RTO)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

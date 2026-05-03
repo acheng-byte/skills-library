@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0d34cc35-5bdd-42f6-ad18-4b7d2ac78ef2",
+    "name": "Next.js升级助手",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Upgrade Next.js\n\nUpgrade the current project to the latest Next.js version following official migration guides.\n\n## Instructions\n\n1. **Detect current version**: Read `package.json` to identify the current Next.js version and related dependencies (React, React DOM, etc.)\n\n2. **Fetch the latest upgrade guide**: Use WebFetch to get the official upgrade documentation:\n   - Codemods: https://nextjs.org/docs/app/guides/upgrading/codemods\n   - Version-specific guides (adjust version as needed):\n     - https://nextjs.org/docs/app/guides/upgrading/version-16 \n     - https://nextjs.org/docs/app/guides/upgrading/version-15\n     - https://nextjs.org/docs/app/guides/upgrading/version-14\n\n3. **Determine upgrade path**: Based on current version, identify which migration steps apply. For major version jumps, upgrade incrementally (e.g., 13 → 14 → 15).\n\n4. **Run codemods first**: Next.js provides codemods to automate breaking changes:\n   npx @next/codemod@latest <transform> <path>\n      Common transforms:\n   - `next-async-request-api` - Updates async Request APIs (v15)\n   - `next-request-geo-ip` - Migrates geo/ip properties (v15)\n   - `next-dynamic-access-named-export` - Transforms dynamic imports (v15)\n\n5. **Update dependencies**: Upgrade Next.js and peer dependencies together:\n   \n\n6. **Review breaking changes**: Check the upgrade guide for manual changes needed:\n   - API changes (e.g., async params in v15)\n   - Configuration changes in `next.config.js`\n   - Deprecated features being remo\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

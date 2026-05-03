@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "ae25ac92-7647-414b-9872-bef85f2d80b3",
+    "name": "AI图像生成-网关版",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Image Generation Skill\n\nGenerate images from text prompts and transform existing images using the AI Gateway API with support for multiple AI models including Google Gemini, Byteplus Seedream, and OpenAI GPT-Image.\n\n## Overview\n\nThis Skill enables Claude to generate images from text descriptions and transform existing images with AI-powered modifications. It uses the AI Gateway API which routes requests to appropriate providers based on the model selected.\n\n## Prerequisites\n\n**Required Environment Variable:**\n- `AI_GATEWAY_API_KEY`: Your AI Gateway API key\n\nIf this environment variable is not set, the scripts will fail with an error message asking you to provide it.\n\n## Quick Start\n\n### Generate an Image from Text\n\nUse the bundled script to generate images from text descriptions:\n\n### Transform an Existing Image\n\nApply transformations to existing images using reference URLs:\n\n## Supported Models\n\n### Image Generation Models\n\n| Model | Provider | Best For |\n|-------|----------|----------|\n| `google/gemini-3.1-flash-image-preview` | Google Vertex AI | Latest fast image generation with improved quality |\n| `google/gemini-3-pro-image-preview` | Google Vertex AI | High-quality photorealistic images |\n| `google/gemini-2.5-flash-image` | Google Vertex AI | Fast image generation |\n| `byteplus/seedream-4-5` | Byteplus Seedream | Creative artistic styles |\n| `byteplus/seedream-4-0` | Byteplus Seedream | General purpose image generation |\n| `openai/gpt-image-1` | OpenAI | Advanced ima\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

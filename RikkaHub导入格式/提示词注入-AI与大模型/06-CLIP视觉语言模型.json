@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "946186db-a476-4b00-8a5b-7d4105d0d810",
+    "name": "CLIP视觉语言模型",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# CLIP - Contrastive Language-Image Pre-Training\n\nOpenAI's model that understands images from natural language.\n\n## When to use CLIP\n\n**Use when:**\n- Zero-shot image classification (no training data needed)\n- Image-text similarity/matching\n- Semantic image search\n- Content moderation (detect NSFW, violence)\n- Visual question answering\n- Cross-modal retrieval (image→text, text→image)\n\n**Metrics**:\n- **25,300+ GitHub stars**\n- Trained on 400M image-text pairs\n- Matches ResNet-50 on ImageNet (zero-shot)\n- MIT License\n\n**Use alternatives instead**:\n- **BLIP-2**: Better captioning\n- **LLaVA**: Vision-language chat\n- **Segment Anything**: Image segmentation\n\n## Quick start\n\n### Installation\n\n### Zero-shot classification\n\npython\nimport torch\nimport clip\nfrom PIL import Image\n\n# Load model\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nmodel, preprocess = clip.load(\"ViT-B/32\", device=device)\n\n# Load image\nimage = preprocess(Image.open(\"photo.jpg\")).unsqueeze(0).to(device)\n\n# Define possible labels\ntext = clip.tokenize([\"a dog\", \"a cat\", \"a bird\", \"a car\"]).to(device)\n\n# Compute similarity\nwith torch.no_grad():\n    image_features = model.encode_image(image)\n    text_features = model.encode_text(text)\n\n    # Cosine similarity\n    logits_per_image, logits_per_text = model(image, text)\n    probs = logits_per_image.softmax(dim=-1).cpu().numpy()\n\n# Print results\nlabels = [\"a dog\", \"a cat\", \"a bird\", \"a car\"]\nfor label, prob in zip(labels, probs[0]):\n    print(f\"{label}: {prob:.2%}\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

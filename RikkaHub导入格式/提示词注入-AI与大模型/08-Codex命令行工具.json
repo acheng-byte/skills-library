@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "808fd4e6-17a2-485f-ba17-b2b2218675b4",
+    "name": "Codex命令行工具",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Codex Skill Guide\n\n## Running a Task\n1. Default to `gpt-5.2` model. Ask the user (via `AskUserQuestion`) which reasoning effort to use (`xhigh`,`high`, `medium`, or `low`). User can override model if needed (see Model Options below).\n2. Select the sandbox mode required for the task; default to `--sandbox read-only` unless edits or network access are necessary.\n3. Assemble the command with the appropriate options:\n   - `-m, --model <MODEL>`\n   - `--config model_reasoning_effort=\"<high|medium|low>\"`\n   - `--sandbox <read-only|workspace-write|danger-full-access>`\n   - `--full-auto`\n   - `-C, --cd <DIR>`\n   - `--skip-git-repo-check`\n3. Always use --skip-git-repo-check.\n4. When continuing a previous session, use `codex exec --skip-git-repo-check resume --last` via stdin. When resuming don't use any configuration flags unless explicitly requested by the user e.g. if he species the model or the reasoning effort when requesting to resume a session. Resume syntax: `echo \"your prompt here\" | codex exec --skip-git-repo-check resume --last 2>/dev/null`. All flags have to be inserted between exec and resume.\n5. **IMPORTANT**: By default, append `2>/dev/null` to all `codex exec` commands to suppress thinking tokens (stderr). Only show stderr if the user explicitly requests to see thinking tokens or if debugging is needed.\n6. Run the command, capture stdout/stderr (filtered as appropriate), and summarize the outcome for the user.\n7. **After Codex completes**, inform the user: \"You can res\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "99085813-a842-4368-8f79-1a1e535b57f1",
+    "name": "部署到Vercel",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Deploy to Vercel\n\nDeploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.\n\nThe goal is to get the user into the best long-term setup: their project linked to Vercel with git-push deploys. Every method below tries to move the user closer to that state.\n\n## Step 1: Gather Project State\n\nRun all four checks before deciding which method to use:\n\n# 1. Check for a git remote\ngit remote get-url origin 2>/dev/null\n\n# 2. Check if locally linked to a Vercel project (either file means linked)\ncat .vercel/project.json 2>/dev/null || cat .vercel/repo.json 2>/dev/null\n\nvercel whoami 2>/dev/null\n\n# 4. List available teams (if authenticated)\nvercel teams list --format json 2>/dev/null\n\n### Team selection\n\nIf the user belongs to multiple teams, present all available team slugs as a bulleted list and ask which one to deploy to. Once the user picks a team, proceed immediately to the next step — do not ask for additional confirmation.\n\nvercel deploy [path] -y --no-wait --scope <team-slug>\n\nIf the project is already linked (`.vercel/project.json` or `.vercel/repo.json` exists), the `orgId` in those files determines the team — no need to ask again. If there is only one team (or just a personal account), skip the prompt and use it directly.\n\n**About the `.vercel/` directory:** A linked project has either:\n- `.vercel/project.json` — created by `vercel link` (single project linking). Contains `projectId` and `orgId`.\n- `.vercel/rep\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

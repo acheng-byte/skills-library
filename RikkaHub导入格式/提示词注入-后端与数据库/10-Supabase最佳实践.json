@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "88b69576-69eb-45c0-84e9-c2eef155e06e",
+    "name": "Supabase最佳实践",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Supabase Postgres Best Practices\n\nComprehensive performance optimization guide for Postgres, maintained by Supabase. Contains rules across 8 categories, prioritized by impact to guide automated query optimization and schema design.\n\n## When to Apply\n\nReference these guidelines when:\n- Writing SQL queries or designing schemas\n- Implementing indexes or query optimization\n- Reviewing database performance issues\n- Configuring connection pooling or scaling\n- Optimizing for Postgres-specific features\n- Working with Row-Level Security (RLS)\n\n## Rule Categories by Priority\n\n| Priority | Category | Impact | Prefix |\n|----------|----------|--------|--------|\n| 1 | Query Performance | CRITICAL | `query-` |\n| 2 | Connection Management | CRITICAL | `conn-` |\n| 3 | Security & RLS | CRITICAL | `security-` |\n| 4 | Schema Design | HIGH | `schema-` |\n| 5 | Concurrency & Locking | MEDIUM-HIGH | `lock-` |\n| 6 | Data Access Patterns | MEDIUM | `data-` |\n| 7 | Monitoring & Diagnostics | LOW-MEDIUM | `monitor-` |\n| 8 | Advanced Features | LOW | `advanced-` |\n\n## How to Use\n\nRead individual rule files for detailed explanations and SQL examples:\n\nreferences/query-missing-indexes.md\nreferences/query-partial-indexes.md\nreferences/_sections.md\n\nEach rule file contains:\n- Brief explanation of why it matters\n- Incorrect SQL example with explanation\n- Correct SQL example with explanation\n- Optional EXPLAIN output or metrics\n- Additional context and references\n- Supabase-specific notes (when applicable)\n\n\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

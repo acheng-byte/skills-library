@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0a8be993-8b97-442b-8400-8cfaf0c98f61",
+    "name": "A股价值投资分析",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\n当用户请求以下操作时调用此skill：\n- 分析某只A股股票\n- 筛选符合条件的股票\n- 对比多只股票或行业内股票\n- 计算股票估值或内在价值\n- 查看股票的财务健康状况\n- 检测财务异常风险\n\n## Output Format\n\n### JSON输出格式\n\n所有脚本输出JSON格式，便于后续处理：\n\njson\n{\n  \"code\": \"600519\",\n  \"name\": \"贵州茅台\",\n  \"analysis_date\": \"2025-01-25\",\n  \"level\": \"standard\",\n  \"summary\": {\n    \"score\": 85,\n    \"conclusion\": \"低估\",\n    \"recommendation\": \"建议关注\"\n  },\n  \"financials\": { ... },\n  \"valuation\": { ... },\n  \"risks\": [ ... ]\n}\n```",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

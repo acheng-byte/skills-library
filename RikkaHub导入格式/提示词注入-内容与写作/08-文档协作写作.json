@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "3869f66d-a582-4878-947b-e314eedf7f80",
+    "name": "文档协作写作",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Doc Co-Authoring Workflow\n\nThis skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing.\n\n## When to Offer This Workflow\n\n**Trigger conditions:**\n- User mentions writing documentation: \"write a doc\", \"draft a proposal\", \"create a spec\", \"write up\"\n- User mentions specific doc types: \"PRD\", \"design doc\", \"decision doc\", \"RFC\"\n- User seems to be starting a substantial writing task\n\n**Initial offer:**\nOffer the user a structured workflow for co-authoring the document. Explain the three stages:\n\n1. **Context Gathering**: User provides all relevant context while Claude asks clarifying questions\n2. **Refinement & Structure**: Iteratively build each section through brainstorming and editing\n3. **Reader Testing**: Test the doc with a fresh Claude (no context) to catch blind spots before others read it\n\nExplain that this approach helps ensure the doc works well when others read it (including when they paste it into Claude). Ask if they want to try this workflow or prefer to work freeform.\n\nIf user declines, work freeform. If user accepts, proceed to Stage 1.\n\n## Stage 1: Context Gathering\n\n**Goal:** Close the gap between what the user knows and what Claude knows, enabling smart guidance later.\n\n### Initial Questions\n\nStart by asking the user for meta-context about the document:\n\n1. What type of document is this? (e.g., tech\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

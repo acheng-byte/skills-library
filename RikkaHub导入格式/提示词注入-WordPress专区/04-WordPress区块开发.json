@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "7c6b4de5-a9c8-479b-8b5e-cf3ddab6152d",
+    "name": "WordPress区块开发",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n\nUse this skill for block work such as:\n\n- creating a new block, or updating an existing one\n- fixing “block invalid / not saving / attributes not persisting”\n- adding dynamic rendering (`render.php` / `render_callback`)\n- block deprecations and migrations (`deprecated` versions)\n- build tooling for blocks (`@wordpress/scripts`, `@wordpress/create-block`, `wp-env`)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

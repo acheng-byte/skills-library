@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "dc6dc8fa-1555-4545-848d-17fda4e6cf8d",
+    "name": "视频帧提取",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Video Frames (ffmpeg)\n\nExtract a single frame from a video, or create quick thumbnails for inspection.\n\n## Quick start\n\nFirst frame:\n\nAt a timestamp:\n\n## Notes\n\n- Prefer `--time` for “what is happening around here?”.\n- Use a `.jpg` for quick share; use `.png` for crisp UI frames.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

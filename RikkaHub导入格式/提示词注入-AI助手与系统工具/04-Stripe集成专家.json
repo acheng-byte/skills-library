@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "ecfcd71d-8319-4e68-85c5-9441414185ce",
+    "name": "Stripe集成专家",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\n- Adding subscription billing to any web app\n- Implementing plan upgrades/downgrades with proration\n- Building usage-based or seat-based billing\n- Debugging webhook delivery failures\n- Migrating from one billing model to another\n\n---",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

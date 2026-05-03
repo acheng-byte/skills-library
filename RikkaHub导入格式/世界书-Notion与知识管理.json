@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "52e3ec16-3527-405a-ad6d-42e1808a7c75",
+    "name": "Notion与知识管理技能触发库",
+    "description": "Notion与知识管理分类共8个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "af3b404c-7cbc-4393-a880-c4fc4c8ee9b5",
+        "name": "Notion-API操作",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "This skill enables interaction with Notion workspaces through the Notion REST API. Use `curl` and `jq` for direct REST calls, or write ad-hoc scripts as appropriate for the task.\n1. **Environment Vari",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Notion API",
+          "Notion操作",
+          "创建页面",
+          "查询数据库"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "502c9710-4b3e-494e-a864-4b6ffb1634ea",
+        "name": "Notion会议智能",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "1. Add the Notion MCP:\n2. Enable remote MCP client:\n3. Log in with OAuth:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "会议准备",
+          "会议议程",
+          "Notion会议",
+          "会议记录"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "f017e4fa-3e8f-4841-9183-2de8684cef84",
+        "name": "Notion知识捕获",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "1. Add the Notion MCP:\n2. Enable remote MCP client:\n3. Log in with OAuth:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "知识捕获",
+          "记录决策",
+          "Notion知识库",
+          "整理笔记"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1d294c7b-8cdb-4c7a-bc48-eff7254d3d3b",
+        "name": "Notion研究文档",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "1. Add the Notion MCP:\n2. Enable remote MCP client:\n3. Log in with OAuth:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "研究文档",
+          "Notion调研",
+          "生成报告",
+          "知识整合"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ea189179-3c0f-4b64-854b-074b6f201737",
+        "name": "Notion规格转实现",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "1. Add the Notion MCP:\n2. Enable remote MCP client:\n3. Log in with OAuth:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "规格转实现",
+          "需求拆解",
+          "Notion任务",
+          "实现计划"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9484fb72-2346-4742-b4f6-bd77c16d60c9",
+        "name": "Obsidian-Markdown格式",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark and GFM with wikilinks, embeds, callouts, properties, comments, and other syntax. This skill covers only Obsidian-specific",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Obsidian笔记",
+          "双链语法",
+          "Obsidian格式",
+          "wikilink"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "5d1fc2bc-858c-47e8-954f-7101712c5aac",
+        "name": "Obsidian命令行",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "Run `obsidian help` to see all available commands. This is always up to date. Full docs: https://help.obsidian.md/cli\n**Parameters** take a value with `=`. Quote values with spaces:\nobsidian create na",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Obsidian命令行",
+          "obsidian CLI",
+          "Obsidian操作",
+          "vault管理"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "cad04c46-92a2-421d-9711-0bb005bedd33",
+        "name": "Obsidian数据库视图",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "1. **Create the file**: Create a `.base` file in the vault with valid YAML content\n2. **Define scope**: Add `filters` to select which notes appear (by tag, folder, property, or date)\n3. **Add formulas** (optional): Define computed properties in the `formulas` section",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Obsidian数据库",
+          "Bases视图",
+          "笔记数据库",
+          "动态视图"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

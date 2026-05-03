@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "ef3c1628-ebee-426c-b495-05b6ed04a3c6",
+    "name": "爆款视频生成流水线",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n### Step 1: Write Script\n\nUse the script template in `references/script-templates.md`. Every video follows the 6-8 scene structure:\n\n| Scene | Purpose | Duration |\n|-------|---------|----------|\n| Hook | Grab attention, relatable problem | 5-9s |\n| Discovery | Introduce the solution | 6-10s |\n| Demo | Show it working | 8-13s |\n| Features | Key benefits (1-3 scenes) | 5-10s each |\n| Payoff | Emotional resolution | 6-8s |\n| CTA | Call to action | 5-9s |\n\nWrite each scene with:\n- `visual_prompt`: Text prompt for AI video generation\n- `voiceover`: Narration text\n- `sfx`: Sound effect cue (whoosh, ding, boom, etc.)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

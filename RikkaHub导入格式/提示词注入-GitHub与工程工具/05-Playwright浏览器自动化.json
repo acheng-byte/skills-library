@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "8ab1adaf-57e5-4eab-a996-c03b6f34e046",
+    "name": "Playwright浏览器自动化",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.\n\n## Prerequisite check (required)\n\nBefore proposing commands, check whether `npx` is available (the wrapper depends on it):\n\ncommand -v npx >/dev/null 2>&1\n\nIf it is not available, pause and ask the user to install Node.js/npm (which provides `npx`). Provide these steps verbatim:\n\n# Verify Node/npm are installed\nnode --version\nnpm --version\n\n# If missing, install Node.js/npm, then:\nplaywright-cli --help\n\nOnce `npx` is present, proceed with the wrapper script. A global install of `playwright-cli` is optional.\n\n## Skill path (set once)\n\nexport CODEX_HOME=\"${CODEX_HOME:-$HOME/.codex}\"\n\nUser-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).\n\n## Quick start\n\nUse the wrapper script:\n\n\"$PWCLI\" open https://playwright.dev --headed\n\"$PWCLI\" snapshot\n\"$PWCLI\" click e15\n\"$PWCLI\" type \"Playwright\"\n\"$PWCLI\" press Enter\n\"$PWCLI\" screenshot\n\nIf the user prefers a global install, this is also valid:\n\nplaywright-cli --help\n\n## Core workflow\n\n1. Open the page.\n2. Snapshot to get stable element refs.\n3. Interact using refs from the latest snapshot.\n4. Re-snapshot after navigation or significant DOM changes.\n5. Capture artifacts (screenshot, pdf, traces) when useful.\n\nMinimal loop:\n\n\"$PWCLI\" open https://example.com\n\"$PWCLI\" snapshot\n\"$PWCLI\" click e3\n\"$PWCLI\" snapshot\n\n## When to snapshot again\n\nSnapshot again after:\n\n- navigation\n- clicking e\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

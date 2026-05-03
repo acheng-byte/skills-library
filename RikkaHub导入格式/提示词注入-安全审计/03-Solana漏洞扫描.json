@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c4d232f6-1495-4720-9cde-de3783aea120",
+    "name": "Solana漏洞扫描",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Solana Vulnerability Scanner\n\n## 1. Purpose\n\nSystematically scan Solana programs (native and Anchor framework) for platform-specific security vulnerabilities related to cross-program invocations, account validation, and program-derived addresses. This skill encodes 6 critical vulnerability patterns unique to Solana's account model.\n\n## 2. When to Use This Skill\n\n- Auditing Solana programs (native Rust or Anchor)\n- Reviewing cross-program invocation (CPI) logic\n- Validating program-derived address (PDA) implementations\n- Pre-launch security assessment of Solana protocols\n- Reviewing account validation patterns\n- Assessing instruction introspection logic\n\n## 3. Platform Detection\n\n### File Extensions & Indicators\n- **Rust files**: `.rs`\n\n### Language/Framework Markers\n// Native Solana program indicators\nuse solana_program::{\n    account_info::AccountInfo,\n    entrypoint,\n    entrypoint::ProgramResult,\n    pubkey::Pubkey,\n    program::invoke,\n    program::invoke_signed,\n};\n\nentrypoint!(process_instruction);\n\n// Anchor framework indicators\nuse anchor_lang::prelude::*;\n\n#[program]\npub mod my_program {\n    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {\n        // Program logic\n    }\n}\n\n#[derive(Accounts)]\npub struct Initialize<'info> {\n    #[account(mut)]\n    pub authority: Signer<'info>,\n}\n\n// Common patterns\nAccountInfo, Pubkey\ninvoke(), invoke_signed()\nSigner<'info>, Account<'info>\n#[account(...)] with constraints\nseeds, bump\n\n### Project Structure\n- `programs/*/s\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

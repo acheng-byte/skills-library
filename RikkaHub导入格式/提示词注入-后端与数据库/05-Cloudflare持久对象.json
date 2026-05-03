@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "5b5bbcb4-9e8a-41f3-ae23-42c46d3c4246",
+    "name": "Cloudflare持久对象",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\n- Creating new Durable Object classes for stateful coordination\n- Implementing RPC methods, alarms, or WebSocket handlers\n- Reviewing existing DO code for best practices\n- Configuring wrangler.jsonc/toml for DO bindings and migrations\n- Writing tests with `@cloudflare/vitest-pool-workers`\n- Designing sharding strategies and parent-child relationships",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

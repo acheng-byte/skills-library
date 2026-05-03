@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "48002d98-9bce-40e1-a159-b6cee32bf692",
+    "name": "Notion研究文档",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n### 0) If any MCP call fails because Notion MCP is not connected, pause and set it up:\n1. Add the Notion MCP:\n   - `codex mcp add notion --url https://mcp.notion.com/mcp`\n2. Enable remote MCP client:\n   - Set `[features].rmcp_client = true` in `config.toml` **or** run `codex --enable rmcp_client`\n3. Log in with OAuth:\n   - `codex mcp login notion`\n\nAfter successful login, the user will have to restart codex. You should finish your answer and tell them so when they try again they can continue with Step 1.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

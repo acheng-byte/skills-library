@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0bbf9ec9-ea80-4eb9-8c64-bc980d5ef4a8",
+    "name": "Rust模糊测试",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\ncargo-fuzz is currently the primary and most mature fuzzing solution for Rust projects using Cargo.\n\n| Fuzzer | Best For | Complexity |\n|--------|----------|------------|\n| cargo-fuzz | Cargo-based Rust projects, quick setup | Low |\n| AFL++ | Multi-core fuzzing, non-Cargo projects | Medium |\n| LibAFL | Custom fuzzers, research, advanced use cases | High |\n\n**Choose cargo-fuzz when:**\n- Your project uses Cargo (required)\n- You want simple, quick setup with minimal configuration\n- You need integrated sanitizer support\n- You're fuzzing Rust code with or without unsafe blocks",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

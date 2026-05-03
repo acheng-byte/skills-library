@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "329f3d93-f6d4-4c64-ab90-8e6e094eadd5",
+    "name": "单细胞基因组查询",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# CZ CELLxGENE Census\n\n## Overview\n\nThe CZ CELLxGENE Census provides programmatic access to a comprehensive, versioned collection of standardized single-cell genomics data from CZ CELLxGENE Discover. This skill enables efficient querying and analysis of millions of cells across thousands of datasets.\n\nThe Census includes:\n- **61+ million cells** from human and mouse\n- **Standardized metadata** (cell types, tissues, diseases, donors)\n- **Raw gene expression** matrices\n- **Pre-calculated embeddings** and statistics\n- **Integration with PyTorch, scanpy, and other analysis tools**\n\n## When to Use This Skill\n\nThis skill should be used when:\n- Querying single-cell expression data by cell type, tissue, or disease\n- Exploring available single-cell datasets and metadata\n- Training machine learning models on single-cell data\n- Performing large-scale cross-dataset analyses\n- Integrating Census data with scanpy or other analysis frameworks\n- Computing statistics across millions of cells\n- Accessing pre-calculated embeddings or model predictions\n\n## Core Workflow Patterns\n\n### 1. Opening the Census\n\nAlways use the context manager to ensure proper resource cleanup:\n\nimport cellxgene_census\n\n# Open latest stable version\nwith cellxgene_census.open_soma() as census:\n    # Work with census data\n\n# Open specific version for reproducibility\nwith cellxgene_census.open_soma(census_version=\"2023-07-25\") as census:\n    # Work with census data\n\n**Key points:**\n- Use context manager (`with` statement)\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

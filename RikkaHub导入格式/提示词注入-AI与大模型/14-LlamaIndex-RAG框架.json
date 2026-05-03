@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "b02d0e70-2308-43f4-b711-401d82bdb004",
+    "name": "LlamaIndex-RAG框架",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# LlamaIndex - Data Framework for LLM Applications\n\nThe leading framework for connecting LLMs with your data.\n\n## When to use LlamaIndex\n\n**Use LlamaIndex when:**\n- Building RAG (retrieval-augmented generation) applications\n- Need document question-answering over private data\n- Ingesting data from multiple sources (300+ connectors)\n- Creating knowledge bases for LLMs\n- Building chatbots with enterprise data\n- Need structured data extraction from documents\n\n**Metrics**:\n- **45,100+ GitHub stars**\n- **23,000+ repositories** use LlamaIndex\n- **300+ data connectors** (LlamaHub)\n- **1,715+ contributors**\n- **v0.14.7** (stable)\n\n**Use alternatives instead**:\n- **LangChain**: More general-purpose, better for agents\n- **Haystack**: Production search pipelines\n- **txtai**: Lightweight semantic search\n- **Chroma**: Just need vector storage\n\n## Quick start\n\n### Installation\n\n# Starter package (recommended)\n\n# Or minimal core + specific integrations\n\n### 5-line RAG example\n\npython\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\n\n# Load documents\ndocuments = SimpleDirectoryReader(\"data\").load_data()\n\n# Create index\nindex = VectorStoreIndex.from_documents(documents)\n\n# Query\nquery_engine = index.as_query_engine()\nresponse = query_engine.query(\"What did the author do growing up?\")\nprint(response)\n\n## Core concepts\n\n### 1. Data connectors - Load documents\n\npython\nfrom llama_index.core import SimpleDirectoryReader, Document\nfrom llama_index.readers.web import SimpleWebPag\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

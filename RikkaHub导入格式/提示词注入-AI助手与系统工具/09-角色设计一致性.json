@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "977e52ee-1c13-4ad9-967c-a0c522b0695b",
+    "name": "角色设计一致性",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Character Design Sheet\n\nCreate consistent characters across multiple AI-generated images via [inference.sh](https://inference.sh) CLI.\n\n## Quick Start\n\nbelt login\n\n# Generate a character concept\nbelt app run falai/flux-dev-lora --input '{\n  \"prompt\": \"character design reference sheet, front view of a young woman with short red hair, green eyes, wearing a blue jacket and white t-shirt, full body, white background, clean lines, concept art style, character turnaround\",\n  \"width\": 1024,\n  \"height\": 1024\n}'\n\n## The Consistency Problem\n\nAI image generation produces different-looking characters every time, even with the same prompt. This is the #1 challenge in AI art for any project requiring the same character across multiple images.\n\n### Solutions (Ranked by Effectiveness)\n\n| Technique | Consistency | Effort | Best For |\n|-----------|-------------|--------|----------|\n| **FLUX LoRA** (trained on character) | Very high | High (requires training data) | Ongoing projects, many images |\n| **Detailed description anchor** | Medium-high | Low | Quick projects, few images |\n| **Same seed + similar prompt** | Medium | Low | Variations of single pose |\n| **Image-to-image refinement** | Medium | Medium | Refining existing images |\n| **Reference image in prompt** | Varies | Low | When model supports it |\n\n## Reference Sheet Types\n\n### 1. Turnaround Sheet\n\nShows the character from multiple angles:\n\n┌────────┬────────┬────────┬────────┐\n│        │        │        │        │\n│ FRONT  │  3/4  \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

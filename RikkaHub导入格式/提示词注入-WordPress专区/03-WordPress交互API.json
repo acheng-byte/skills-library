@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "a2a527f0-d0bf-4618-96cd-1670b453ff47",
+    "name": "WordPress交互API",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n\nUse this skill when the user mentions:\n\n- Interactivity API, `@wordpress/interactivity`,\n- `data-wp-interactive`, `data-wp-on--*`, `data-wp-bind--*`, `data-wp-context`,\n- block `viewScriptModule` / module-based view scripts,\n- hydration issues or “directives don’t fire”.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "56b3e438-b69e-494c-9e52-06f0ba2e9fe3",
+    "name": "PPT文件处理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# PPT 文件处理（手机版）\n\n## 环境说明\n\n手机端（RikkaHub）可执行 **JavaScript**，创建 PPT 使用 **pptxgenjs** 包。\n\n安装依赖：\nnpm install pptxgenjs\n\n---\n\n## 快速参考\n\n| 任务 | 方式 |\n|------|------|\n| 创建新演示文稿 | 用 `pptxgenjs`（见下方示例） |\n| 读取/分析内容 | 上传 .pptx 让 AI 直接分析 |\n\n---\n\n## 创建演示文稿\n\nconst pptxgen = require('pptxgenjs');\n\nconst prs = new pptxgen();\n\n// 设置幻灯片尺寸（宽屏 16:9）\nprs.layout = 'LAYOUT_WIDE'; // 33.87cm x 19.05cm\n\n// 封面页\nconst slide1 = prs.addSlide();\nslide1.background = { color: '1E2761' }; // 深蓝色背景\n\nslide1.addText('项目标题', {\n  x: 1, y: 3, w: '80%', h: 1.5,\n  fontSize: 44, bold: true,\n  color: 'FFFFFF',\n  align: 'center'\n});\n\nslide1.addText('副标题 · 2026年', {\n  x: 1, y: 5, w: '80%', h: 0.8,\n  fontSize: 20, color: 'CADCFC',\n  align: 'center'\n});\n\n// 内容页\nconst slide2 = prs.addSlide();\nslide2.background = { color: 'FFFFFF' };\n\n// 标题\nslide2.addText('第一章：核心观点', {\n  x: 0.5, y: 0.3, w: '90%', h: 0.7,\n  fontSize: 36, bold: true, color: '1E2761'\n});\n\n// 要点列表\nconst bullets = [\n  '核心发现一：重要观点说明',\n  '核心发现二：数据支撑内容',\n  '核心发现三：结论与建议'\n];\nbullets.forEach((text, i) => {\n  slide2.addText('• ' + text, {\n    x: 0.8, y: 1.5 + i * 0.8, w: '85%', h: 0.7,\n    fontSize: 16, color: '36454F'\n  });\n});\n\n// 保存\nprs.writeFile({ fileName: 'presentation.pptx' })\n  .then(() => console.log('PPT 已生成: presentation.pptx'));\n\n---\n\n## 设计规范\n\n### 颜色搭配\n\n**不要用默认蓝色，选适合主题的颜色：**\n\n| 主题 | 主色 | 辅色 | 强调色 |\n|------|------|------|--------|\n| 商务深沉 | `1E2761` 深蓝 | `CADCFC` 冰蓝 | `FFFFFF` 白 |\n| 森林沉稳 | `2C5F2D` 深绿 | `97BC62` 苔绿 | `F5F5F5` 米白 |\n| 活力珊瑚 | `F96167` 珊瑚 | `F9E795`\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

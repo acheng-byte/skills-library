@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0faf3b0f-744a-42a7-af77-33d39620181f",
+    "name": "聊天界面组件",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Chat UI Components\n\nChat building blocks from [ui.inference.sh](https://ui.inference.sh).\n\n![Chat UI Components](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kgvftp7hb8wby7z66fvs9asd.jpeg)\n\n## Quick Start\n\n# Install chat components\nnpx shadcn@latest add https://ui.inference.sh/r/chat.json\n\n## Components\n\n### Chat Container\n\ntsx\nimport { ChatContainer } from \"@/registry/blocks/chat/chat-container\"\n\n<ChatContainer>\n  {/* messages go here */}\n</ChatContainer>\n\n### Messages\n\ntsx\nimport { ChatMessage } from \"@/registry/blocks/chat/chat-message\"\n\n<ChatMessage\n  role=\"user\"\n  content=\"Hello, how can you help me?\"\n/>\n\n<ChatMessage\n  role=\"assistant\"\n  content=\"I can help you with many things!\"\n/>\n\n### Chat Input\n\ntsx\nimport { ChatInput } from \"@/registry/blocks/chat/chat-input\"\n\n<ChatInput\n  onSubmit={(message) => handleSend(message)}\n  placeholder=\"Type a message...\"\n  disabled={isLoading}\n/>\n\n### Typing Indicator\n\ntsx\nimport { TypingIndicator } from \"@/registry/blocks/chat/typing-indicator\"\n\n{isTyping && <TypingIndicator />}\n\n## Full Example\n\ntsx\nimport {\n  ChatContainer,\n  ChatMessage,\n  ChatInput,\n  TypingIndicator,\n} from \"@/registry/blocks/chat\"\n\nexport function Chat() {\n  const [messages, setMessages] = useState([])\n  const [isLoading, setIsLoading] = useState(false)\n\n  const handleSend = async (content: string) => {\n    setMessages(prev => [...prev, { role: 'user', content }])\n    setIsLoading(true)\n    // Send to API...\n    setIsLoading(false)\n  }\n\n \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

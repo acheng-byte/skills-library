@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "39d23ac0-9d46-42da-8810-f667cc5d555a",
+    "name": "Astro框架",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Astro Usage Guide\n\n**Always consult [docs.astro.build](https://docs.astro.build) for code examples and latest API.**\n\nAstro is the web framework for content-driven websites.\n\n---\n\n## Quick Reference\n\n### File Location\n\n- `npx astro dev` - Start the development server.\n- `npx astro build` - Build your project and write it to disk.\n- `npx astro check` - Check your project for errors.\n- `npx astro add` - Add an integration.\n- `npx astro sync` - Generate TypeScript types for all Astro modules.\n\n**Re-run after adding/changing plugins.**\n\n### Project Structure\n\nReference [project structure docs](https://docs.astro.build/en/basics/project-structure).\n\n- `src/*` - Project source code (components, pages, styles, images, etc.)\n- `src/pages` - **Required.** Defines all pages and routes.\n- `src/components` - Components (convention, not required).\n- `src/layouts` - Layout components (convention, not required).\n- `src/styles` - CSS/Sass files (convention, not required).\n- `public/*` - Non-code, unprocessed assets (fonts, icons, etc.); copied as-is to build output.\n- `package.json` - Project manifest.\n- `astro.config.{js,mjs,cjs,ts}` - Astro configuration file. (recommended)\n- `tsconfig.json` - TypeScript configuration file. (recommended)\n\n---\n\n## Core Config Options\n\n| Option | Notes |\n|--------|-------|\n| `site` | Your final, deployed URL. Used to generate sitemaps and canonical URLs. |\n\n### Example `astro.config.ts`\n\nimport { defineConfig } from 'astro/config';\n\nexport default defineCo\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

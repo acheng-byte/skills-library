@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "19f7774a-02be-458a-b527-ffd6f290712a",
+    "name": "前端开发技能触发库",
+    "description": "前端开发分类共22个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "9cdac09d-1092-44e0-99eb-686eb2b71407",
+        "name": "3D网页体验",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "**Role**: 3D Web Experience Architect\nYou bring the third dimension to the web. You know when 3D enhances\nand when it's just showing off. You balance visual impact with\nperformance. You make 3D access",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "3D网页",
+          "Three"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "d64f8e5b-83ef-4c98-8210-795a1399b47d",
+        "name": "Astro框架",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "**Always consult [docs.astro.build](https://docs.astro.build) for code examples and latest API.**\nAstro is the web framework for content-driven websites.\n---\n- `npx astro dev` - Start the development ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Astro",
+          "astro dev",
+          "astro build",
+          "astro框架",
+          "静态网站"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "a412e89a-bec6-46b5-9112-64f2b2c7c3be",
+        "name": "Astro框架专家",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Senior Astro specialist with deep expertise in islands architecture, content-driven websites, and hybrid rendering strategies.\nYou are a senior frontend engineer with extensive Astro experience. You s",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Astro专家",
+          "islands架构",
+          "服务端岛屿",
+          "内容集合",
+          "Astro SSR"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "0d84aae3-efe0-4baa-8883-d234b94bf7fb",
+        "name": "Canvas视觉设计",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.\nComplete this in two steps:\n1. Design",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "视觉设计",
+          "设计哲学",
+          "Canvas设计",
+          "艺术创作",
+          "PDF设计"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1b4c2ae3-192a-440b-89f1-451d63cc5487",
+        "name": "ChatGPT应用开发",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Scaffold ChatGPT Apps SDK implementations with a docs-first, example-first workflow, then generate code that follows current Apps SDK and MCP Apps bridge patterns.\nUse this skill to produce:\n- A prima",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "ChatGPT应用",
+          "Apps SDK",
+          "MCP服务器",
+          "ChatGPT插件",
+          "openai apps"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "8587a7a8-d648-4e5b-832f-45cdbbe862fd",
+        "name": "ChatGPT应用构建",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "This file provides a NAVIGATION GUIDE ONLY. Before implementing any MCP server features, you MUST:\n1. Read this overview to understand which reference files are relevant\n2. **ALWAYS read the specific ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "mcp-use",
+          "MCP服务器构建",
+          "Widget开发",
+          "MCP工具",
+          "MCP应用"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "76dc35b2-c629-4d53-9ff0-14e5b62b20cb",
+        "name": "Figma设计系统规则",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "This skill helps you generate custom design system rules tailored to your project's specific needs. These rules guide AI coding agents to produce consistent, high-quality code when implementing Figma ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Figma规则",
+          "设计系统规则",
+          "Figma MCP",
+          "设计转代码",
+          "Figma guidelines"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ad510b92-3652-4b16-b9ba-c9c955438ff8",
+        "name": "Instagram轮播图生成",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "Generate Instagram carousels that are genuinely world-class: content people save, share, and come back to. Not engagement bait. Not AI slop. Actual value, delivered through precise visual design and n",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Instagram轮播图",
+          "carousel生成",
+          "社交媒体内容",
+          "轮播图设计",
+          "Instagram图文"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "631d7ef0-b643-4a0d-852d-3af4b8fa7173",
+        "name": "Next.js升级助手",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "Upgrade the current project to the latest Next.js version following official migration guides.\n1. **Detect current version**: Read `package.json` to identify the current Next.js version and related de",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "升级Next"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "78e5f6fc-1e0b-4df6-b8bb-d755e0fcd381",
+        "name": "Next.js最佳实践",
+        "enabled": true,
+        "priority": 77,
+        "position": "after_system_prompt",
+        "content": "Apply these rules when writing or reviewing Next.js code.\nSee [file-conventions.md](./file-conventions.md) for:\n- Project structure and special files\n- Route segments (dynamic, catch-all, groups)\n- Pa",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Next"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "e2330692-7ec1-4c3a-9527-36dfac55f89e",
+        "name": "Next.js缓存组件",
+        "enabled": true,
+        "priority": 75,
+        "position": "after_system_prompt",
+        "content": "Cache Components enable Partial Prerendering (PPR) - mix static, cached, and dynamic content in a single route.\nThis replaces the old `experimental.ppr` flag.\n---\nWith Cache Components enabled, conten",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "use cache",
+          "缓存组件",
+          "PPR",
+          "局部预渲染",
+          "Next"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1114e703-dee1-46b2-af82-232e02190893",
+        "name": "React邮件模板",
+        "enabled": true,
+        "priority": 73,
+        "position": "after_system_prompt",
+        "content": "Build and send HTML emails using React components - a modern, component-based approach to email development that works across all major email clients.\nYou must change into the newly created project fo",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "React邮件",
+          "邮件模板",
+          "react-email",
+          "HTML邮件",
+          "邮件发送"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "c2191755-27ef-4168-8b66-5134e3137e75",
+        "name": "Remotion视频组件",
+        "enabled": true,
+        "priority": 71,
+        "position": "after_system_prompt",
+        "content": "Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Remotion",
+          "视频组件",
+          "程序化视频",
+          "视频动画",
+          "Remotion视频"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "429d96eb-ecbc-435d-9b1b-7986e8acd057",
+        "name": "Shopify专家",
+        "enabled": true,
+        "priority": 69,
+        "position": "after_system_prompt",
+        "content": "Senior Shopify developer with expertise in theme development, headless commerce, app architecture, and custom checkout solutions.\n1. **Requirements analysis** — Identify if theme, app, or headless app",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Shopify",
+          "Liquid模板",
+          "Shopify主题",
+          "Storefront API",
+          "Shopify应用"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "df7ed529-23f0-484b-8040-0373506211f7",
+        "name": "Web性能分析",
+        "enabled": true,
+        "priority": 67,
+        "position": "after_system_prompt",
+        "content": "Your knowledge of web performance metrics, thresholds, and tooling APIs may be outdated. **Prefer retrieval over pre-training** when citing specific numbers or recommendations.\n| Source | How to retri",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Web性能",
+          "性能分析",
+          "Core Web Vitals",
+          "性能审计",
+          "LCP",
+          "CLS",
+          "页面速度"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "62d1a048-1184-4c85-a44e-f2165e9494fa",
+        "name": "Web设计规范审查",
+        "enabled": true,
+        "priority": 65,
+        "position": "after_system_prompt",
+        "content": "Review files for compliance with Web Interface Guidelines.\n1. Fetch the latest guidelines from the source URL below\n2. Read the specified files (or prompt user for files/pattern)\n3. Check against all ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Web设计规范",
+          "界面规范审查",
+          "设计规范检查",
+          "UI规范"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1ff81969-7674-4a55-85d3-939d66c79799",
+        "name": "信息图制作",
+        "enabled": true,
+        "priority": 63,
+        "position": "after_system_prompt",
+        "content": "Infographics convert data, information, and knowledge into perceptible visual language. They combine visual design with data visualization, compressing complex information with intuitive symbols to he",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "信息图",
+          "infographic",
+          "数据可视化",
+          "AntV",
+          "可视化图表"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "e66f48ca-642b-482e-a5a3-f45dd2526e86",
+        "name": "前端界面设计",
+        "enabled": true,
+        "priority": 61,
+        "position": "after_system_prompt",
+        "content": "This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Implement real working code with exceptional attention to aesthetic details and",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "前端界面设计",
+          "UI设计",
+          "网页设计",
+          "前端设计",
+          "界面美化",
+          "前端组件设计"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "76dd4239-1fb7-4376-a687-41b5890a4900",
+        "name": "原生UI-Expo",
+        "enabled": true,
+        "priority": 59,
+        "position": "after_system_prompt",
+        "content": "Consult these resources as needed:\nreferences/\n  animations.md          Reanimated: entering, exiting, layout, scroll-driven, gestures\n  controls.md            Native iOS: Switch, Slider, SegmentedCon",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Expo",
+          "React Native",
+          "原生UI",
+          "expo-router",
+          "iOS开发",
+          "移动端UI"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ee8d4d20-5e9a-4ebf-bf56-00379b316cf3",
+        "name": "管理后台构建",
+        "enabled": true,
+        "priority": 57,
+        "position": "after_system_prompt",
+        "content": "Use when building the Admin Console for quote review, pricing management, or any internal tool.\nFor advanced patterns: [FIRESTORE_INTEGRATION.md](FIRESTORE_INTEGRATION.md) | [DATA_EDITOR_PATTERNS.md](",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "管理后台",
+          "admin dashboard",
+          "Streamlit",
+          "后台管理系统",
+          "内部工具"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "a1c9e1e2-55c1-4e8e-8c3a-a84c544e12ea",
+        "name": "聊天界面组件",
+        "enabled": true,
+        "priority": 55,
+        "position": "after_system_prompt",
+        "content": "Chat building blocks from [ui.inference.sh](https://ui.inference.sh).\n![Chat UI Components](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kgvftp7hb8wby7z66fvs9asd.jpeg)\nnpx shadc",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "聊天界面",
+          "chat UI",
+          "聊天组件",
+          "ChatMessage",
+          "ChatInput",
+          "聊天窗口"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "b176378e-cd72-433c-a75f-22551fe3bce8",
+        "name": "设计系统规则生成",
+        "enabled": true,
+        "priority": 53,
+        "position": "after_system_prompt",
+        "content": "This skill helps you generate custom design system rules tailored to your project's specific needs. These rules guide Claude to produce consistent, high-quality code when implementing Figma designs, e",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "设计系统规则",
+          "CLAUDE"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

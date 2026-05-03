@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "adf27e1e-ec25-49c1-ab2b-b4ccabf0bbf9",
+    "name": "提示词优化器",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n1. **Gather context** - Use AskUserQuestion to clarify:\n   - Target platform (Claude Code, ChatGPT, API, image gen)\n   - Priority (accuracy, speed, depth, creativity)\n   - Missing context (technical stack, constraints, examples)\n\n2. **Analyze** - Identify what's unclear, missing, or ambiguous\n\n3. **Improve** - Apply the framework (see references/framework.md)\n\n4. **Present** - Show improved prompt with key changes explained\n\n5. **Refine** - Ask if user wants adjustments\n\n## Output Format\n\n## Analysis\n[Brief issues/opportunities]",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

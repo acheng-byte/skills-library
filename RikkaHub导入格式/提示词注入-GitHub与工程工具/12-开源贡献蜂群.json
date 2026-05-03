@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "330af324-9ee7-44e6-97fe-a5dae54f9e35",
+    "name": "开源贡献蜂群",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# OSS Contributor Swarm Skill\n\n> \"I don't just write PRs. I continuously contribute to open source while learning from every interaction.\"\n\nThis skill deploys a **9-agent swarm** that autonomously:\n1. Qualifies repositories for contribution-friendliness\n2. Finds suitable \"good first issues\"\n3. Analyzes requirements\n4. Clones and understands codebases\n5. Writes fixes/features\n6. Adds tests (if needed)\n7. Updates documentation (if needed)\n8. Creates professional pull requests\n9. Responds to review feedback automatically\n\n## Quick Start\n\n# Run a single contribution cycle\n\n# Run continuous 24/7 mode (target: 3-5 PRs/day)\n\n# View dashboard\n```\n\n## Prerequisites\n\n- `jq` and `git`\n\n## Key Features\n\n### Continuous Mode\nRuns 24/7, automatically finding and contributing to open source projects.\n\n### Learning System\nTracks success patterns and improves over time:\n- Best issue types (typo, docs, tests)\n- Best languages and repo sizes\n- Maintainer preferences\n- Auto-avoids problematic repos\n\n### Auto-Fix Reviews\nAgent 8 can automatically fix simple review requests:\n- Typos, style, formatting → Auto-fix\n- Logic changes → Escalate to human\n\n## Configuration\n\nEdit `config/swarm-config.json` to customize:\n- Target daily PRs (default: 3-5)\n- Max concurrent PRs (default: 3)\n- Repo qualification criteria\n- Learning parameters\n\n## Safety\n\n- Never force pushes\n- Respects CONTRIBUTING.md\n- Max 5 files / 100 lines per PR\n- Human approval for security changes\n\nSee README.md for full documentation.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "81543392-2b73-42b9-94a6-aca9c72d8df8",
+    "name": "修复CI失败",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n1. Verify gh authentication.\n   - Run `gh auth status` in the repo.\n   - If unauthenticated, ask the user to run `gh auth login` (ensuring repo + workflow scopes) before proceeding.\n2. Resolve the PR.\n   - Prefer the current branch PR: `gh pr view --json number,url`.\n   - If the user provides a PR number or URL, use that directly.\n3. Inspect failing checks (GitHub Actions only).\n   - Preferred: run the bundled script (handles gh field drift and job-log fallbacks):\n     - Add `--json` for machine-friendly output.\n   - Manual fallback:\n     - `gh pr checks <pr> --json name,state,bucket,link,startedAt,completedAt,workflow`\n       - If a field is rejected, rerun with the available fields reported by `gh`.\n     - For each failing check, extract the run id from `detailsUrl` and run:\n       - `gh run view <run_id> --json name,workflowName,conclusion,status,url,event,headBranch,headSha`\n       - `gh run view <run_id> --log`\n     - If the run log says it is still in progress, fetch job logs directly:\n       - `gh api \"/repos/<owner>/<repo>/actions/jobs/<job_id>/logs\" > \"<path>\"`\n4. Scope non-GitHub Actions checks.\n   - If `detailsUrl` is not a GitHub Actions run, label it as external and only report the URL.\n   - Do not attempt Buildkite or other providers; keep the workflow lean.\n5. Summarize failures for the user.\n   - Provide the failing check name, run URL (if any), and a concise log snippet.\n   - Call out missing logs explicitly.\n6. Create a plan.\n   - Use the `creat\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

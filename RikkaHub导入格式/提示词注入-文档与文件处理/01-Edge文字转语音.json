@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "886c81b1-8849-45b9-b9d4-609380934c3d",
+    "name": "Edge文字转语音",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n1. **Detect intent**: Check for \"tts\" trigger or keyword in user message\n3. **Generate audio**: Convert the target text (message, search results, summary)\n4. **Return to user**: The tts tool returns a MEDIA: path; Clawdbot handles delivery",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

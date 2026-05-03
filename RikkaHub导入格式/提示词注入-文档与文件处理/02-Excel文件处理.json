@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c0cd4e35-d47f-45c6-9cbf-ac3e94256662",
+    "name": "Excel文件处理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Excel 文件处理（手机版）\n\n## 环境说明\n\n手机端（RikkaHub）可执行 **JavaScript**，生成 Excel 文件使用 **ExcelJS**。\n\n安装依赖：\nnpm install exceljs\n\n---\n\n## 输出质量要求\n\n### 全部 Excel 文件\n\n- 使用专业字体（Arial、Times New Roman 等）\n- 每个 Excel 模型必须 **零公式错误**（#REF! #DIV/0! #VALUE! #N/A #NAME?）\n- 修改模板时，严格匹配已有格式、风格和约定，已有约定始终优先\n\n### 财务模型颜色规范\n\n| 颜色 | 含义 |\n|------|------|\n| 蓝色文字 (0,0,255) | 硬编码输入值（用户会改变的数字） |\n| 黑色文字 (0,0,0) | 所有公式和计算结果 |\n| 绿色文字 (0,128,0) | 从同工作簿其他表引用的数据 |\n| 红色文字 (255,0,0) | 外部文件链接 |\n| 黄色背景 (255,255,0) | 需要注意的关键假设单元格 |\n\n### 数字格式规范\n\n- **年份**：文字字符串（\"2024\" 而非 \"2,024\"）\n- **货币**：$#,##0 格式，表头注明单位（\"Revenue ($mm)\"）\n- **零值**：用 \"-\" 显示，包括百分比\n- **百分比**：默认保留一位小数（0.0%）\n- **倍数**：0.0x 格式（EV/EBITDA、P/E 等）\n- **负数**：用括号 (123)，不用负号 -123\n\n---\n\n## 创建新 Excel 文件（JavaScript）\n\nconst ExcelJS = require('exceljs');\n\nasync function createExcel() {\n  const workbook = new ExcelJS.Workbook();\n  workbook.creator = 'Capy';\n  workbook.created = new Date();\n\n  const sheet = workbook.addWorksheet('Sheet1');\n\n  // 添加表头行\n  sheet.addRow(['项目', '金额', '备注']);\n\n  // 设置表头样式\n  const headerRow = sheet.getRow(1);\n  headerRow.eachCell(cell => {\n    cell.font = { bold: true, name: 'Arial', size: 11 };\n    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD5E8F0' } };\n    cell.alignment = { horizontal: 'center', vertical: 'middle' };\n    cell.border = {\n      top: { style: 'thin' },\n      bottom: { style: 'thin' },\n      left: { style: 'thin' },\n      right: { style: 'thin' }\n    };\n  });\n\n  // 添加数据行（蓝色=输入值）\n  sheet.addRow(['收入 A', 1000, '来源: 2024\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

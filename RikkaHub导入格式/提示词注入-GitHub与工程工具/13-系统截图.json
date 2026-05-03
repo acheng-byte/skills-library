@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "46f50665-c3b3-48de-a986-620caae63ed2",
+    "name": "系统截图",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Screenshot Capture\n\nFollow these save-location rules every time:\n\n1) If the user specifies a path, save there.\n2) If the user asks for a screenshot without a path, save to the OS default screenshot location.\n3) If Codex needs a screenshot for its own inspection, save to the temp directory.\n\n## Tool priority\n\n- Prefer tool-specific screenshot capabilities when available (for example: a Figma MCP/skill for Figma files, or Playwright/agent-browser tools for browsers and Electron apps).\n- Use this skill when explicitly asked, for whole-system desktop captures, or when a tool-specific capture cannot get what you need.\n- Otherwise, treat this skill as the default for desktop apps without a better-integrated capture tool.\n\n## macOS permission preflight (reduce repeated prompts)\n\nOn macOS, run the preflight helper once before window/app capture. It checks\nScreen Recording permission, explains why it is needed, and requests it in one\nplace.\n\nThe helpers route Swift's module cache to `$TMPDIR/codex-swift-module-cache`\nto avoid extra sandbox module-cache prompts.\n\nTo avoid multiple sandbox approval prompts, combine preflight + capture in one\ncommand when possible:\n\nFor Codex inspection runs, keep the output in temp:\n\nUse the bundled scripts to avoid re-deriving OS-specific commands.\n\n## macOS and Linux (Python helper)\n\nRun the helper from the repo root:\n\nCommon patterns:\n\n- Default location (user asked for \"a screenshot\"):\n\n- Temp location (Codex visual check):\n\n- Explicit location (u\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "04b970ba-f00c-42cf-9b3a-7a86f36ef08a",
+    "name": "音频转文字",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n1. Collect inputs: audio file path(s), desired response format (text/json/diarized_json), optional language hint, and any known speaker references.\n2. Verify `OPENAI_API_KEY` is set. If missing, ask the user to set it locally (do not ask them to paste the key).\n4. Validate the output: transcription quality, speaker labels, and segment boundaries; iterate with a single targeted change if needed.\n5. Save outputs under `output/transcribe/` when working in this repo.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

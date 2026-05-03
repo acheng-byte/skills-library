@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c1290913-d774-4645-bf63-09661cf637a6",
+    "name": "多模型LLM议会",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# LLM Council\n\nQuery multiple AI models in parallel with a live web dashboard.\n\n## Launch\n\ncd ~/.claude/skills/llm-council/scripts\n# Kill any existing server on the port\nfuser -k 8787/tcp 2>/dev/null\n# Start server\nnohup python3 server.py > /tmp/council-server.log 2>&1 &\n# Wait for startup, verify health\nsleep 2 && curl -s --max-time 5 http://localhost:8787/health\n# Export port for browser access\n/app/export-port.sh 8787\n```\n\nEnvironment: `COUNCIL_PORT` (default 8787), `AI_GATEWAY_API_KEY` (required, auto-detected from environment).\n\n## Files\n\n## API\n\n| Method | Path | Description |\n|--------|------|-------------|\n| GET | `/` | Dashboard |\n| GET | `/api/models` | List models |\n| GET | `/health` | Health check |\n| POST | `/api/council/stream` | Query models (SSE) |\n| POST | `/api/council/synthesize` | Synthesize consensus |\n| POST | `/api/council/vote` | Anonymous model vote (SSE with keepalive) |\n\n## Key Details\n\n- Server uses `ThreadingHTTPServer` for concurrent request handling\n- Vote endpoint streams SSE keepalive pings every 5s to prevent proxy timeouts (Cloudflare 524)\n- Static files served with `Cache-Control: no-store, no-cache` headers\n- Script tag uses cache-busting version param: `app.js?v=...` (bump when editing app.js)\n- Model IDs use dots not hyphens: `anthropic/claude-sonnet-4.5` (not `claude-sonnet-4-5`)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

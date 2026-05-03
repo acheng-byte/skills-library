@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "29862889-f9a8-4e61-8214-df5f3c1ebdb3",
+    "name": "产品市场研究",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# pm-market-research\n\nNo SKILL.md or README.md found. Directory contents:\n/home/node/.claude/skills/pm-market-research/commands/analyze-feedback.md\n/home/node/.claude/skills/pm-market-research/commands/competitive-analysis.md\n/home/node/.claude/skills/pm-market-research/commands/research-users.md\n/home/node/.claude/skills/pm-market-research/skills/competitor-analysis/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/customer-journey-map/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/market-segments/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/market-sizing/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/sentiment-analysis/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/user-personas/SKILL.md\n/home/node/.claude/skills/pm-market-research/skills/user-segmentation/SKILL.md",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

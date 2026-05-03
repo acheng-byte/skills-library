@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "b79e9998-4ca3-4ff4-a8de-32af9b58f237",
+    "name": "CEO顾问",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# CEO Advisor\n\nStrategic leadership frameworks for vision, fundraising, board management, culture, and stakeholder alignment.\n\n## Keywords\nCEO, chief executive officer, strategy, strategic planning, fundraising, board management, investor relations, culture, organizational leadership, vision, mission, stakeholder management, capital allocation, crisis management, succession planning\n\n## Quick Start\n\n```\n\n## Core Responsibilities\n\n### 1. Vision & Strategy\nSet the direction. Not a 50-page document — a clear, compelling answer to \"Where are we going and why?\"\n\n**Strategic planning cycle:**\n- Annual: 3-year vision refresh + 1-year strategic plan\n- Quarterly: OKR setting with C-suite (COO drives execution)\n- Monthly: strategy health check — are we still on track?\n\n**Stage-adaptive time horizons:**\n- Seed/Pre-PMF: 3-month / 6-month / 12-month\n- Series A: 6-month / 1-year / 2-year\n- Series B+: 1-year / 3-year / 5-year\n\nSee `references/executive_decision_framework.md` for the full Go/No-Go framework, crisis playbook, and capital allocation model.\n\n### 2. Capital & Resource Management\nYou're the chief allocator. Every dollar, every person, every hour of engineering time is a bet.\n\n**Capital allocation priorities:**\n1. Keep the lights on (operations, must-haves)\n2. Protect the core (retention, quality, security)\n3. Grow the core (expansion of what works)\n4. Fund new bets (innovation, new products/markets)\n\n**Fundraising:** Know your numbers cold. Timing matters more than valuation. See\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

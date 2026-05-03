@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "f1a2baa4-5f49-4ab3-a187-f0d42a0b05be",
+    "name": "Slack-GIF制作",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Slack GIF Creator\n\nA toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.\n\n## Slack Requirements\n\n**Dimensions:**\n- Emoji GIFs: 128x128 (recommended)\n- Message GIFs: 480x480\n\n**Parameters:**\n- FPS: 10-30 (lower is smaller file size)\n- Colors: 48-128 (fewer = smaller file size)\n- Duration: Keep under 3 seconds for emoji GIFs\n\n## Core Workflow\n\nfrom core.gif_builder import GIFBuilder\nfrom PIL import Image, ImageDraw\n\n# 1. Create builder\nbuilder = GIFBuilder(width=128, height=128, fps=10)\n\n# 2. Generate frames\nfor i in range(12):\n    frame = Image.new('RGB', (128, 128), (240, 248, 255))\n    draw = ImageDraw.Draw(frame)\n\n    # Draw your animation using PIL primitives\n    # (circles, polygons, lines, etc.)\n\n    builder.add_frame(frame)\n\n# 3. Save with optimization\nbuilder.save('output.gif', num_colors=48, optimize_for_emoji=True)\n\n## Drawing Graphics\n\n### Working with User-Uploaded Images\nIf a user uploads an image, consider whether they want to:\n- **Use it directly** (e.g., \"animate this\", \"split this into frames\")\n- **Use it as inspiration** (e.g., \"make something like this\")\n\nLoad and work with images using PIL:\nfrom PIL import Image\n\nuploaded = Image.open('file.png')\n# Use directly, or just as reference for colors/style\n\n### Drawing from Scratch\nWhen drawing graphics from scratch, use PIL ImageDraw primitives:\n\nfrom PIL import ImageDraw\n\ndraw = ImageDraw.Draw(frame)\n\n# Circles/ovals\ndraw.ellipse([x1, y1, x2, y2], fill=(r, g, b), outline=(\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

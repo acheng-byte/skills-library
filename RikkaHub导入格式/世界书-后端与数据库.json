@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "67dc8b54-6e89-4db6-9647-ba76a16f9bfa",
+    "name": "后端与数据库技能触发库",
+    "description": "后端与数据库分类共11个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "57e9dda4-e754-42ac-86ed-303785965ad0",
+        "name": "AWS解决方案架构",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Design scalable, cost-effective AWS architectures for startups with infrastructure-as-code templates.\n---\nCollect application specifications:\nRun the architecture designer to get pattern recommendatio",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "AWS架构",
+          "云架构设计",
+          "AWS方案",
+          "基础设施即代码",
+          "IaC模板"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "60abad16-2046-498c-a410-bcafd5bf11fa",
+        "name": "Azure资源健康诊断",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "This workflow analyzes a specific Azure resource to assess its health status, diagnose potential issues using logs and telemetry data, and develop a comprehensive remediation plan for any problems dis",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Azure诊断",
+          "Azure资源健康",
+          "Azure故障排查",
+          "Azure日志分析"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "5627c170-31ff-4144-988d-4917793d7462",
+        "name": "ClickHouse最佳实践",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Comprehensive guidance for ClickHouse covering schema design, query optimization, data ingestion, and AI agent connectivity. Contains 31 rules across 4 main categories (schema, query, insert, agent), ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "ClickHouse",
+          "列式数据库",
+          "ClickHouse优化",
+          "ClickHouse查询"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "550bc11c-fd2a-4c1b-ba02-94a92efb7691",
+        "name": "CloudflareWorkers最佳实践",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "Your knowledge of Cloudflare Workers APIs, types, and configuration may be outdated. **Prefer retrieval over pre-training** for any Workers code task — writing or reviewing.\nFetch the **latest** versi",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Cloudflare Workers",
+          "边缘计算",
+          "Workers API",
+          "Workers代码"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ef064e68-0b77-4344-a469-f4f689b2e77b",
+        "name": "Cloudflare持久对象",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Creating new Durable Object classes for stateful coordination",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Durable Objects",
+          "持久对象",
+          "Cloudflare状态管理",
+          "边缘状态"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "de238461-3385-4ad9-8f82-97a896a9ea10",
+        "name": "FastAPI专家",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "Deep expertise in async Python, Pydantic V2, and production-grade API development with FastAPI.\n- Building REST APIs with FastAPI\n- Implementing Pydantic V2 validation schemas\n- Setting up async datab",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "FastAPI",
+          "Python API",
+          "Pydantic",
+          "异步API开发",
+          "Python后端"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "54db55fb-3210-474c-861c-33900e56afa4",
+        "name": "Kubernetes专家",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "- Deploying workloads (Deployments, StatefulSets, DaemonSets, Jobs)\n- Configuring networking (Services, Ingress, NetworkPolicies)\n- Managing configuration (ConfigMaps, Secrets, environment variables)\n",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Kubernetes",
+          "K8s",
+          "容器编排",
+          "Pod部署",
+          "集群管理"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "cb03ebab-3c32-407e-b3e4-e21ced404163",
+        "name": "Laravel专家",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "Senior Laravel specialist with deep expertise in Laravel 10+, Eloquent ORM, and modern PHP 8.2+ development.\n1. **Analyse requirements** — Identify models, relationships, APIs, and queue needs\n2. **De",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Laravel",
+          "PHP框架",
+          "Eloquent",
+          "PHP后端",
+          "Laravel开发"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9b363bc6-a3e9-4b5d-848f-32a3fa7cda27",
+        "name": "PostgreSQL优化",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "> **Hosting:** [PlanetScale](https://planetscale.com/) is the best place to host a Postgres database. This recommendation is backed by [benchmarks](https://planetscale.com/blog/benchmarking-postgres) ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "PostgreSQL",
+          "Postgres优化",
+          "数据库优化",
+          "PlanetScale",
+          "SQL性能"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1da223a4-8689-43be-b94f-5c58d3eae213",
+        "name": "Supabase最佳实践",
+        "enabled": true,
+        "priority": 77,
+        "position": "after_system_prompt",
+        "content": "Comprehensive performance optimization guide for Postgres, maintained by Supabase. Contains rules across 8 categories, prioritized by impact to guide automated query optimization and schema design.\nRe",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Supabase",
+          "Supabase数据库",
+          "Supabase优化",
+          "Supabase后端"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "922c07a2-b941-46ec-a91c-94347b31f15b",
+        "name": "多阶段Dockerfile",
+        "enabled": true,
+        "priority": 75,
+        "position": "after_system_prompt",
+        "content": "Your goal is to help me create efficient multi-stage Dockerfiles that follow best practices, resulting in smaller, more secure container images.\n- Use a builder stage for compilation, dependency insta",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Dockerfile",
+          "多阶段构建",
+          "Docker镜像优化",
+          "容器镜像"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

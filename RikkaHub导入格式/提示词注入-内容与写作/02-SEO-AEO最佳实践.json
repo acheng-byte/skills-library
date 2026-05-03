@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "282eba0d-67ab-452e-aa7d-3d69f91037ac",
+    "name": "SEO-AEO最佳实践",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# SEO & AEO Best Practices\n\nPrinciples for optimizing content for both traditional search engines (SEO) and AI-powered answer engines (AEO). Includes Google's EEAT guidelines and structured data implementation.\n\n## When to Apply\n\nReference these guidelines when:\n- Implementing metadata and Open Graph tags\n- Creating sitemaps and robots.txt\n- Adding JSON-LD structured data\n- Optimizing content for featured snippets\n- Preparing content for AI assistants (ChatGPT, Perplexity, etc.)\n- Evaluating content quality using EEAT principles\n\n## Core Concepts\n\n### SEO (Search Engine Optimization)\nOptimizing content to rank well in traditional search results (Google, Bing).\n\n### AEO (Answer Engine Optimization)\nOptimizing content to be selected as authoritative answers by AI systems.\n\n### EEAT (Experience, Expertise, Authoritativeness, Trustworthiness)\nGoogle's framework for evaluating content quality.\n\n## References\n\nStart with the one reference that matches the task, such as technical SEO, structured data, EEAT, or AI-answer readiness. See `references/` for detailed guidance:\n- `references/eeat-principles.md` — EEAT implementation and author schema\n- `references/structured-data.md` — JSON-LD patterns (Article, FAQ, Breadcrumb, Product)\n- `references/technical-seo.md` — Technical SEO checklist (metadata, sitemaps, hreflang, robots.txt)\n- `references/aeo-considerations.md` — AI/AEO considerations (AI Overviews, crawler management)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

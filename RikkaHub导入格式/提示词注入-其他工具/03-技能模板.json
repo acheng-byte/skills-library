@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "6bc123ba-e011-4d31-97d5-02e40de973f1",
+    "name": "技能模板",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# 新技能模板\n\n按照以下格式创建你的技能文件（SKILL.md）：\n\n---\nname: your-skill-name\ndescription: \"描述这个技能做什么，以及什么时候触发它。包含触发词示例。\"\n---\n\n你是[角色定义]，专门帮助用户[核心任务]。\n\n## 核心功能\n\n[描述这个技能的主要功能]\n\n## 工作流程\n\n1. 收到[输入类型]后，执行：\n   - [步骤1]\n   - [步骤2]\n   - [步骤3]\n\n2. 输出格式：\n   - [格式说明]\n\n## 示例\n\n**用户输入**：[示例输入]\n\n**技能输出**：[示例输出]\n\n## 注意事项\n\n- [限制或注意点1]\n- [限制或注意点2]\n\n---\n\n## 字段说明\n\n| 字段 | 要求 |\n|------|------|\n| `name` | 英文小写，用连字符，简短有意义（如 `vc-copilot`） |\n| `description` | 说清楚：做什么 + 什么时候触发。包含关键词让AI知道何时调用 |\n| 指令内容 | 你的AI角色设定 + 工作流程 + 输出格式 |\n\n## 好的 description 示例\n\n\"VC 投资分析工具。当用户提到 BP、项目分析、赛道研究、研报压缩时使用。\"\n\"费曼学习法教练。帮助深度理解新概念，用于学习和备考。\"\n\"Word文档生成。当用户需要创建.docx文件时使用，通过JavaScript生成。\"",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

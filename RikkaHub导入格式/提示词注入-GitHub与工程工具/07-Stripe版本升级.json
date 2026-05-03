@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "98d794d0-28f0-49b2-9003-24bfb579b6e3",
+    "name": "Stripe版本升级",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "The latest Stripe API version is 2026-04-22.dahlia - use this version when upgrading unless the user specifies a different target version.\n\n# Upgrading Stripe Versions\n\nThis guide covers upgrading Stripe API versions, server-side SDKs, Stripe.js, and mobile SDKs.\n\n## Understanding Stripe API Versioning\n\nStripe uses date-based API versions (e.g., `2026-04-22.dahlia`, `2025-08-27.basil`, `2024-12-18.acacia`). Your account’s API version determines request/response behavior.\n\n### Types of Changes\n\n**Backward-Compatible Changes** (don’t require code updates):\n\n- New API resources\n- New optional request parameters\n- New properties in existing responses\n- Changes to opaque string lengths (e.g., object IDs)\n- New webhook event types\n\n**Breaking Changes** (require code updates):\n\n- Field renames or removals\n- Behavioral modifications\n- Removed endpoints or parameters\n\nReview the [API Changelog](https://docs.stripe.com/changelog.md) for all changes between versions.\n\n## Server-Side SDK Versioning\n\nSee [SDK Version Management](https://docs.stripe.com/sdks/set-version.md) for details.\n\n### Dynamically-Typed Languages (Ruby, Python, PHP, Node.js)\n\nThese SDKs offer flexible version control:\n\n**Global Configuration:**\n\nimport stripe\nstripe.api_version = '2026-04-22.dahlia'\n\nStripe.api_version = '2026-04-22.dahlia'\n\nconst stripe = require('stripe')('sk_test_xxx', {\n  apiVersion: '2026-04-22.dahlia'\n});\n\n**Per-Request Override:**\n\nstripe.Customer.create(\n  email=\"customer@example.com\",\n  stri\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "ca61369d-ae35-4df2-b6af-6341694a7e5f",
+    "name": "内容与写作技能触发库",
+    "description": "内容与写作分类共9个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "307fbe86-ff92-4a9d-8c73-06b648e758df",
+        "name": "Reddit帖子写作",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Generate authentic Reddit posts through emotional truth, not cosmetic rules.\n---\nGather these inputs:\n1. **Target Subreddit(s):** r/jobs, r/RemoteWork, r/Entrepreneur, etc.\n2. **Core Situation:** Brie",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "写Reddit帖子",
+          "Reddit内容",
+          "社区帖子"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "663de38c-a277-4c29-ae3d-b28517554604",
+        "name": "SEO-AEO最佳实践",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "Principles for optimizing content for both traditional search engines (SEO) and AI-powered answer engines (AEO). Includes Google's EEAT guidelines and structured data implementation.\nReference these g",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "SEO",
+          "AEO",
+          "搜索优化",
+          "结构化数据",
+          "内容排名"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "96e8c372-0d7f-4d4a-bce0-a900d32d18c4",
+        "name": "内容A-B测试",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Principles and patterns for running effective content experiments to improve conversion rates, engagement, and user experience.\nReference these guidelines when:\n- Setting up A/B or multivariate testin",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "A",
+          "B测试",
+          "内容实验",
+          "转化率优化",
+          "测试变体"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "889e60a4-e5d4-4074-a50d-be47957652cd",
+        "name": "内部沟通写作",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "To write internal communications, use this skill for:\n- 3P updates (Progress, Plans, Problems)\n- Company newsletters\n- FAQ responses\n- Status reports\n- Leadership updates\n- Project updates\n- Incident ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "内部沟通",
+          "写周报",
+          "团队更新",
+          "公司公告",
+          "项目状态报告"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "2e611ff2-7dda-4a56-9b79-a7447f9b3ef0",
+        "name": "博客监控",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Track blog and RSS/Atom feed updates with the `blogwatcher` CLI.\nInstall\n- Go: `go install github.com/Hyaxia/blogwatcher/cmd/blogwatcher@latest`\nQuick start\n- `blogwatcher --help`\nCommon commands\n- Ad",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "博客监控",
+          "RSS订阅",
+          "追踪博客更新",
+          "博客阅读"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "31c4db5f-6191-4f34-949d-e39d7f1d22d3",
+        "name": "品牌视觉规范",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "To access Anthropic's official brand identity and style resources, use this skill.\n**Keywords**: branding, corporate identity, visual identity, post-processing, styling, brand colors, typography, Anth",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "品牌规范",
+          "视觉设计",
+          "品牌色彩",
+          "企业视觉识别",
+          "UI设计规范"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "62e81ac2-b356-4ea8-9368-7c6f9ba4d6f2",
+        "name": "数据叙事",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "Transform raw data into compelling narratives that drive decisions and inspire action.\n- Presenting analytics to executives\n- Creating quarterly business reviews\n- Building investor presentations\n- Wr",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "数据叙事",
+          "数据可视化",
+          "数据报告",
+          "向高管汇报数据"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "5cb12d2a-2bbb-4197-adb2-71ca1369c91d",
+        "name": "文档协作写作",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structu",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "写文档",
+          "写提案",
+          "写PRD",
+          "写设计文档",
+          "协作写作"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "b7369d2d-8f89-44fd-9c4b-7ff55e70e0a2",
+        "name": "童锦程语气",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "童锦程，浙江杭州人，1993年生，抖音/虎牙户外主播、情感博主，人称**\"江南第一深情\"**、\"渣男祖师爷\"。600万+粉丝，年入3000万+。以\"过来人\"身份输出恋爱哲学，风格犀利、自信、有争议。\n- **称呼**：管用户叫\"兄弟\"、\"哥们\"、\"老铁\"\n- **语气**：自信到自负，不废话，一针见血，偶尔自嘲\n- **句式**：短句为主，善用对比和反转，结尾常加一句总结性金句\n- **态度**：",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "童锦程语气",
+          "渣男祖师爷",
+          "江南第一深情",
+          "用童锦程风格回复"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

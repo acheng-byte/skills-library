@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "40137346-af75-4c55-8a8e-0883d1018afd",
+    "name": "GitHub与工程工具技能触发库",
+    "description": "GitHub与工程工具分类共14个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "f8557275-409b-4854-b318-ee6de00e2db7",
+        "name": "Google工作流",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.\ngws workflow <resource> <method> [flags]\nUse `gws sche",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Google工作流",
+          "gws workflow",
+          "standup报告"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ed718940-5c3d-4d6a-bf70-abb850977c10",
+        "name": "Google模型安全过滤",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.\ngws modelarmor <resource> <method> [flags]\nUse `gws sc",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "模型安全",
+          "内容过滤",
+          "Model Armor",
+          "提示词净化"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "8866b141-3d99-4f88-ac2d-d654c0c9f07f",
+        "name": "Linear项目管理",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "This skill provides a structured workflow for managing issues, projects & team workflows in Linear. It ensures consistent integration with the Linear MCP server, which offers natural-language project ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Linear",
+          "项目管理",
+          "issue管理",
+          "冲刺计划",
+          "任务跟踪"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "d0578920-f022-44c5-839b-eea3d96dc031",
+        "name": "Playwright命令行",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "playwright-cli open\nplaywright-cli goto https://playwright.dev\nplaywright-cli click e15\nplaywright-cli type \"page.click\"\nplaywright-cli press Enter\nplaywright-cli screenshot\nplaywright-cli close\nplayw",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "playwright-cli",
+          "浏览器命令行",
+          "自动化命令",
+          "网页操作"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "36a704ba-e2b5-4f01-a852-c9bd5d23da2a",
+        "name": "Playwright浏览器自动化",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.\nBefore proposing commands, check whether `npx` is available (the wrapper de",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Playwright",
+          "浏览器自动化",
+          "UI测试",
+          "网页自动化"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1d69ea6d-6459-41bb-82f4-c146bd76dc67",
+        "name": "Sentry错误监控",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "- If not already authenticated, ask the user to run `sentry auth login` or set `SENTRY_AUTH_TOKEN` as an env var.\n- Defaults: time range `24h`, environment `production`, limit 20.\n- Always use `--json",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Sentry",
+          "错误监控",
+          "线上报错",
+          "issue分析"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ef24f18e-7ace-49da-8039-15ace9eff873",
+        "name": "Stripe版本升级",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "The latest Stripe API version is 2026-04-22.dahlia - use this version when upgrading unless the user specifies a different target version.\nThis guide covers upgrading Stripe API versions, server-side ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Stripe升级",
+          "Stripe版本",
+          "API版本迁移"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "108c41b4-5561-4126-a5ad-b14d1e6eabdf",
+        "name": "Web应用测试",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "To test local web applications, write native Python Playwright scripts.\n**Helper Scripts Available**:\n**Always run scripts with `--help` first** to see usage. DO NOT read the source until you try runn",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Web测试",
+          "应用测试",
+          "Playwright测试",
+          "前端测试"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "b20323fd-6233-4057-a69a-a5d686a0a877",
+        "name": "代码格式修复",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "1. Run `yarn prettier` to fix formatting\n2. Run `yarn linc` to check for remaining lint issues\n3. Report any remaining manual fixes needed\n- **Running prettier on wrong files** - `yarn prettier` only ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "代码格式",
+          "lint修复",
+          "prettier",
+          "格式化代码"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "688c1015-83bf-4125-bf26-3f1662751151",
+        "name": "修复CI失败",
+        "enabled": true,
+        "priority": 77,
+        "position": "after_system_prompt",
+        "content": "1. Verify gh authentication.\n2. Resolve the PR.\n3. Inspect failing checks (GitHub Actions only).\n4. Scope non-GitHub Actions checks.\n5. Summarize failures for the user.\n6. Create a plan.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "CI失败",
+          "流水线报错",
+          "GitHub Actions",
+          "PR检查失败"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1e57680f-f635-4576-8122-1d61b65fb6c5",
+        "name": "处理PR评论",
+        "enabled": true,
+        "priority": 75,
+        "position": "after_system_prompt",
+        "content": "Guide to find the open PR for the current branch and address its comments with gh CLI. Run all `gh` commands with elevated network access.\nPrereq: ensure `gh` is authenticated (for example, run `gh au",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "处理PR评论",
+          "review意见",
+          "PR反馈",
+          "代码审查"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "a7a15b78-4575-42a2-9d25-7a1f3f7ea1f3",
+        "name": "开源贡献蜂群",
+        "enabled": true,
+        "priority": 73,
+        "position": "after_system_prompt",
+        "content": "> \"I don't just write PRs. I continuously contribute to open source while learning from every interaction.\"\nThis skill deploys a **9-agent swarm** that autonomously:\n1. Qualifies repositories for cont",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "开源贡献",
+          "自动PR",
+          "蜂群模式",
+          "OSS贡献"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "8dbc8ed7-216d-490e-88f6-cf71dd869287",
+        "name": "系统截图",
+        "enabled": true,
+        "priority": 71,
+        "position": "after_system_prompt",
+        "content": "Follow these save-location rules every time:\n1) If the user specifies a path, save there.\n2) If the user asks for a screenshot without a path, save to the OS default screenshot location.\n3) If Codex n",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "截图",
+          "屏幕截图",
+          "截屏",
+          "系统截图"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "c17585d8-b402-428c-b7ec-3fc1914a0526",
+        "name": "超级能力",
+        "enabled": true,
+        "priority": 69,
+        "position": "after_system_prompt",
+        "content": "Superpowers is a complete software development workflow for your coding agents, built on top of a set of composable \"skills\" and some initial instructions that make sure your agent uses them.\nIt start",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "超级能力",
+          "Superpowers",
+          "完整开发流程",
+          "代理驱动开发"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "01dbfae7-f0c7-466e-9183-96b74834e9e7",
+    "name": "数据叙事",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Data Storytelling\n\nTransform raw data into compelling narratives that drive decisions and inspire action.\n\n## When to Use This Skill\n\n- Presenting analytics to executives\n- Creating quarterly business reviews\n- Building investor presentations\n- Writing data-driven reports\n- Communicating insights to non-technical audiences\n- Making recommendations based on data\n\n## Core Concepts\n\n### 1. Story Structure\n\nSetup → Conflict → Resolution\n\nSetup: Context and baseline\nConflict: The problem or opportunity\nResolution: Insights and recommendations\n\n### 2. Narrative Arc\n\n1. Hook: Grab attention with surprising insight\n2. Context: Establish the baseline\n3. Rising Action: Build through data points\n4. Climax: The key insight\n5. Resolution: Recommendations\n6. Call to Action: Next steps\n\n### 3. Three Pillars\n\n| Pillar        | Purpose  | Components                       |\n| ------------- | -------- | -------------------------------- |\n| **Data**      | Evidence | Numbers, trends, comparisons     |\n| **Narrative** | Meaning  | Context, causation, implications |\n| **Visuals**   | Clarity  | Charts, diagrams, highlights     |\n\n## Story Frameworks\n\n### Framework 1: The Problem-Solution Story\n\n# Customer Churn Analysis\n\n## The Hook\n\n\"We're losing $2.4M annually to preventable churn.\"\n\n## The Context\n\n- Current churn rate: 8.5% (industry average: 5%)\n- Average customer lifetime value: $4,800\n- 500 customers churned last quarter\n\n## The Problem\n\nAnalysis of churned customers reveals a pattern:\n\n-\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

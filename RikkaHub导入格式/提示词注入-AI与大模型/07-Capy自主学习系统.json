@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "de10766a-a6b2-4e5e-82f6-4cce4c287474",
+    "name": "Capy自主学习系统",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Capy Cortex - Autonomous Learning System\n\nYou have a persistent learning brain powered by SQLite + FTS5 + sklearn TF-IDF.\nKnowledge is automatically loaded via hooks. This file describes manual operations.\n\n## Architecture\n\n- **Database**: `~/.claude/skills/capy-cortex/cortex.db` (SQLite + FTS5 + WAL)\n- **Hooks** (automatic, never call manually):\n  - SessionStart: Loads anti-patterns, preferences, principles\n  - UserPromptSubmit: Retrieves task-relevant rules via FTS5\n  - PreToolUse(Bash): Blocks known dangerous commands\n  - PostToolUseFailure: Records errors as anti-patterns\n  - Stop: Extracts corrections and preferences from conversation\n- **Scripts** (for manual/scheduled use):\n  - `cortex.py`: Core engine (retrieve, add rules, stats)\n  - `reflect.py`: Deep session analysis\n  - `consolidate.py`: Cluster rules into principles (sklearn)\n  - `bootstrap.py`: Mine historical sessions\n\n## Manual Commands\n\n# Check system health\n\n# Retrieve rules for a topic\n\n# Add a rule manually\n\n# Add an anti-pattern\n\n# Add a preference\n\n# Run consolidation (clusters rules into principles)\n\n# Retrain TF-IDF model\n\n# Apply confidence decay\n```\n\n## How It Learns\n\n1. **Automatic** (via hooks): Errors are captured, corrections noted, preferences extracted\n2. **Reflection**: Deep analysis of session transcripts extracts patterns\n3. **Consolidation**: sklearn clustering groups similar rules into principles\n4. **Decay**: Old, unreinforced rules fade; validated rules strengthen\n5. **Retrieval**: Two-\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

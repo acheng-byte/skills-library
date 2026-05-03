@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "1a96ca76-1c1f-4333-8dc4-02663cd7d572",
+    "name": "Figma设计系统规则",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Create Design System Rules\n\n## Overview\n\nThis skill helps you generate custom design system rules tailored to your project's specific needs. These rules guide AI coding agents to produce consistent, high-quality code when implementing Figma designs, ensuring that your team's conventions, component patterns, and architectural decisions are followed automatically.\n\n### Supported Rule Files\n\n| Agent | Rule File |\n|-------|-----------|\n| Claude Code | `CLAUDE.md` |\n| Cursor | `.cursor/rules/figma-design-system.mdc` |\n\n## What Are Design System Rules?\n\nDesign system rules are project-level instructions that encode the \"unwritten knowledge\" of your codebase - the kind of expertise that experienced developers know and would pass on to new team members:\n\n- Which layout primitives and components to use\n- Where component files should be located\n- How components should be named and structured\n- What should never be hardcoded\n- How to handle design tokens and styling\n- Project-specific architectural patterns\n\nOnce defined, these rules dramatically reduce repetitive prompting and ensure consistent output across all Figma implementation tasks.\n\n## Prerequisites\n\n- Figma MCP server must be connected and accessible\n- Access to the project codebase for analysis\n- Understanding of your team's component conventions (or willingness to establish them)\n\n## When to Use This Skill\n\nUse this skill when:\n\n- Starting a new project that will use Figma designs\n- Onboarding an AI coding agent to an exis\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

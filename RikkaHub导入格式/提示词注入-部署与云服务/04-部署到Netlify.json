@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "410791c2-a121-4308-8811-b82b008ac350",
+    "name": "部署到Netlify",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\nCheck if the user is logged into Netlify:\n\nnpx netlify status\n\n**Expected output patterns**:\n- ✅ Authenticated: Shows logged-in user email and site link status\n- ❌ Not authenticated: \"Not logged into any site\" or authentication error\n\n**If not authenticated**, guide the user:\n\nnpx netlify login\n\nThis opens a browser window for OAuth authentication. Wait for user to complete login, then verify with `netlify status` again.\n\n**Alternative: API Key authentication**\n\nIf browser authentication isn't available, users can set:\n\nexport NETLIFY_AUTH_TOKEN=your_token_here\n\nTokens can be generated at: https://app.netlify.com/user/applications#personal-access-tokens",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

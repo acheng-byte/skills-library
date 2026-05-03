@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "52603529-8287-4c86-912c-51ec001334f8",
+    "name": "信息图制作",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "Infographics convert data, information, and knowledge into perceptible visual language. They combine visual design with data visualization, compressing complex information with intuitive symbols to help audiences quickly understand and remember key points.\n\n`Infographic = Information Structure + Visual Expression`\n\nThis task uses [AntV Infographic](https://infographic.antv.vision/) to create visual infographics.\n\nBefore starting the task, you need to understand the AntV Infographic syntax specifications, including template list, data structure, themes, etc.\n\n## Specifications\n\n### AntV Infographic Syntax\n\nAntV Infographic syntax is a custom DSL used to describe infographic rendering configurations. It uses indentation to describe information, has strong robustness, and is convenient for AI streaming output and infographic rendering. It mainly contains the following information:\n\n1. template: Use templates to express the text information structure.\n2. data: Infographic data, including title, desc, data items, etc. Data items typically contain fields such as label, desc, icon, etc.\n3. theme: Theme contains style configurations such as palette, font, etc.\n\nFor example:\n\ninfographic list-row-horizontal-icon-arrow\ndata\n  title Title\n  desc Description\n  lists\n    - label Label\n      value 12.5\n      desc Explanation\n      icon document text\ntheme\n  palette #3b82f6 #8b5cf6 #f97316\n\n### Syntax Specifications\n\n- The first line must be `infographic <template-name>`, template selected \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

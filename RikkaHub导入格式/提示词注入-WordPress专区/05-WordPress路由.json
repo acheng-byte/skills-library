@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0b3c10f4-dd92-4fb2-875f-84addb97c614",
+    "name": "WordPress路由",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n\nUse this skill at the start of most WordPress tasks to:\n\n- identify what kind of WordPress codebase this is (plugin vs theme vs block theme vs WP core checkout vs full site),\n- pick the right workflow and guardrails,\n- delegate to the most relevant domain skill(s).",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

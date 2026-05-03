@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "2e3395fc-d971-4755-8440-f355d8084cdc",
+    "name": "Capy邮件发送",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Output Format\n\nThe script returns JSON with send status:\n\n{\n  \"success\": true,\n  \"message_id\": \"010001234567890-abcdef...\",\n  \"from\": \"capy@capymail.ai\",\n  \"to\": [\"john.doe@example.com\"],\n  \"cc\": [],\n  \"bcc\": [],\n  \"subject\": \"Hello from Claude\",\n  \"timestamp\": \"2024-01-22T10:30:00Z\",\n  \"attachments\": 0\n}",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

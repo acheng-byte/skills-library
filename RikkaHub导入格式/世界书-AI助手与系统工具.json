@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "9c8c15ac-1f42-4679-97c1-1735a45cda6c",
+    "name": "AI助手与系统工具技能触发库",
+    "description": "AI助手与系统工具分类共9个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "c8578e26-1aa8-4f93-af84-c3f5fd409b2a",
+        "name": "Capy邮件发送",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Send emails using AWS SES (Amazon Simple Email Service) with automatic sender configuration and flexible recipient options.\nThis skill enables Claude to send emails on behalf of users using AWS SES. E",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "发送邮件",
+          "发邮件",
+          "邮件发送",
+          "send email"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "0c184334-867e-4a8b-9257-fe86f043c8ac",
+        "name": "Slack-GIF制作",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.\n**Dimensions:**\n- Emoji GIFs: 128x128 (recommended)\n- Message GIFs: 480x480\n**Parameters:**\n- FPS: 10-30 (lo",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "制作GIF",
+          "Slack表情包",
+          "GIF动图",
+          "Slack GIF"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9051afca-17c1-4911-b2a5-62639708a053",
+        "name": "Stripe最佳实践",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Latest Stripe API version: **2026-04-22.dahlia**. Always use the latest API version and SDK unless the user specifies otherwise.\n| Building…                                                            ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Stripe集成",
+          "支付接入",
+          "订阅计费",
+          "Stripe API"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "cf978de4-10ad-4c40-bdf6-d808916d1779",
+        "name": "Stripe集成专家",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "Adding subscription billing to any web app",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Stripe集成",
+          "支付系统开发",
+          "订阅功能",
+          "Stripe代码实现"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "570d0c38-416c-4ed3-b788-2878244d4b16",
+        "name": "技能创建工具",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "A skill for creating new skills and iteratively improving them.\nAt a high level, the process of creating a skill goes like this:\n- Decide what you want the skill to do and roughly how it should do it\n",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "创建技能",
+          "新建skill",
+          "写技能文档",
+          "技能开发"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "5eacebf0-6fb1-4985-9717-4eaed111813b",
+        "name": "技能发现助手",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "This skill helps you discover and install skills from the open agent skills ecosystem.\nUse this skill when the user:\n- Asks \"how do I do X\" where X might be a common task with an existing skill\n- Says",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "查找技能",
+          "有没有某个技能",
+          "技能推荐",
+          "能不能做某件事"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "4cbd139d-5908-4902-b3d9-7a6a1356e840",
+        "name": "技能安装工具",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "Helps install skills. By default these are from https://github.com/openai/skills/tree/main/skills/.curated, but users can also provide other locations.\nUse the helper scripts based on the task:\n- List",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "安装技能",
+          "install skill",
+          "添加技能",
+          "技能安装"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "2901e352-096e-46b9-ac55-7bd546c2b0f6",
+        "name": "网络搜索",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "**Current Information**: Get up-to-date facts, statistics, or news",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "搜索网络",
+          "查一下",
+          "最新信息",
+          "网络搜索",
+          "search"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "30da51e9-a706-499e-b021-f85f4b722fb6",
+        "name": "角色设计一致性",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "Create consistent characters across multiple AI-generated images via [inference.sh](https://inference.sh) CLI.\nbelt login\nbelt app run falai/flux-dev-lora --input '{\n  \"prompt\": \"character design refe",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "角色设计",
+          "人物一致性",
+          "AI绘图角色",
+          "character design"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

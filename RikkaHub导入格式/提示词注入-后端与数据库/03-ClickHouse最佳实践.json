@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "e3d9ed2a-e0a6-40e3-b658-98e1b3e729e4",
+    "name": "ClickHouse最佳实践",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Output Format\n\nStructure your response as follows:",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

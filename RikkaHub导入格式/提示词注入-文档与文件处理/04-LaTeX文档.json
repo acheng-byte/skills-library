@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "6327664b-ad45-4f5c-a683-1530dd6816e1",
+    "name": "LaTeX文档",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# LaTeX Document Skill\n\nCreate any LaTeX document, compile to PDF, and generate PNG previews. Convert PDFs of any type to LaTeX.\n\n## Workflow: Create Documents\n\n1. Determine document type (resume, report, letter, invoice, article, thesis, academic CV, presentation, poster, exam, book, cheat sheet)\n2. **If poster:** Run the poster sub-workflow (see [Poster Sub-Workflow](#poster-sub-workflow) below), then skip to step 5.\n3. **If cheat sheet / reference card:** Run the cheat sheet sub-workflow (see [Cheat Sheet / Reference Card Sub-Workflow](#cheat-sheet--reference-card-sub-workflow) below), then skip to step 5.\n4. **Ask the user which enrichment elements they want** (use AskUserQuestion tool with multiSelect). Offer relevant options based on document type:\n   - **AI-generated images** -- custom illustrations, diagrams, photos (uses generate-image skill)\n   - **Charts/graphs** -- bar, line, pie, scatter, heatmap (pgfplots or matplotlib)\n   - **Flowcharts/diagrams** -- process flows, architecture, decision trees (TikZ or Mermaid)\n   - **Citations/bibliography** -- academic references, footnotes, works cited (BibTeX/biblatex)\n   - **Tables with data** -- comparison matrices, financial data, statistics (booktabs)\n   - **Watermarks** -- DRAFT, CONFIDENTIAL, or company logo background\n   - Skip this step for simple documents (cover letters, invoices) or when the user has already specified exactly what they want.\n6. Customize content based on user requirements\n7. Generate external ass\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

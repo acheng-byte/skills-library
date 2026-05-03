@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "27f9790d-3b3e-43b9-a9b8-e3d833122771",
+    "name": "文字转语音",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n- Generate a single spoken clip from text\n- Generate a batch of prompts (many lines, many files)\n\n## Workflow\n1. Decide intent: single vs batch (see decision tree above).\n2. Collect inputs up front: exact text (verbatim), desired voice, delivery style, format, and any constraints.\n3. If batch: write a temporary JSONL under tmp/ (one job per line), run once, then delete the JSONL.\n4. Augment instructions into a short labeled spec without rewriting the input text.\n6. For important clips, validate: intelligibility, pacing, pronunciation, and adherence to constraints.\n7. Iterate with a single targeted change (voice, speed, or instructions), then re-check.\n8. Save/return final outputs and note the final text + instructions + flags used.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

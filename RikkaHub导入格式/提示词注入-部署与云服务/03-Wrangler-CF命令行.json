@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "52544ebd-cb33-416c-b0a9-138f743f8d5a",
+    "name": "Wrangler-CF命令行",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Wrangler CLI\n\n## Retrieval Sources\n\n| Source | How to retrieve | Use for |\n|--------|----------------|---------|\n| Wrangler config schema | `node_modules/wrangler/config-schema.json` | Config fields, binding shapes, allowed values |\n| Cloudflare docs | Search tool or `https://developers.cloudflare.com/workers/` | API reference, compatibility dates/flags |\n\n## FIRST: Check if Wrangler is installed, and if not, install it\n\nCheck if Wrangler is installed by running:\n\nwrangler --version  # Requires v4.x+\n\nIf Wrangler is not installed, you should install it by running:\n\nWherever possible, you should use Wrangler instead of manually constructing API requests.\n\n## Key Guidelines\n\n- **Use `wrangler.jsonc`**: Prefer JSON config over TOML. Newer features are JSON-only.\n- **Set `compatibility_date`**: Use a recent date (within 30 days). Check https://developers.cloudflare.com/workers/configuration/compatibility-dates/\n- **Generate types after config changes**: Run `wrangler types` to update TypeScript bindings.\n- **Local dev defaults to local storage**: Bindings use local simulation unless `remote: true`.\n- **Profile Worker startup**: Run `wrangler check startup` to measure startup time and detect scripts that exceed the startup time limit.\n- **Use environments for staging/prod**: Define `env.staging` and `env.production` in config.\n\n## Quick Start: New Worker\n\n# Initialize new project\nnpx wrangler init my-worker\n\n# Or with a framework\nnpx create-cloudflare@latest my-app\n\n## Quick Ref\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

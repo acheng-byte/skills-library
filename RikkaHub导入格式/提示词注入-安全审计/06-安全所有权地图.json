@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "4c03219f-6e63-4f7b-beac-2f49b4ce054b",
+    "name": "安全所有权地图",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n1. Scope the repo and time window (optional `--since/--until`).\n2. Decide sensitivity rules (use defaults or provide a CSV config).\n4. Communities are computed by default; graphml output is optional (`--graphml`).\n6. Persist and visualize (see `references/neo4j-import.md`).\n\nBy default, the co-change graph ignores common “glue” files (lockfiles, `.github/*`, editor config) so clusters reflect actual code movement instead of shared infra edits. Override with `--cochange-exclude` or `--no-default-cochange-excludes`. Dependabot commits are excluded by default; override with `--no-default-author-excludes` or add patterns via `--author-exclude-regex`.\n\nIf you want to exclude Linux build glue like `Kbuild` from co-change clustering, pass:\n\n  --repo /path/to/linux \\\n  --out ownership-map-out \\\n  --cochange-exclude \"**/Kbuild\"",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

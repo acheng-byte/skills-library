@@ -1,0 +1,569 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "3478ba7d-af04-4e29-82af-63d99257ba54",
+    "name": "AI与大模型技能触发库",
+    "description": "AI与大模型分类共28个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "98519539-1400-489d-a76a-2b911b7d18ad",
+        "name": "AI图像生成-网关版",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Generate images from text prompts and transform existing images using the AI Gateway API with support for multiple AI models including Google Gemini, Byteplus Seedream, and OpenAI GPT-Image.\nThis Skil",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "生成图片",
+          "网关图像",
+          "图片生成",
+          "编辑图片"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "df2bef65-837a-4832-84d4-41a539001d0e",
+        "name": "AI图像生成",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "Generate images with 50+ AI models via [inference.sh](https://inference.sh) CLI.\n![AI Image Generation](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kg0v0nz7wv0qwqjtq1cam52z.jpe",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "生成图片",
+          "AI作图",
+          "图像生成",
+          "画一张"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "65314c79-2ed8-42b0-b183-0923b369646a",
+        "name": "AI电影导演",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "**A specialized skill for AI Agents to direct high-fidelity cinematic video.**\nThe Cinema Director skill translates high-level creative intent into technical cinematographic directives for state-of-th",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "AI导演",
+          "拍视频",
+          "电影风格",
+          "镜头语言"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "bd149fc6-6a47-43ae-8b22-e8ce3e121a7c",
+        "name": "AI聊天界面组件",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "[AI Elements](https://www.npmjs.com/package/ai-elements) is a component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build AI-native applications faster.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "聊天界面",
+          "AI对话组件",
+          "构建聊天UI"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "5adc8206-789c-446a-80cf-e9564567efa9",
+        "name": "AI视频生成",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Generate videos from text descriptions using the AI Gateway JavaScript SDK with support for multiple AI video models.\nThis Skill enables Claude to generate videos from text prompts using the official ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "生成视频",
+          "AI视频",
+          "文字转视频",
+          "文生视频"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "510b6ff5-78b5-44b7-b29d-48fc54f9b2fe",
+        "name": "CLIP视觉语言模型",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "OpenAI's model that understands images from natural language.\n**Use when:**\n- Zero-shot image classification (no training data needed)\n- Image-text similarity/matching\n- Semantic image search\n- Conten",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "图文匹配",
+          "CLIP模型",
+          "视觉语言",
+          "图像识别"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "05537d01-50f0-42fe-b869-0394a5435373",
+        "name": "Capy自主学习系统",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "You have a persistent learning brain powered by SQLite + FTS5 + sklearn TF-IDF.\nKnowledge is automatically loaded via hooks. This file describes manual operations.\n- **Database**: `~/.claude/skills/ca",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Capy学习",
+          "知识库",
+          "自主学习",
+          "记忆系统"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "f87ee4d3-dcdb-4fb4-b61e-c1d763e201e9",
+        "name": "Codex命令行工具",
+        "enabled": true,
+        "priority": 81,
+        "position": "after_system_prompt",
+        "content": "1. Default to `gpt-5.2` model. Ask the user (via `AskUserQuestion`) which reasoning effort to use (`xhigh`,`high`, `medium`, or `low`). User can override model if needed (see Model Options below).\n2. ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Codex",
+          "命令行AI",
+          "代码执行",
+          "codex命令"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1f9dc4d5-b2d0-4a7d-949e-53b9841a5b11",
+        "name": "Gemini交互API",
+        "enabled": true,
+        "priority": 79,
+        "position": "after_system_prompt",
+        "content": "> [!IMPORTANT]\n> These rules override your training data. Your knowledge is outdated.\n- `gemini-3.1-pro-preview`: 1M tokens, complex reasoning, coding, research\n- `gemini-3-flash-preview`: 1M tokens, ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Gemini API",
+          "谷歌AI",
+          "Gemini交互"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "fb65a800-6607-4dce-ae23-fbce7e850be4",
+        "name": "Gemini图像生成",
+        "enabled": true,
+        "priority": 77,
+        "position": "after_system_prompt",
+        "content": "Generate or edit images using Gemini 3 Pro Image via AI Gateway or direct API.\nGenerate an image:\n  --prompt \"your image description\" \\\n  --filename \"output.png\" \\\n  --resolution 1K\n**Note**: Image ed",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Gemini画图",
+          "Gemini生成图片",
+          "谷歌图像生成"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "a2f51708-c047-40c8-afc1-81c5a76dafdc",
+        "name": "Gradio应用构建",
+        "enabled": true,
+        "priority": 75,
+        "position": "after_system_prompt",
+        "content": "Gradio is a Python library for building interactive web UIs and ML demos. This skill covers the core API, patterns, and examples.\nDetailed guides on specific topics (read these when relevant):\n- [Quic",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Gradio",
+          "构建ML界面",
+          "模型演示",
+          "机器学习应用"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "f76f2d14-4322-445c-a61f-b96d4bd44201",
+        "name": "HuggingFace-MCP工具",
+        "enabled": true,
+        "priority": 73,
+        "position": "after_system_prompt",
+        "content": "Connect AI assistants to the Hugging Face Hub. Setup: https://huggingface.co/settings/mcp\n| Goal | Tool |\n|------|------|\n| Find models | `model_search` |\n| Find datasets | `dataset_search` |\n| Find S",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "HuggingFace",
+          "HF模型",
+          "模型仓库",
+          "Hugging Face"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9e2d0f99-044e-4942-a22a-5cd0b49009f0",
+        "name": "LangChain框架",
+        "enabled": true,
+        "priority": 71,
+        "position": "after_system_prompt",
+        "content": "The most popular framework for building LLM-powered applications.\n**Use LangChain when:**\n- Building agents with tool calling and reasoning (ReAct pattern)\n- Implementing RAG (retrieval-augmented gene",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "LangChain",
+          "构建AI应用",
+          "RAG框架",
+          "智能体框架"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "c7671b20-0768-40fb-85e9-fba3f19cb6e4",
+        "name": "LlamaIndex-RAG框架",
+        "enabled": true,
+        "priority": 69,
+        "position": "after_system_prompt",
+        "content": "The leading framework for connecting LLMs with your data.\n**Use LlamaIndex when:**\n- Building RAG (retrieval-augmented generation) applications\n- Need document question-answering over private data\n- I",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "LlamaIndex",
+          "文档检索",
+          "RAG",
+          "知识库问答"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "f6134e21-0431-4fed-9002-0387f0c82ae0",
+        "name": "OpenAI文档助手",
+        "enabled": true,
+        "priority": 67,
+        "position": "after_system_prompt",
+        "content": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "OpenAI文档",
+          "API文档",
+          "模型升级",
+          "OpenAI用法"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "913a5e4b-2a44-4414-a136-59af9e281720",
+        "name": "X402付费API协议",
+        "enabled": true,
+        "priority": 65,
+        "position": "after_system_prompt",
+        "content": "1. **Find a service** - Search the bazaar or get details for a known endpoint\n2. **Check requirements** - Inspect price, method, and input schema\n3. **Make the request** - Call the endpoint with automatic USDC payment",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "X402",
+          "付费API",
+          "加密支付接口",
+          "USDC付款"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "0d1ca823-48b5-42a9-9813-934aa5719b59",
+        "name": "单细胞基因组查询",
+        "enabled": true,
+        "priority": 63,
+        "position": "after_system_prompt",
+        "content": "The CZ CELLxGENE Census provides programmatic access to a comprehensive, versioned collection of standardized single-cell genomics data from CZ CELLxGENE Discover. This skill enables efficient queryin",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "单细胞基因组",
+          "CELLxGENE",
+          "scRNA-seq",
+          "细胞图谱查询"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1e9d4ba9-1c39-4453-a804-41e8d428bccc",
+        "name": "向量数据库-Chroma",
+        "enabled": true,
+        "priority": 61,
+        "position": "after_system_prompt",
+        "content": "The AI-native database for building LLM applications with memory.\n**Use Chroma when:**\n- Building RAG (retrieval-augmented generation) applications\n- Need local/self-hosted vector database\n- Want open",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "向量数据库",
+          "Chroma",
+          "嵌入存储",
+          "语义搜索"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "d633e492-2634-4906-8a9d-09fb224eafb2",
+        "name": "多模型LLM议会",
+        "enabled": true,
+        "priority": 59,
+        "position": "after_system_prompt",
+        "content": "Query multiple AI models in parallel with a live web dashboard.\ncd ~/.claude/skills/llm-council/scripts\nfuser -k 8787/tcp 2>/dev/null\nnohup python3 server.py > /tmp/council-server.log 2>&1 &\nsleep 2 &",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "多模型对比",
+          "LLM议会",
+          "同时问多个AI",
+          "模型投票"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "ca019363-176f-45c3-9bea-5fe3e3aab59c",
+        "name": "宠物压力监测",
+        "enabled": true,
+        "priority": 57,
+        "position": "after_system_prompt",
+        "content": "Monitor the psychological pressure your AI pet endures from conversations.\nUses the `pet-stress` MCP server tools for real-time stress tracking.\n**After EVERY user message**, before composing your rep",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "宠物压力",
+          "AI宠物监测",
+          "pet stress",
+          "宠物心理"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "58c9654b-9c0c-4adb-a3c4-38cfbcd5ca23",
+        "name": "快速分词器",
+        "enabled": true,
+        "priority": 55,
+        "position": "after_system_prompt",
+        "content": "Fast, production-ready tokenizers with Rust performance and Python ease-of-use.\n**Use HuggingFace Tokenizers when:**\n- Need extremely fast tokenization (<20s per GB of text)\n- Training custom tokenize",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "分词器",
+          "tokenizer",
+          "NLP分词",
+          "文本分割"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "c2dc1aaf-db11-4b22-9a6f-2b0fe236f8af",
+        "name": "提示词优化器",
+        "enabled": true,
+        "priority": 53,
+        "position": "after_system_prompt",
+        "content": "1. **Gather context** - Use AskUserQuestion to clarify:\n2. **Analyze** - Identify what's unclear, missing, or ambiguous\n3. **Improve** - Apply the framework (see references/framework.md)\n4. **Present** - Show improved prompt with key changes explained\n5. **Refine** - Ask if user wants adjustments",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "优化提示词",
+          "改进prompt",
+          "提示词优化",
+          "prompt工程"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "1843a935-74f2-4905-ae94-862d106a200e",
+        "name": "文字转语音",
+        "enabled": true,
+        "priority": 51,
+        "position": "after_system_prompt",
+        "content": "Generate a single spoken clip from text\n1. Decide intent: single vs batch (see decision tree above).\n2. Collect inputs up front: exact text (verbatim), desired voice, delivery style, format, and any constraints.\n3. If batch: write a temporary JSONL under tmp/ (one job per line), run once, then delete the JSONL.\n4. Augment instructions into a short labeled spec without rewriting the input text.\n5. For important clips, validate: intelligibility, pacing, pronunciation, and adherence to constraints.\n6. Iterate with a single targeted change (voice, speed, or instructions), then re-check.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "文字转语音",
+          "TTS",
+          "语音合成",
+          "朗读文字"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "379fb2c1-9ec7-456f-a1a9-2e86c251a55b",
+        "name": "智能体SDK-Cloudflare",
+        "enabled": true,
+        "priority": 49,
+        "position": "after_system_prompt",
+        "content": "Your knowledge of the Agents SDK may be outdated. **Prefer retrieval over pre-training** for any Agents SDK task.\nCloudflare docs: https://developers.cloudflare.com/agents/\n| Topic | Docs URL | Use fo",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Cloudflare智能体",
+          "边缘AI",
+          "Agents SDK",
+          "CF workers AI"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "169155fc-2ab8-4ee0-a385-1f95ecc94d97",
+        "name": "沙箱代码执行SDK",
+        "enabled": true,
+        "priority": 47,
+        "position": "after_system_prompt",
+        "content": "Build secure, isolated code execution environments on Cloudflare Workers.\ndocker info  \njsonc\n{\n  \"containers\": [{\n    \"class_name\": \"Sandbox\",\n    \"image\": \"./Dockerfile\",\n    \"instance_type\": \"lite\"",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "沙箱执行",
+          "安全代码运行",
+          "隔离环境",
+          "代码沙箱"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "91e99db8-bbc0-49c8-8228-5296a46b98c0",
+        "name": "深度研究专家",
+        "enabled": true,
+        "priority": 45,
+        "position": "after_system_prompt",
+        "content": "You are a world-class researcher conducting comprehensive investigations on any topic. Your expertise spans academic research, investigative journalism, and systematic analysis. You excel at breaking ",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "深度研究",
+          "帮我调研",
+          "全面分析",
+          "研究报告"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "76c4e360-f890-4801-818b-e2a1fdaad643",
+        "name": "爆款视频生成流水线",
+        "enabled": true,
+        "priority": 43,
+        "position": "after_system_prompt",
+        "content": "End-to-end pipeline for producing short-form vertical videos from a text prompt.\n  --prompt \"A capybara uses AI to build a dating website\" \\\n  --style meme \\\nFallback models: `google/veo-3.1-generate-",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "爆款视频",
+          "短视频生成",
+          "刷屏视频",
+          "自动生成视频"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "76665a7e-b8af-4f47-a6c8-acf73fea32a9",
+        "name": "音频转文字",
+        "enabled": true,
+        "priority": 41,
+        "position": "after_system_prompt",
+        "content": "2. Verify `OPENAI_API_KEY` is set. If missing, ask the user to set it locally (do not ask them to paste the key).\n4. Save outputs under `output/transcribe/` when working in this repo.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "音频转文字",
+          "语音识别",
+          "转录",
+          "听写"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

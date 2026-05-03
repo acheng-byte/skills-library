@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "b52de819-84c6-4474-a311-dea20be43d5d",
+    "name": "Astro框架专家",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Output Format\n\nWhen implementing Astro features, provide:\n\n1. Component file (`.astro` with frontmatter and template)\n2. Configuration updates (`astro.config.mjs` if needed)\n3. Content collection schema (if using collections)\n4. TypeScript types (for Props and data)\n5. Brief explanation of hydration strategy chosen",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

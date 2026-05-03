@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c1d99db1-e825-42ee-967a-ff75248e0974",
+    "name": "ChatGPT应用开发",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# ChatGPT Apps\n\n## Overview\n\nScaffold ChatGPT Apps SDK implementations with a docs-first, example-first workflow, then generate code that follows current Apps SDK and MCP Apps bridge patterns.\n\nUse this skill to produce:\n\n- A primary app-archetype classification and repo-shape decision\n- A tool plan (names, schemas, annotations, outputs)\n- An upstream starting-point recommendation (official example, ext-apps example, or local fallback scaffold)\n- An MCP server scaffold (resource registration, tool handlers, metadata)\n- A widget scaffold (MCP Apps bridge first, `window.openai` compatibility/extensions second)\n- A reusable Node + `@modelcontextprotocol/ext-apps` starter scaffold for low-dependency fallbacks\n- A validation report against the minimum working repo contract\n- Local dev and connector setup steps\n- A short stakeholder summary of what the app does (when requested)\n\n## Mandatory Docs-First Workflow\n\nUse `$openai-docs` first whenever building or changing a ChatGPT Apps SDK app.\n\n1. Invoke `$openai-docs` (preferred) or call the OpenAI docs MCP server directly.\n2. Fetch current Apps SDK docs before writing code, especially (baseline pages):\n   - `apps-sdk/build/mcp-server`\n   - `apps-sdk/build/chatgpt-ui`\n   - `apps-sdk/build/examples`\n   - `apps-sdk/plan/tools`\n   - `apps-sdk/reference`\n3. Fetch `apps-sdk/quickstart` when scaffolding a new app or generating a first-pass implementation, and check the official examples repo/page before inventing a scaffold from scratch.\n4.\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

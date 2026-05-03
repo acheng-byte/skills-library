@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "4c0cdef6-45b0-4e8c-a202-7101af24ff9c",
+    "name": "内容A-B测试",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Content Experimentation Best Practices\n\nPrinciples and patterns for running effective content experiments to improve conversion rates, engagement, and user experience.\n\n## When to Apply\n\nReference these guidelines when:\n- Setting up A/B or multivariate testing infrastructure\n- Designing experiments for content changes\n- Analyzing and interpreting test results\n- Building CMS integrations for experimentation\n- Deciding what to test and how\n\n## Core Concepts\n\n### A/B Testing\nComparing two variants (A vs B) to determine which performs better.\n\n### Multivariate Testing\nTesting multiple variables simultaneously to find optimal combinations.\n\n### Statistical Significance\nThe confidence level that results aren't due to random chance.\n\n### Experimentation Culture\nMaking decisions based on data rather than opinions (HiPPO avoidance).\n\n## References\n\nStart with the reference that matches the current problem, such as design, statistics, CMS integration, or pitfalls. See `references/` for detailed guidance:\n- `references/experiment-design.md` — Hypothesis framework, metrics, sample size, and what to test\n- `references/statistical-foundations.md` — p-values, confidence intervals, power analysis, Bayesian methods\n- `references/cms-integration.md` — CMS-managed variants, field-level variants, external platforms\n- `references/common-pitfalls.md` — 17 common mistakes across statistics, design, execution, and interpretation",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

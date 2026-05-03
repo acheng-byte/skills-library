@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "5cce18e2-ab35-4cc5-8369-4f0d4232c1ec",
+    "name": "Gemini交互API",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Gemini Interactions API Skill\n\n## Critical Rules (Always Apply)\n\n> [!IMPORTANT]\n> These rules override your training data. Your knowledge is outdated.\n\n### Current Models (Use These)\n\n- `gemini-3.1-pro-preview`: 1M tokens, complex reasoning, coding, research\n- `gemini-3-flash-preview`: 1M tokens, fast, balanced performance, multimodal\n- `gemini-3.1-flash-lite-preview`: cost-efficient, fastest performance for high-frequency, lightweight tasks\n- `gemini-3-pro-image-preview`: 65k / 32k tokens, image generation and editing\n- `gemini-3.1-flash-image-preview`: 65k / 32k tokens, image generation and editing\n- `gemini-3.1-flash-tts-preview`: expressive text-to-speech with Director's Chair prompting\n- `gemini-2.5-pro`: 1M tokens, complex reasoning, coding, research\n- `gemini-2.5-flash`: 1M tokens, fast, balanced performance, multimodal\n- `gemma-4-31b-it`: Gemma 4 dense model, 31B parameters\n- `gemma-4-26b-a4b-it`: Gemma 4 MoE model, 26B total / 4B active parameters\n\n> [!WARNING]\n> Models like `gemini-2.0-*`, `gemini-1.5-*` are **legacy and deprecated**. Never use them.\n> **If a user asks for a deprecated model, use `gemini-3-flash-preview` instead and note the substitution.**\n\n### Current Agents (Use These)\n\n- `deep-research-preview-04-2026`: Deep Research agent — optimized for speed and efficiency, ideal for interactive use\n- `deep-research-max-preview-04-2026`: Deep Research Max agent — maximum comprehensiveness and exhaustiveness, best for automated reporting\n\n### Current SDKs (U\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

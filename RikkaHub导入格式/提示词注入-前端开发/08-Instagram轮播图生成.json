@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "6f6b16d9-3ae3-4961-97da-4bf8ab5f7339",
+    "name": "Instagram轮播图生成",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# World-Class Instagram Carousel Generator\n\nGenerate Instagram carousels that are genuinely world-class: content people save, share, and come back to. Not engagement bait. Not AI slop. Actual value, delivered through precise visual design and narrative structure.\n\nThis skill is **fully generalized**. It contains FORM (structure, principles, patterns), not MATTER (specific topics). The user provides the matter (topic); the skill provides the form (archetypes, design system, music matrix, quality gates). Together they produce the carousel. Nothing is hardcoded.\n\n---\n\n## BEFORE YOU START: Read `KNOWN_ISSUES.md`\n\nBefore generating ANY carousel, read `/home/node/.claude/skills/world-class-carousel/KNOWN_ISSUES.md`. It contains compressed rules from all previous sessions -- data format gotchas, sizing rules, visual strategy decisions, and quality gates. Ignoring it means repeating solved mistakes.\n\n---\n\n## EXECUTION PIPELINE\n\nWhen the user requests a carousel, execute these 6 phases in order (Phase 6 runs post-delivery):\n\n### PHASE 1: RESEARCH & STRUCTURING\n\n1. **Analyze the topic** -- What is the core insight? What specific value can this deliver?\n2. **Identify the audience** -- What does the target audience NOT already know? What's their current understanding?\n3. **Auto-detect content vertical and theme** -- Use the Content Vertical Detection table below\n4. **Select the archetype** -- Which of the 7 carousel archetypes (see below) fits best? Use the Archetype Selection Guide belo\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

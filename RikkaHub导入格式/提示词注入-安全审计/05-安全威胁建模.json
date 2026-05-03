@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "99f51a5c-dff9-4ab9-a545-80116ae9c414",
+    "name": "安全威胁建模",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\n### 1) Scope and extract the system model\n- Identify primary components, data stores, and external integrations from the repo summary.\n- Identify how the system runs (server, CLI, library, worker) and its entrypoints.\n- Separate runtime behavior from CI/build/dev tooling and from tests/examples.\n- Map the in-scope locations to those components and exclude out-of-scope items explicitly.\n- Do not claim components, flows, or controls without evidence.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

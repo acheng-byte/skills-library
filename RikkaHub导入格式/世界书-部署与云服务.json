@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "83c71f32-f2c7-4a05-a126-cf68a9601e90",
+    "name": "部署与云服务技能触发库",
+    "description": "部署与云服务分类共6个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "eaa99b66-3b9c-45f2-80d7-4b258da12881",
+        "name": "Cloudflare综合平台",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Consolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.\nYour knowledge of Cloudflare APIs, types, limits, and pri",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Cloudflare平台",
+          "Cloudflare产品",
+          "Cloudflare选型",
+          "Cloudflare综合"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "28268d6f-35bf-4152-a9f0-ff28d439978e",
+        "name": "Cloudflare部署",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "Consolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.\n- When sandboxing blocks the deployment network calls, re",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "部署到Cloudflare",
+          "Cloudflare部署",
+          "Cloudflare Pages部署",
+          "发布到CF"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "658423e5-e1bd-49ce-8063-13cfd8461395",
+        "name": "Wrangler-CF命令行",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "| Source | How to retrieve | Use for |\n|--------|----------------|---------|\n| Wrangler config schema | `node_modules/wrangler/config-schema.json` | Config fields, binding shapes, allowed values |\n| C",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Wrangler",
+          "wrangler命令",
+          "Cloudflare CLI",
+          "Workers命令行"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "bc851bb9-b60b-4391-801a-161547c3fe52",
+        "name": "部署到Netlify",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "This skill automates Netlify deployments by:\n- Detecting project configuration and framework\n- Linking to existing sites or creating new ones\n- Deploying to production or preview environments\n- **Netl",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "部署到Netlify",
+          "Netlify部署",
+          "Netlify发布",
+          "Netlify托管"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "3ae8c312-4b8c-4ff4-aeff-979988c670c5",
+        "name": "部署到Render",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Render supports **Git-backed** services and **prebuilt Docker image** services.\nThis skill covers **Git-backed** flows:\n1. **Blueprint Method** - Generate render.yaml for Infrastructure-as-Code deploy",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "部署到Render",
+          "Render部署",
+          "Render发布",
+          "Render托管"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "3eeacb61-f1ca-4836-a1bc-02c1573b9bdb",
+        "name": "部署到Vercel",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "Deploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.\nThe goal is to get the user into the best long-term setup: their project lin",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "部署到Vercel",
+          "Vercel部署",
+          "Vercel发布",
+          "Vercel托管"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "6e0b4ad6-53a2-4d23-93f0-0a009c75bb22",
+    "name": "Remotion视频组件",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n\nUse this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

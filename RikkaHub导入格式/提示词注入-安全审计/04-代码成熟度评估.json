@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "24d1f125-c43f-4d3a-a27b-af8f7e3889e0",
+    "name": "代码成熟度评估",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Code Maturity Assessor\n\n## Purpose\n\nSystematically assesses codebase maturity using Trail of Bits' 9-category framework. Provides evidence-based ratings and actionable recommendations.\n\n**Framework**: Building Secure Contracts - Code Maturity Evaluation v0.1.0\n\n---\n\n## How This Works\n\n### Phase 1: Discovery\nExplores the codebase to understand:\n- Project structure and platform\n- Contract/module files\n- Test coverage\n- Documentation availability\n\n### Phase 2: Analysis\nFor each of 9 categories, I'll:\n- **Search the code** for relevant patterns\n- **Read key files** to assess implementation\n- **Present findings** with file references\n- **Ask clarifying questions** about processes I can't see in code\n- **Determine rating** based on criteria\n\n### Phase 3: Report\nGenerates:\n- Executive summary\n- Maturity scorecard (ratings for all 9 categories)\n- Detailed analysis with evidence\n- Priority-ordered improvement roadmap\n\n---\n\n## Rating System\n\n- **Missing (0)**: Not present/not implemented\n- **Weak (1)**: Several significant improvements needed\n- **Moderate (2)**: Adequate, can be improved\n- **Satisfactory (3)**: Above average, minor improvements\n- **Strong (4)**: Exceptional, only small improvements possible\n\n**Rating Logic**:\n- ANY \"Weak\" criteria → **Weak**\n- NO \"Weak\" + SOME \"Moderate\" unmet → **Moderate**\n- ALL \"Moderate\" + SOME \"Satisfactory\" met → **Satisfactory**\n- ALL \"Satisfactory\" + exceptional practices → **Strong**\n\n---\n\n## The 9 Categories\n\nI assess 9 comprehensive catego\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

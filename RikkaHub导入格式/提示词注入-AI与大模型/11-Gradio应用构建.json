@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "143a7b5b-0061-4217-831e-aec29c43599e",
+    "name": "Gradio应用构建",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Gradio\n\nGradio is a Python library for building interactive web UIs and ML demos. This skill covers the core API, patterns, and examples.\n\n## Guides\n\nDetailed guides on specific topics (read these when relevant):\n\n- [Quickstart](https://www.gradio.app/guides/quickstart)\n- [The Interface Class](https://www.gradio.app/guides/the-interface-class)\n- [Blocks and Event Listeners](https://www.gradio.app/guides/blocks-and-event-listeners)\n- [Controlling Layout](https://www.gradio.app/guides/controlling-layout)\n- [More Blocks Features](https://www.gradio.app/guides/more-blocks-features)\n- [Custom CSS and JS](https://www.gradio.app/guides/custom-CSS-and-JS)\n- [Streaming Outputs](https://www.gradio.app/guides/streaming-outputs)\n- [Streaming Inputs](https://www.gradio.app/guides/streaming-inputs)\n- [Sharing Your App](https://www.gradio.app/guides/sharing-your-app)\n- [Custom HTML Components](https://www.gradio.app/guides/custom-HTML-components)\n- [Getting Started with the Python Client](https://www.gradio.app/guides/getting-started-with-the-python-client)\n- [Getting Started with the JS Client](https://www.gradio.app/guides/getting-started-with-the-js-client)\n\n## Core Patterns\n\n**Interface** (high-level): wraps a function with input/output components.\n\nimport gradio as gr\n\ndef greet(name):\n    return f\"Hello {name}!\"\n\ngr.Interface(fn=greet, inputs=\"text\", outputs=\"text\").launch()\n\n**Blocks** (low-level): flexible layout with explicit event wiring.\n\nimport gradio as gr\n\nwith gr.Blocks() a\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

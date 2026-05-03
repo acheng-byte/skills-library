@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "9e5b7191-21a2-41ec-97a3-ece3a2f01351",
+    "name": "X402付费API协议",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\nThe typical x402 workflow is:\n\n1. **Find a service** - Search the bazaar or get details for a known endpoint\n2. **Check requirements** - Inspect price, method, and input schema\n3. **Make the request** - Call the endpoint with automatic USDC payment",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

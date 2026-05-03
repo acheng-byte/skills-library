@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "dd4e9817-8829-4528-be93-352a889a36e8",
+    "name": "LangChain框架",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# LangChain - Build LLM Applications with Agents & RAG\n\nThe most popular framework for building LLM-powered applications.\n\n## When to use LangChain\n\n**Use LangChain when:**\n- Building agents with tool calling and reasoning (ReAct pattern)\n- Implementing RAG (retrieval-augmented generation) pipelines\n- Need to swap LLM providers easily (OpenAI, Anthropic, Google)\n- Creating chatbots with conversation memory\n- Rapid prototyping of LLM applications\n- Production deployments with LangSmith observability\n\n**Metrics**:\n- **119,000+ GitHub stars**\n- **272,000+ repositories** use LangChain\n- **500+ integrations** (models, vector stores, tools)\n- **3,800+ contributors**\n\n**Use alternatives instead**:\n- **LlamaIndex**: RAG-focused, better for document Q&A\n- **LangGraph**: Complex stateful workflows, more control\n- **Haystack**: Production search pipelines\n- **Semantic Kernel**: Microsoft ecosystem\n\n## Quick start\n\n### Installation\n\n# Core library (Python 3.10+)\n\n# With OpenAI\n\n# With Anthropic\n\n# Common extras\n\n### Basic LLM usage\n\npython\nfrom langchain_anthropic import ChatAnthropic\n\n# Initialize model\nllm = ChatAnthropic(model=\"claude-sonnet-4-5-20250929\")\n\n# Simple completion\nresponse = llm.invoke(\"Explain quantum computing in 2 sentences\")\nprint(response.content)\n\n### Create an agent (ReAct pattern)\n\npython\nfrom langchain.agents import create_agent\nfrom langchain_anthropic import ChatAnthropic\n\n# Define tools\ndef get_weather(city: str) -> str:\n    \"\"\"Get current weather for a city.\"\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

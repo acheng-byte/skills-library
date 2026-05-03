@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "262d668e-ec11-4287-ab3d-721d49566022",
+    "name": "Web性能分析",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Workflow\n\nCopy this checklist to track progress:\n\nAudit Progress:\n- [ ] Phase 1: Performance trace (navigate + record)\n- [ ] Phase 2: Core Web Vitals analysis (includes CLS culprits)\n- [ ] Phase 3: Network analysis\n- [ ] Phase 4: Accessibility snapshot\n- [ ] Phase 5: Codebase analysis (skip if third-party site)\n\n## Output Format\n\nPresent findings as:\n\n1. **Core Web Vitals Summary** - Table with metric, value, and rating (good/needs-improvement/poor)\n2. **Top Issues** - Prioritized list of problems with estimated impact (high/medium/low)\n3. **Recommendations** - Specific, actionable fixes with code snippets or config changes\n4. **Codebase Findings** - Framework/bundler detected, optimization opportunities (omit if no codebase access)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

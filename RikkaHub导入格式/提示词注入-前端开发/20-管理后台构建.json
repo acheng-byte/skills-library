@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "4654b499-941c-4cb0-9306-b15203edaac5",
+    "name": "管理后台构建",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Streamlit Admin Dashboard\n\nUse when building the Admin Console for quote review, pricing management, or any internal tool.\n\nFor advanced patterns: [FIRESTORE_INTEGRATION.md](FIRESTORE_INTEGRATION.md) | [DATA_EDITOR_PATTERNS.md](DATA_EDITOR_PATTERNS.md)\n\n---\n\n## Project Structure\n\nbackend_python/\n  admin_tool/\n    app.py                 ← Entry point (streamlit run app.py)\n    pages/\n      1_📋_Quotes.py      ← Quote review + st.data_editor\n      2_💰_Price_Book.py  ← Master Price Book editor\n    config/\n      auth.yaml            ← Credenziali (gitignored!)\n    requirements.txt\n\n## Authentication (streamlit-authenticator)\n\nGenerate hashed password once:\npython\nimport streamlit_authenticator as stauth\nhashed = stauth.Hasher([\"mypassword\"]).generate()\nprint(hashed[0])  # → copy into auth.yaml\n\n`config/auth.yaml`:\nyaml\ncredentials:\n  usernames:\n    admin:\n      name: Admin SYD\n      password: $2b$12$...   # bcrypt hash, NOT plain text\n      roles: [admin]\ncookie:\n  name: sydbio_admin_cookie\n  key: $ENV_RANDOM_SECRET_32CHARS  # from env var\n  expiry_days: 1\n\n> **MANDATORIO**: `auth.yaml` nel `.gitignore`. Non committare mai password hashate nel repo pubblico.\n\n`app.py`:\npython\nimport streamlit as st\nimport streamlit_authenticator as stauth\nimport yaml\nimport os\n\nwith open(\"config/auth.yaml\") as f:\n    config = yaml.safe_load(f)\n\nauthenticator = stauth.Authenticate(\n    config[\"credentials\"],\n    config[\"cookie\"][\"name\"],\n    os.environ[\"AUTH_COOKIE_KEY\"],  # ← from env, not hardc\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

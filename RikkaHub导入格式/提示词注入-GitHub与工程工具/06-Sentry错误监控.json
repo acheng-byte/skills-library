@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "160ea06a-c64f-4791-a59d-c378444af872",
+    "name": "Sentry错误监控",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Sentry (Read-only Observability)\n\n## Quick start\n\n- If not already authenticated, ask the user to run `sentry auth login` or set `SENTRY_AUTH_TOKEN` as an env var.\n- Defaults: time range `24h`, environment `production`, limit 20.\n- Always use `--json` when processing output programmatically. Use `--json --fields` to select specific fields and reduce output size.\n- Use `sentry schema <resource>` to discover API endpoints quickly.\n\n2. Authenticate: `sentry auth login`\n3. Confirm authentication: `sentry auth status`\n- Never ask the user to paste the full token in chat. Ask them to set it locally and confirm when ready.\n\n## Core tasks (use Sentry CLI)\n\n### 1) List issues (ordered by most recent)\n\nsentry issue list \\\n  --query \"is:unresolved environment:production\" \\\n  --period 24h \\\n  --limit 20 \\\n  --json --fields shortId,title,priority,level,status\n\nIf auto-detection doesn't resolve org/project, pass them explicitly:\nsentry issue list {your-org}/{your-project} \\\n  --query \"is:unresolved environment:production\" \\\n  --period 24h \\\n  --limit 20 \\\n  --json\n\n### 2) Resolve an issue short ID to issue detail\n\nsentry issue view {ABC-123} --json\n\nUse the short ID format (e.g., `ABC-123`), not the numeric ID.\n\n### 3) Issue detail\n\nsentry issue view {ABC-123}\n\n### 4) Issue events\n\nsentry issue events {ABC-123} --limit 20 --json\n\n### 5) Event detail\n\nsentry event view {your-org}/{your-project}/{event_id} --json\n\n### 6) AI-powered root cause analysis\n\nsentry issue explain {ABC-123}\n\n### 7\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

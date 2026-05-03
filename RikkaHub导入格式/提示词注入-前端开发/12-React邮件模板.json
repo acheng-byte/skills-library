@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "15f41c12-7e47-45eb-b24c-4c572935047c",
+    "name": "React邮件模板",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# React Email\n\nBuild and send HTML emails using React components - a modern, component-based approach to email development that works across all major email clients.\n\n## Navigate to Project Directory\n\nYou must change into the newly created project folder:\n\ncd react-email-starter\n\n## Install Dependencies\n\nYou need to install all project dependencies before running the development server.\n\nUsing npm:\n\nUsing yarn:\nyarn\n\nUsing pnpm:\n\nUsing bun:\nbun install\n\n## Start the Development Server\n\nYour task is to start the local preview server to view and edit email templates.\n\nUsing npm:\nnpm run dev\n\nUsing yarn:\nyarn dev\n\nUsing pnpm:\npnpm dev\n\nUsing bun:\nbun dev\n\n## Verify Installation\n\nConfirm the development server is running by checking that localhost:3000 is accessible. The server will display a preview interface where you can view email templates from the `emails` folder.\n\n### Notes on installation\nAssuming React Email is installed in an existing project, update the top-level package.json file with a script to run the React Email preview server.\n\n{\n  \"scripts\": {\n    \"email\": \"email dev --dir emails --port 3000\"\n  }\n}\n\nMake sure the path to the emails folder is relative to the base project directory.\n\n### tsconfig.json updating or creation\n\nEnsure the tsconfig.json includes proper support for jsx.\n\n## Basic Email Template\n\nReplace the sample email templates. Here is how to create a new email template:\n\nCreate an email component with proper structure using the Tailwind component for\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

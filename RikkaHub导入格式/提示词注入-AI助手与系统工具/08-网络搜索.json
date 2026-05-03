@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "8f48d60b-1373-4573-af07-053c7ab44af4",
+    "name": "网络搜索",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\n- **Current Information**: Get up-to-date facts, statistics, or news\n- **Documentation**: Find official documentation, API references, or guides\n- **Research**: Look up technical topics, best practices, or comparisons\n- **Recent Events**: Check latest news, releases, or announcements\n- **Website Discovery**: Find specific tools, libraries, or services\n- **Fact Checking**: Verify information or get multiple perspectives",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

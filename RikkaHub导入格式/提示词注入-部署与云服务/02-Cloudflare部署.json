@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "91aa2b63-9045-4ee6-b1df-40c3ea19f32d",
+    "name": "Cloudflare部署",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Cloudflare Deploy\n\nConsolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.\n\n## Prerequisites\n\n- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.\n- The deployment might take a few minutes. Use appropriate timeout values.\n\n## Authentication (Required Before Deploy)\n\nVerify auth before `wrangler deploy`, `wrangler pages deploy`, or `npm run deploy`:\n\nnpx wrangler whoami    # Shows account if authenticated\n\nNot authenticated? → `references/wrangler/auth.md`\n- Interactive/local: `wrangler login` (one-time OAuth)\n- CI/CD: Set `CLOUDFLARE_API_TOKEN` env var\n\n## Quick Decision Trees\n\n### \"I need to run code\"\n\nNeed to run code?\n├─ Serverless functions at the edge → workers/\n├─ Full-stack web app with Git deploys → pages/\n├─ Stateful coordination/real-time → durable-objects/\n├─ Long-running multi-step jobs → workflows/\n├─ Run containers → containers/\n├─ Multi-tenant (customers deploy code) → workers-for-platforms/\n├─ Scheduled tasks (cron) → cron-triggers/\n├─ Lightweight edge logic (modify HTTP) → snippets/\n├─ Process Worker execution events (logs/observability) → tail-workers/\n└─ Optimize latency to backend infrastructure → smart-placement/\n\n### \"I need to store data\"\n\nNeed storage?\n├─ Key-value (config, sessions, cache) → kv/\n├─ Relational SQL → d1/ (SQLite) or hyperdrive/ (existing Postgres/MySQL)\n├─ Object/file storage (S3-compatible) → r2\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

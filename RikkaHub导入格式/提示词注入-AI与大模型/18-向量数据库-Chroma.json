@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "edcc1695-36e8-4c77-987e-2a96f8c1f98d",
+    "name": "向量数据库-Chroma",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Chroma - Open-Source Embedding Database\n\nThe AI-native database for building LLM applications with memory.\n\n## When to use Chroma\n\n**Use Chroma when:**\n- Building RAG (retrieval-augmented generation) applications\n- Need local/self-hosted vector database\n- Want open-source solution (Apache 2.0)\n- Prototyping in notebooks\n- Semantic search over documents\n- Storing embeddings with metadata\n\n**Metrics**:\n- **24,300+ GitHub stars**\n- **1,900+ forks**\n- **v1.3.3** (stable, weekly releases)\n- **Apache 2.0 license**\n\n**Use alternatives instead**:\n- **Pinecone**: Managed cloud, auto-scaling\n- **FAISS**: Pure similarity search, no metadata\n- **Weaviate**: Production ML-native database\n- **Qdrant**: High performance, Rust-based\n\n## Quick start\n\n### Installation\n\n# Python\n\n# JavaScript/TypeScript\n\n### Basic usage (Python)\n\npython\nimport chromadb\n\n# Create client\nclient = chromadb.Client()\n\n# Create collection\ncollection = client.create_collection(name=\"my_collection\")\n\n# Add documents\ncollection.add(\n    documents=[\"This is document 1\", \"This is document 2\"],\n    metadatas=[{\"source\": \"doc1\"}, {\"source\": \"doc2\"}],\n    ids=[\"id1\", \"id2\"]\n)\n\n# Query\nresults = collection.query(\n    query_texts=[\"document about topic\"],\n    n_results=2\n)\n\nprint(results)\n\n## Core operations\n\n### 1. Create collection\n\npython\n# Simple collection\ncollection = client.create_collection(\"my_docs\")\n\n# With custom embedding function\nfrom chromadb.utils import embedding_functions\n\nopenai_ef = embedding_functions.Ope\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "4ce1c8af-8d25-4481-9daf-fb0d608696eb",
+    "name": "学术引用管理",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Citation Management\n\n## Overview\n\nManage citations systematically throughout the research and writing process. This skill provides tools and strategies for searching academic databases (Google Scholar, PubMed), extracting accurate metadata from multiple sources (CrossRef, PubMed, arXiv), validating citation information, and generating properly formatted BibTeX entries.\n\nCritical for maintaining citation accuracy, avoiding reference errors, and ensuring reproducible research. Integrates seamlessly with the literature-review skill for comprehensive research workflows.\n\n## When to Use This Skill\n\nUse this skill when:\n- Searching for specific papers on Google Scholar or PubMed\n- Converting DOIs, PMIDs, or arXiv IDs to properly formatted BibTeX\n- Extracting complete metadata for citations (authors, title, journal, year, etc.)\n- Validating existing citations for accuracy\n- Cleaning and formatting BibTeX files\n- Finding highly cited papers in a specific field\n- Verifying that citation information matches the actual publication\n- Building a bibliography for a manuscript or thesis\n- Checking for duplicate citations\n- Ensuring consistent citation formatting\n\n## Visual Enhancement with Scientific Schematics\n\n**When creating documents with this skill, always consider adding scientific diagrams and schematics to enhance visual communication.**\n\nIf your document does not already contain schematics or diagrams:\n- Use the **scientific-schematics** skill to generate AI-powered publication-q\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c1fceea5-66af-456a-b433-d16bbf7421d0",
+    "name": "代码格式修复",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Fix Lint and Formatting\n\n## Instructions\n\n1. Run `yarn prettier` to fix formatting\n2. Run `yarn linc` to check for remaining lint issues\n3. Report any remaining manual fixes needed\n\n## Common Mistakes\n\n- **Running prettier on wrong files** - `yarn prettier` only formats changed files\n- **Ignoring linc errors** - These will fail CI, fix them before committing",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

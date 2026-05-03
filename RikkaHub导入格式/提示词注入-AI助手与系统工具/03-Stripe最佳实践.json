@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "ce38f646-d620-45ee-9222-c07e484009a8",
+    "name": "Stripe最佳实践",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "Latest Stripe API version: **2026-04-22.dahlia**. Always use the latest API version and SDK unless the user specifies otherwise.\n\n## Integration routing\n\n| Building…                                                                | Recommended API                     | Details                  |\n| ------------------------------------------------------------------------ | ----------------------------------- | ------------------------ |\n| One-time payments                                                        | Checkout Sessions                   | <references/payments.md> |\n| Custom payment form with embedded UI                                     | Checkout Sessions + Payment Element | <references/payments.md> |\n| Saving a payment method for later                                        | Setup Intents                       | <references/payments.md> |\n| Connect platform or marketplace                                          | Accounts v2 (`/v2/core/accounts`)   | <references/connect.md>  |\n| Subscriptions or recurring billing                                       | Billing APIs + Checkout Sessions    | <references/billing.md>  |\n| Embedded financial accounts / banking                                    | v2 Financial Accounts               | <references/treasury.md> |\n| Security (key management, RAKs, webhooks, OAuth, 2FA, Connect liability) | See security reference              | <references/security.md> |\n\nRead the relevant reference file before answering any integration q\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "9de96707-a10d-4b03-b14c-7129de1d03aa",
+    "name": "Next.js最佳实践",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Next.js Best Practices\n\nApply these rules when writing or reviewing Next.js code.\n\n## File Conventions\n\nSee [file-conventions.md](./file-conventions.md) for:\n- Project structure and special files\n- Route segments (dynamic, catch-all, groups)\n- Parallel and intercepting routes\n- Middleware rename in v16 (middleware → proxy)\n\n## RSC Boundaries\n\nDetect invalid React Server Component patterns.\n\nSee [rsc-boundaries.md](./rsc-boundaries.md) for:\n- Async client component detection (invalid)\n- Non-serializable props detection\n- Server Action exceptions\n\n## Async Patterns\n\nNext.js 15+ async API changes.\n\nSee [async-patterns.md](./async-patterns.md) for:\n- Async `params` and `searchParams`\n- Async `cookies()` and `headers()`\n- Migration codemod\n\n## Runtime Selection\n\nSee [runtime-selection.md](./runtime-selection.md) for:\n- Default to Node.js runtime\n- When Edge runtime is appropriate\n\n## Directives\n\nSee [directives.md](./directives.md) for:\n- `'use client'`, `'use server'` (React)\n- `'use cache'` (Next.js)\n\n## Functions\n\nSee [functions.md](./functions.md) for:\n- Navigation hooks: `useRouter`, `usePathname`, `useSearchParams`, `useParams`\n- Server functions: `cookies`, `headers`, `draftMode`, `after`\n- Generate functions: `generateStaticParams`, `generateMetadata`\n\n## Error Handling\n\nSee [error-handling.md](./error-handling.md) for:\n- `error.tsx`, `global-error.tsx`, `not-found.tsx`\n- `redirect`, `permanentRedirect`, `notFound`\n- `forbidden`, `unauthorized` (auth errors)\n- `unstable_\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

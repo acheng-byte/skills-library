@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "70afdd65-bf23-4f97-8e16-0066c03a1077",
+    "name": "Playwright命令行",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## Core\n\nplaywright-cli open\n# open and navigate right away\nplaywright-cli open https://example.com/\nplaywright-cli goto https://playwright.dev\nplaywright-cli type \"search query\"\nplaywright-cli click e3\nplaywright-cli dblclick e7\n# --submit presses Enter after filling the element\nplaywright-cli fill e5 \"user@example.com\"  --submit\nplaywright-cli drag e2 e8\n# drop files or data onto an element (from outside the page)\nplaywright-cli drop e4 --path=./image.png\nplaywright-cli drop e4 --data=\"text/plain=hello world\"\nplaywright-cli hover e4\nplaywright-cli select e9 \"option-value\"\nplaywright-cli upload ./document.pdf\nplaywright-cli check e12\nplaywright-cli uncheck e12\nplaywright-cli snapshot\nplaywright-cli eval \"document.title\"\nplaywright-cli eval \"el => el.textContent\" e5\n# get element id, class, or any attribute not visible in the snapshot\nplaywright-cli eval \"el => el.id\" e5\nplaywright-cli eval \"el => el.getAttribute('data-testid')\" e5\nplaywright-cli dialog-accept\nplaywright-cli dialog-accept \"confirmation text\"\nplaywright-cli dialog-dismiss\nplaywright-cli resize 1920 1080\nplaywright-cli close",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "5a3d769f-86d2-4705-b8f9-58bcd1a52a5f",
+    "name": "HuggingFace-MCP工具",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Hugging Face MCP Server\n\nConnect AI assistants to the Hugging Face Hub. Setup: https://huggingface.co/settings/mcp\n\n## Use Cases & Examples\n\n### Find the Best Model for a Task\n\nUser: \"Find the best model for code generation\"\n\n1. model_search(task=\"text-generation\", query=\"code\", sort=\"trendingScore\", limit=10)\n2. hub_repo_details(repo_ids=[\"top-result-id\"], include_readme=true)\n\n### Compare Models from Different Providers\n\nUser: \"Compare Llama vs Qwen for text generation\"\n\n1. model_search(author=\"meta-llama\", task=\"text-generation\", sort=\"downloads\", limit=5)\n2. model_search(author=\"Qwen\", task=\"text-generation\", sort=\"downloads\", limit=5)\n3. hub_repo_details(repo_ids=[\"meta-llama/Llama-3.2-1B\", \"Qwen/Qwen3-8B\"], include_readme=true)\n\n### Find Training Datasets\n\nUser: \"Find datasets for sentiment analysis in English\"\n\n1. dataset_search(query=\"sentiment\", tags=[\"language:en\", \"task_categories:text-classification\"], sort=\"downloads\")\n2. hub_repo_details(repo_ids=[\"top-dataset-id\"], repo_type=\"dataset\", include_readme=true)\n\n### Discover AI Tools (MCP Spaces)\n\nUser: \"Find a tool that can remove image backgrounds\"\n\n1. space_search(query=\"background removal\", mcp=true)\n2. dynamic_space(operation=\"view_parameters\", space_name=\"result-space-id\")\n3. dynamic_space(operation=\"invoke\", space_name=\"result-space-id\", parameters=\"{...}\")\n\n### Generate Images\n\nUser: \"Create an image of a robot reading a book\"\n\n1. dynamic_space(operation=\"discover\")  # See available tasks\n2. gr1_flux1_schn\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

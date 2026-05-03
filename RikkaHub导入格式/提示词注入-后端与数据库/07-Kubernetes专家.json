@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "67c1a73a-8764-4a36-8ffc-cef04a0faa89",
+    "name": "Kubernetes专家",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Kubernetes Specialist\n\n## When to Use This Skill\n\n- Deploying workloads (Deployments, StatefulSets, DaemonSets, Jobs)\n- Configuring networking (Services, Ingress, NetworkPolicies)\n- Managing configuration (ConfigMaps, Secrets, environment variables)\n- Setting up persistent storage (PV, PVC, StorageClasses)\n- Creating Helm charts for application packaging\n- Troubleshooting cluster and workload issues\n- Implementing security best practices\n\n## Core Workflow\n\n1. **Analyze requirements** — Understand workload characteristics, scaling needs, security requirements\n2. **Design architecture** — Choose workload types, networking patterns, storage solutions\n3. **Implement manifests** — Create declarative YAML with proper resource limits, health checks\n4. **Secure** — Apply RBAC, NetworkPolicies, Pod Security Standards, least privilege\n5. **Validate** — Run `kubectl rollout status`, `kubectl get pods -w`, and `kubectl describe pod <name>` to confirm health; roll back with `kubectl rollout undo` if needed\n\n## Reference Guide\n\nLoad detailed guidance based on context:\n\n| Topic | Reference | Load When |\n|-------|-----------|-----------|\n| Workloads | `references/workloads.md` | Deployments, StatefulSets, DaemonSets, Jobs, CronJobs |\n| Networking | `references/networking.md` | Services, Ingress, NetworkPolicies, DNS |\n| Configuration | `references/configuration.md` | ConfigMaps, Secrets, environment variables |\n| Storage | `references/storage.md` | PV, PVC, StorageClasses, CSI drivers |\n| \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "26c43101-3e9c-481a-adc9-ce110bc82199",
+    "name": "多阶段Dockerfile",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "Your goal is to help me create efficient multi-stage Dockerfiles that follow best practices, resulting in smaller, more secure container images.\n\n## Multi-Stage Structure\n\n- Use a builder stage for compilation, dependency installation, and other build-time operations\n- Use a separate runtime stage that only includes what's needed to run the application\n- Copy only the necessary artifacts from the builder stage to the runtime stage\n- Use meaningful stage names with the `AS` keyword (e.g., `FROM node:18 AS builder`)\n- Place stages in logical order: dependencies → build → test → runtime\n\n## Base Images\n\n- Start with official, minimal base images when possible\n- Specify exact version tags to ensure reproducible builds (e.g., `python:3.11-slim` not just `python`)\n- Consider distroless images for runtime stages where appropriate\n- Use Alpine-based images for smaller footprints when compatible with your application\n- Ensure the runtime image has the minimal necessary dependencies\n\n## Layer Optimization\n\n- Organize commands to maximize layer caching\n- Place commands that change frequently (like code changes) after commands that change less frequently (like dependency installation)\n- Use `.dockerignore` to prevent unnecessary files from being included in the build context\n- Combine related RUN commands with `&&` to reduce layer count\n- Consider using COPY --chown to set permissions in one step\n\n## Security Practices\n\n- Avoid running containers as root - use `USER` instruction to speci\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

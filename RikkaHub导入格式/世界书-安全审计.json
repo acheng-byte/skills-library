@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "49e16e0a-cf2a-43b2-9130-cf32cbe8a964",
+    "name": "安全审计技能触发库",
+    "description": "安全审计分类共7个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "0459c048-a563-4504-99e7-4d77c6fe8fac",
+        "name": "Firebase-APK扫描",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Auditing Android applications for Firebase security misconfigurations",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Firebase安全",
+          "APK扫描",
+          "Firebase配置检查",
+          "Android安全审计"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "2cfd2979-1739-43b2-81d7-b9a730b9039a",
+        "name": "Rust模糊测试",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "cargo-fuzz is currently the primary and most mature fuzzing solution for Rust projects using Cargo.",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Rust模糊测试",
+          "cargo-fuzz",
+          "fuzzing",
+          "Rust安全测试",
+          "模糊测试"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "8372b4ea-dd84-4759-88b7-e49f7a575787",
+        "name": "Solana漏洞扫描",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Systematically scan Solana programs (native and Anchor framework) for platform-specific security vulnerabilities related to cross-program invocations, account validation, and program-derived addresses",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "Solana安全",
+          "Solana漏洞",
+          "Anchor安全审计",
+          "智能合约审计"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "7e181c9a-3e56-4a24-97a6-71a11e782669",
+        "name": "代码成熟度评估",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "Systematically assesses codebase maturity using Trail of Bits' 9-category framework. Provides evidence-based ratings and actionable recommendations.\n**Framework**: Building Secure Contracts - Code Mat",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "代码成熟度",
+          "代码质量评估",
+          "安全代码审查",
+          "代码评估"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "e9abbb9e-716e-4b0c-b051-ca45b48d6a2c",
+        "name": "安全威胁建模",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Deliver an actionable AppSec-grade threat model that is specific to the repository or a project path, not a generic checklist. Anchor every architectural claim to evidence in the repo and keep assumpt",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "安全威胁建模",
+          "威胁模型",
+          "threat modeling",
+          "AppSec",
+          "安全分析",
+          "代码安全审查"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "48d004d1-7f13-4a28-8007-ad8ee5a07fb3",
+        "name": "安全所有权地图",
+        "enabled": true,
+        "priority": 85,
+        "position": "after_system_prompt",
+        "content": "1. Scope the repo and time window (optional `--since/--until`).\n2. Decide sensitivity rules (use defaults or provide a CSV config).\n3. Communities are computed by default; graphml output is optional (`--graphml`).\n4. Persist and visualize (see `references/neo4j-import.md`).",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "安全所有权地图",
+          "代码所有权",
+          "git历史分析",
+          "安全风险图",
+          "所有权分析"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "b489e8a9-a6be-4910-9f77-6ab4e3d2c556",
+        "name": "安全最佳实践",
+        "enabled": true,
+        "priority": 83,
+        "position": "after_system_prompt",
+        "content": "This skill provides a description of how to identify the language and frameworks used by the current context, and then to load information from this skill's references directory about the security bes",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "安全最佳实践",
+          "安全规范",
+          "代码安全",
+          "安全指南",
+          "框架安全"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

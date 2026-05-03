@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "0bdb5425-f070-45ee-90b6-4ad522dde3ca",
+    "name": "Azure资源健康诊断",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Azure Resource Health & Issue Diagnosis\n\nThis workflow analyzes a specific Azure resource to assess its health status, diagnose potential issues using logs and telemetry data, and develop a comprehensive remediation plan for any problems discovered.\n\n## Prerequisites\n- Azure MCP server configured and authenticated\n- Target Azure resource identified (name and optionally resource group/subscription)\n- Resource must be deployed and running to generate logs/telemetry\n\n## Workflow Steps\n\n### Step 1: Get Azure Best Practices\n**Action**: Retrieve diagnostic and troubleshooting best practices\n**Tools**: Azure MCP best practices tool\n**Process**:\n1. **Load Best Practices**:\n   - Execute Azure best practices tool to get diagnostic guidelines\n   - Focus on health monitoring, log analysis, and issue resolution patterns\n   - Use these practices to inform diagnostic approach and remediation recommendations\n\n### Step 2: Resource Discovery & Identification\n**Action**: Locate and identify the target Azure resource\n**Process**:\n1. **Resource Lookup**:\n   - If only resource name provided: Search across subscriptions using `azmcp-subscription-list`\n   - Use `az resource list --name <resource-name>` to find matching resources\n   - If multiple matches found, prompt user to specify subscription/resource group\n   - Gather detailed resource information:\n     - Resource type and current status\n     - Location, tags, and configuration\n     - Associated services and dependencies\n\n2. **Resource Type De\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

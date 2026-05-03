@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "type": "lorebook",
+  "data": {
+    "id": "49f0fcfa-1665-4468-aeb8-7c44b89e0ebc",
+    "name": "WordPress专区技能触发库",
+    "description": "WordPress专区分类共5个技能，按关键词自动触发对应框架",
+    "enabled": true,
+    "entries": [
+      {
+        "id": "68394562-4717-4b21-919f-8b3e72c272b5",
+        "name": "WP-CLI运维",
+        "enabled": true,
+        "priority": 95,
+        "position": "after_system_prompt",
+        "content": "Use this skill when the task involves WordPress operational work via WP-CLI, including:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "WP-CLI",
+          "WordPress运维",
+          "wp命令",
+          "数据库迁移"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "af826dda-ee6a-4df0-8e7f-93d348f9b944",
+        "name": "WordPress专业开发",
+        "enabled": true,
+        "priority": 93,
+        "position": "after_system_prompt",
+        "content": "Expert WordPress developer specializing in custom themes, plugins, Gutenberg blocks, WooCommerce, and WordPress performance optimization.\n1. **Analyze requirements** — Understand WordPress context, ex",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "WordPress开发",
+          "主题开发",
+          "插件开发",
+          "Gutenberg"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "08f56c5c-655a-413f-ae13-1126914c04b7",
+        "name": "WordPress交互API",
+        "enabled": true,
+        "priority": 91,
+        "position": "after_system_prompt",
+        "content": "Use this skill when the user mentions:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "交互API",
+          "Interactivity API",
+          "data-wp-",
+          "前端交互"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "e0ee9ba5-467f-4eb6-8a4a-d7f08e258886",
+        "name": "WordPress区块开发",
+        "enabled": true,
+        "priority": 89,
+        "position": "after_system_prompt",
+        "content": "Use this skill for block work such as:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "区块开发",
+          "Block开发",
+          "Gutenberg区块",
+          "block"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      },
+      {
+        "id": "9c84c7b0-236a-4600-a894-cdb20ea17f0f",
+        "name": "WordPress路由",
+        "enabled": true,
+        "priority": 87,
+        "position": "after_system_prompt",
+        "content": "Use this skill at the start of most WordPress tasks to:",
+        "injectDepth": 10,
+        "role": "user",
+        "keywords": [
+          "WordPress路由",
+          "项目类型识别",
+          "WordPress分析",
+          "wp-triage"
+        ],
+        "useRegex": false,
+        "caseSensitive": false,
+        "scanDepth": 5,
+        "constantActive": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "18b955b9-0101-45a4-a5b8-c905c218749c",
+    "name": "Obsidian-Markdown格式",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Obsidian Flavored Markdown Skill\n\nCreate and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark and GFM with wikilinks, embeds, callouts, properties, comments, and other syntax. This skill covers only Obsidian-specific extensions -- standard Markdown (headings, bold, italic, lists, quotes, code blocks, tables) is assumed knowledge.\n\n## Workflow: Creating an Obsidian Note\n\n1. **Add frontmatter** with properties (title, tags, aliases) at the top of the file. See [PROPERTIES.md](references/PROPERTIES.md) for all property types.\n2. **Write content** using standard Markdown for structure, plus Obsidian-specific syntax below.\n3. **Link related notes** using wikilinks (`[[Note]]`) for internal vault connections, or standard Markdown links for external URLs.\n4. **Embed content** from other notes, images, or PDFs using the `![[embed]]` syntax. See [EMBEDS.md](references/EMBEDS.md) for all embed types.\n5. **Add callouts** for highlighted information using `> [!type]` syntax. See [CALLOUTS.md](references/CALLOUTS.md) for all callout types.\n6. **Verify** the note renders correctly in Obsidian's reading view.\n\n> When choosing between wikilinks and Markdown links: use `[[wikilinks]]` for notes within the vault (Obsidian tracks renames automatically) and `[text](url)` for external URLs only.\n\n## Internal Links (Wikilinks)\n\n[[Note Name]]                          Link to note\n[[Note Name|Display Text]]             Custom display text\n[[Note Name#Heading]]                  Li\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

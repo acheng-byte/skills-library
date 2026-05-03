@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "de792b18-23d7-4c21-902d-98626f118ce8",
+    "name": "Next.js缓存组件",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Cache Components (Next.js 16+)\n\nCache Components enable Partial Prerendering (PPR) - mix static, cached, and dynamic content in a single route.\n\n## Enable Cache Components\n\n// next.config.ts\nimport type { NextConfig } from 'next'\n\nconst nextConfig: NextConfig = {\n  cacheComponents: true,\n}\n\nexport default nextConfig\n\nThis replaces the old `experimental.ppr` flag.\n\n---\n\n## Three Content Types\n\nWith Cache Components enabled, content falls into three categories:\n\n### 1. Static (Auto-Prerendered)\n\nSynchronous code, imports, pure computations - prerendered at build time:\n\nexport default function Page() {\n  return (\n    <header>\n      <h1>Our Blog</h1>  {/* Static - instant */}\n      <nav>...</nav>\n    </header>\n  )\n}\n\n### 2. Cached (`use cache`)\n\nAsync data that doesn't need fresh fetches every request:\n\nasync function BlogPosts() {\n  'use cache'\n  cacheLife('hours')\n\n  const posts = await db.posts.findMany()\n  return <PostList posts={posts} />\n}\n\n### 3. Dynamic (Suspense)\n\nRuntime data that must be fresh - wrap in Suspense:\n\nimport { Suspense } from 'react'\n\nexport default function Page() {\n  return (\n    <>\n      <BlogPosts />  {/* Cached */}\n\n      <Suspense fallback={<p>Loading...</p>}>\n        <UserPreferences />  {/* Dynamic - streams in */}\n      </Suspense>\n    </>\n  )\n}\n\nasync function UserPreferences() {\n  const theme = (await cookies()).get('theme')?.value\n  return <p>Theme: {theme}</p>\n}\n\n---\n\n## `use cache` Directive\n\n### File Level\n\n'use cache'\n\nexport default asyn\n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "bf95bfca-a696-408d-bf5b-7bd923affbbc",
+    "name": "Firebase-APK扫描",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to Use\n\n- Auditing Android applications for Firebase security misconfigurations\n- Testing Firebase endpoints extracted from APKs (Realtime Database, Firestore, Storage)\n- Checking authentication security (open signup, anonymous auth, email enumeration)\n- Enumerating Cloud Functions and testing for unauthenticated access\n- Mobile app security assessments involving Firebase backends\n- Authorized penetration testing of Firebase-backed applications\n\n## Workflow\n\n### Step 1: Validate Input\n\nFirst, verify the target exists:\n\nls -la $ARGUMENTS\n\nIf `$ARGUMENTS` is empty, ask the user to provide an APK path.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

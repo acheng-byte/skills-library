@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "57a70858-47ab-4d45-ae59-b5de36013864",
+    "name": "处理PR评论",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# PR Comment Handler\n\nGuide to find the open PR for the current branch and address its comments with gh CLI. Run all `gh` commands with elevated network access.\n\nPrereq: ensure `gh` is authenticated (for example, run `gh auth login` once), then run `gh auth status` with escalated permissions (include workflow/repo scopes) so `gh` commands succeed. If sandboxing blocks `gh auth status`, rerun it with `sandbox_permissions=require_escalated`.\n\n## 1) Inspect comments needing attention\n\n## 2) Ask the user for clarification\n- Number all the review threads and comments and provide a short summary of what would be required to apply a fix for it\n- Ask the user which numbered comments should be addressed\n\n## 3) If user chooses comments\n- Apply fixes for the selected comments\n\nNotes:\n- If gh hits auth/rate issues mid-run, prompt the user to re-authenticate with `gh auth login`, then retry.",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

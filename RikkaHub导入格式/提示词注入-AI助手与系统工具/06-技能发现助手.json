@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "c6e9cb2f-5557-4a5b-9d5d-d6fd30f45c66",
+    "name": "技能发现助手",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Find Skills\n\nThis skill helps you discover and install skills from the open agent skills ecosystem.\n\n## When to Use This Skill\n\nUse this skill when the user:\n\n- Asks \"how do I do X\" where X might be a common task with an existing skill\n- Says \"find a skill for X\" or \"is there a skill for X\"\n- Asks \"can you do X\" where X is a specialized capability\n- Expresses interest in extending agent capabilities\n- Wants to search for tools, templates, or workflows\n- Mentions they wish they had help with a specific domain (design, testing, deployment, etc.)\n\n## What is the Skills CLI?\n\n**Key commands:**\n\n- `npx skills find [query]` - Search for skills interactively or by keyword\n- `npx skills add <package>` - Install a skill from GitHub or other sources\n- `npx skills check` - Check for skill updates\n- `npx skills update` - Update all installed skills\n\n**Browse skills at:** https://skills.sh/\n\n## How to Help Users Find Skills\n\n### Step 1: Understand What They Need\n\nWhen a user asks for help with something, identify:\n\n1. The domain (e.g., React, testing, design, deployment)\n2. The specific task (e.g., writing tests, creating animations, reviewing PRs)\n3. Whether this is a common enough task that a skill likely exists\n\n### Step 2: Check the Leaderboard First\n\nFor example, top skills for web development include:\n- `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each)\n- `anthropics/skills` — Frontend design, document processing (100K+ installs)\n\n### Step 3: Search for \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "9c497782-3026-4fbe-9b7a-7ad0ba51663e",
+    "name": "WP-CLI运维",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "## When to use\n\nUse this skill when the task involves WordPress operational work via WP-CLI, including:\n\n- `wp search-replace` (URL changes, domain migrations, protocol switch)\n- DB export/import, resets, and inspections (`wp db *`)\n- plugin/theme install/activate/update, language packs\n- cron event listing/running\n- cache/rewrite flushing\n- multisite operations (`wp site *`, `--url`, `--network`)\n- building repeatable scripts (`wp-cli.yml`, shell scripts, CI jobs)",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}

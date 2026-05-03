@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "e3f9d828-197a-43fa-b4ec-b13acbec28d5",
+    "name": "原生UI-Expo",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "# Expo UI Guidelines\n\n## References\n\nConsult these resources as needed:\n\nreferences/\n  animations.md          Reanimated: entering, exiting, layout, scroll-driven, gestures\n  controls.md            Native iOS: Switch, Slider, SegmentedControl, DateTimePicker, Picker\n  form-sheet.md          Form sheets in expo-router: configuration, footers and background interaction. \n  gradients.md           CSS gradients via experimental_backgroundImage (New Arch only)\n  icons.md               SF Symbols via expo-image (sf: source), names, animations, weights\n  media.md               Camera, audio, video, and file saving\n  route-structure.md     Route conventions, dynamic routes, groups, folder organization\n  search.md              Search bar with headers, useSearch hook, filtering patterns\n  storage.md             SQLite, AsyncStorage, SecureStore\n  tabs.md                NativeTabs, migration from JS tabs, iOS 26 features\n  toolbar-and-headers.md Stack headers and toolbar buttons, menus, search (iOS only)\n  visual-effects.md      Blur (expo-blur) and liquid glass (expo-glass-effect)\n  webgpu-three.md        3D graphics, games, GPU visualizations with WebGPU and Three.js\n  zoom-transitions.md    Apple Zoom: fluid zoom transitions with Link.AppleZoom (iOS 18+)\n\n## Running the App\n\n**CRITICAL: Always try Expo Go first before creating custom builds.**\n\nMost Expo apps work in Expo Go without any custom native code. Before running `npx expo run:ios` or `npx expo run:android`:\n\n1. **Start with \n...",
+    "injectDepth": 10,
+    "role": "user"
+  }
+}
