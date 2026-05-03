@@ -2,7 +2,7 @@
   "version": 1,
   "type": "mode_injection",
   "data": {
-    "id": "3ce00baa-f58f-44ac-a38e-a43aa84e0008",
+    "id": "7ac8fd36-923b-40ee-8d54-51c604310ebf",
     "name": "强制Markdown输出",
     "enabled": false,
     "priority": 1,
