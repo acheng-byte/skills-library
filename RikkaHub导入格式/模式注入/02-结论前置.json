@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "9424bd3f-cc29-49da-9caa-5677901a2655",
+    "name": "结论前置",
+    "enabled": true,
+    "priority": 3,
+    "position": "after_system_prompt",
+    "content": "回复结构强制要求：\n- 第一句：直接给结论或答案\n- 之后再解释原因和细节\n- 禁止\"我们先来看一下背景...\"式铺垫\n- 如果有多个观点，先给最重要的那个",
+    "injectDepth": 4,
+    "role": "user"
+  }
+}

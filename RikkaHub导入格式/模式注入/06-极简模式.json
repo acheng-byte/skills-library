@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "59a6cbdd-3bfc-4e2f-aef7-9c90c98256e0",
+    "name": "极简模式",
+    "enabled": false,
+    "priority": 0,
+    "position": "after_system_prompt",
+    "content": "回复长度限制：\n- 普通问题：不超过150字\n- 分析类：不超过300字，用列表而非段落\n- 禁止重复问题、总结全文、感谢等废话\n- 用最少的字传达最多的信息",
+    "injectDepth": 4,
+    "role": "user"
+  }
+}

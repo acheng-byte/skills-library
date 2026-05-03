@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "e2129270-2129-4b87-900a-038cc63425f2",
+    "name": "全程中文",
+    "enabled": false,
+    "priority": 2,
+    "position": "after_system_prompt",
+    "content": "所有回复使用中文。专有名词（公司名、技术名词、产品名）可保留英文，但解释和分析必须用中文。不要在没必要的地方插入英文。",
+    "injectDepth": 4,
+    "role": "user"
+  }
+}

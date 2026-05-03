@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "mode_injection",
+  "data": {
+    "id": "3ce00baa-f58f-44ac-a38e-a43aa84e0008",
+    "name": "强制Markdown输出",
+    "enabled": false,
+    "priority": 1,
+    "position": "after_system_prompt",
+    "content": "所有输出使用 Markdown 格式：\n- 用 ## ### 层级标题组织结构\n- 重要结论用 **加粗**\n- 列表用 - 而非中文序号\n- 数据对比用表格\n- 末尾附「下一步行动」清单（如适用）",
+    "injectDepth": 4,
+    "role": "user"
+  }
+}
