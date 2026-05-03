@@ -8,6 +8,7 @@ tags: [RAG, Chroma, Vector Database, Embeddings, Semantic Search, Open Source, S
 dependencies: [chromadb, sentence-transformers]
 ---
 
+```
 # Chroma - Open-Source Embedding Database
 
 The AI-native database for building LLM applications with memory.
@@ -402,5 +403,4 @@ collection = client.get_or_create_collection("my_docs")
 - **Discord**: https://discord.gg/MMeYNTmh3x
 - **Version**: 1.3.3+
 - **License**: Apache 2.0
-
-
+```

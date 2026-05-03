@@ -4,6 +4,7 @@ description: "Generate world-class Instagram carousel content on any topic. Prod
 allowed-tools: Bash, Read, Edit, Write, Glob, Grep, WebFetch
 ---
 
+```
 # World-Class Instagram Carousel Generator
 
 Generate Instagram carousels that are genuinely world-class: content people save, share, and come back to. Not engagement bait. Not AI slop. Actual value, delivered through precise visual design and narrative structure.
@@ -1129,3 +1130,4 @@ Every piece of learning must be compressed to its irreducible form before enteri
 - GOOD: "Synthesis `points[]` must be FLAT STRINGS, not dicts. Renderer does `escape_latex(pt)` directly." (12 words)
 
 If you can't compress it to one line, it belongs in Tier 2 (session archive), not Tier 1.
+```

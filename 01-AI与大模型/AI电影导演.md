@@ -4,6 +4,7 @@ version: 0.1.0
 description: Direct high-fidelity cinematic video with AI — translates creative intent into technical cinematographic directives for Veo3, Kling, and Luma video models via muapi.ai
 ---
 
+```
 # 🎬 AI Cinema Director Skill
 
 **A specialized skill for AI Agents to direct high-fidelity cinematic video.**
@@ -91,3 +92,4 @@ Video generation is asynchronous. Use the returned `request_id` to poll for comp
 
 ## ⚙️ Implementation Details
 This skill acts as an "Expert Translator" for the `core/media/generate-video.sh` primitive. It maintains a dictionary of cinematic styles and injects technical directives into the prompt before execution.
+```

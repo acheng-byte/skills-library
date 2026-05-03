@@ -13,6 +13,7 @@ metadata:
   }
 ---
 
+```
 # Nano Banana Pro (Gemini 3 Pro Image)
 
 Generate or edit images using Gemini 3 Pro Image via AI Gateway or direct API.
@@ -100,3 +101,4 @@ export GEMINI_API_KEY="your-gemini-key"
 - Use descriptive filenames with timestamps: `2024-12-31-cat.png`
 - The script outputs a `MEDIA:` line for OpenClaw integration
 - AI Gateway mode works with standard Python 3, no extra tools needed
+```

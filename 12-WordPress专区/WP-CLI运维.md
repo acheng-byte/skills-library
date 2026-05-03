@@ -4,6 +4,7 @@ description: "Use when working with WP-CLI (wp) for WordPress operations: safe s
 compatibility: "Targets WordPress 6.9+ (PHP 7.2.24+). Requires WP-CLI in the execution environment."
 ---
 
+```
 # WP-CLI and Ops
 
 ## When to use
@@ -121,3 +122,4 @@ See:
 
 - If you cannot confirm environment safety, do not run write operations.
 - If the repo uses containerized tooling (Docker/wp-env) but you can’t access it, ask for the intended command runner or CI job.
+```

@@ -5,6 +5,7 @@ metadata:
   short-description: VC Copilot 总控路由和输出规范
 ---
 
+```
 # VC Investor Workbench
 
 ## Role
@@ -33,4 +34,4 @@ metadata:
 - 新建报告：`../../scripts/new_report.py`
 - 提取输入：`../../scripts/extract_input.py`
 - 插件校验：`../../scripts/validate_plugin.py`
-
+```

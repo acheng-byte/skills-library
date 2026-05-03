@@ -3,6 +3,7 @@ name: hf-mcp
 description: Use Hugging Face Hub via MCP server tools. Search models, datasets, Spaces, papers. Get repo details, fetch documentation, run compute jobs, and use Gradio Spaces as AI tools. Available when connected to the HF MCP server.
 ---
 
+```
 # Hugging Face MCP Server
 
 Connect AI assistants to the Hugging Face Hub. Setup: https://huggingface.co/settings/mcp
@@ -176,3 +177,4 @@ hf_jobs(operation="scheduled uv", args={
 - Use `include_readme=true` in `hub_repo_details` for full model/dataset documentation
 - For jobs accessing private repos, always include `secrets: {"HF_TOKEN": "$HF_TOKEN"}`
 - Use `dynamic_space(operation="discover")` to see all available Space-based tasks
+```

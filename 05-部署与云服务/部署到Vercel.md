@@ -6,6 +6,7 @@ metadata:
   version: "3.0.0"
 ---
 
+```
 # Deploy to Vercel
 
 Deploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.
@@ -294,3 +295,4 @@ the command with escalated permissions — want me to proceed?
 ### CLI Auth Failure
 
 If `vercel login` or `vercel deploy` fails with authentication errors, fall back to the no-auth deploy script (claude.ai or Codex variant, depending on the environment).
+```

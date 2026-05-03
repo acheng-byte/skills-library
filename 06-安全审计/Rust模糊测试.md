@@ -6,6 +6,7 @@ description: >
   Use for fuzzing Rust code with libFuzzer backend.
 ---
 
+```
 # cargo-fuzz
 
 cargo-fuzz is the de facto choice for fuzzing Rust projects when using Cargo. It uses libFuzzer as the backend and provides a convenient Cargo subcommand that automatically enables relevant compilation flags for your Rust project, including support for sanitizers like AddressSanitizer.
@@ -452,3 +453,4 @@ Guide to structure-aware fuzzing with automatic derivation for Rust types.
 
 **[cargo-fuzz GitHub Repository](https://github.com/rust-fuzz/cargo-fuzz)**
 Source code, issue tracker, and examples for cargo-fuzz.
+```

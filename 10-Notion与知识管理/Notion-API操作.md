@@ -7,6 +7,7 @@ description: >
   covers authentication, all available endpoints, pagination, error handling, and best practices.
 ---
 
+```
 # Notion API Skill
 
 This skill enables interaction with Notion workspaces through the Notion REST API. Use `curl` and `jq` for direct REST calls, or write ad-hoc scripts as appropriate for the task.
@@ -493,3 +494,4 @@ For detailed documentation on specific topics, see:
 - `references/property-types.md` - Database property types and value formats
 - `references/filters-and-sorts.md` - Database query filter and sort syntax
 - `references/rich-text.md` - Rich text object structure and annotations
+```

@@ -5,6 +5,7 @@ metadata:
   short-description: Capture conversations into structured Notion pages
 ---
 
+```
 # Knowledge Capture
 
 Convert conversations and notes into structured, linkable Notion pages for easy reuse.
@@ -54,3 +55,4 @@ After successful login, the user will have to restart codex. You should finish y
 ## References and examples
 - `reference/` — database schemas and templates (e.g., `team-wiki-database.md`, `how-to-guide-database.md`, `faq-database.md`, `decision-log-database.md`, `documentation-database.md`, `learning-database.md`, `database-best-practices.md`).
 - `examples/` — capture patterns in practice (e.g., `decision-capture.md`, `how-to-guide.md`, `conversation-to-faq.md`).
+```

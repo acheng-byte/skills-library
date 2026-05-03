@@ -4,6 +4,7 @@ description: Guide for upgrading Stripe API versions and SDKs
 
 ---
 
+```
 The latest Stripe API version is 2026-04-22.dahlia - use this version when upgrading unless the user specifies a different target version.
 
 # Upgrading Stripe Versions
@@ -183,3 +184,4 @@ const stripe = require('stripe')('sk_test_xxx', {
 - Test webhooks with the new version structure before upgrading
 - Breaking changes are tagged by affected product areas (Payments, Billing, Connect, etc.)
 - Multiple API versions coexist simultaneously, enabling staged adoption
+```

@@ -10,6 +10,7 @@ description: >-
   Gemini 2.5 Pro via AI Gateway.
 ---
 
+```
 # LLM Council
 
 Query multiple AI models in parallel with a live web dashboard.
@@ -55,3 +56,4 @@ Environment: `COUNCIL_PORT` (default 8787), `AI_GATEWAY_API_KEY` (required, auto
 - Static files served with `Cache-Control: no-store, no-cache` headers
 - Script tag uses cache-busting version param: `app.js?v=...` (bump when editing app.js)
 - Model IDs use dots not hyphens: `anthropic/claude-sonnet-4.5` (not `claude-sonnet-4-5`)
+```

@@ -5,6 +5,7 @@ user-invocable: true
 disable-model-invocation: false
 ---
 
+```
 # x402 Payment Protocol
 
 Use the `npx awal@2.8.2 x402` commands to discover, inspect, and call paid API endpoints using the X402 payment protocol. Payments are made in USDC on Base.
@@ -128,3 +129,4 @@ X402 uses USDC atomic units (6 decimals):
 - "No X402 payment requirements found" - URL may not be an x402 endpoint
 - "CDP API returned 429" - Rate limited; cached data will be used if available
 - "Insufficient balance" - Fund wallet with USDC (`npx awal@2.8.2 balance` to check)
+```

@@ -8,6 +8,7 @@ lastSyncedDate: 2026-04-07
 localModifications: false
 ---
 
+```
 # Requirements for Outputs
 
 ## All Excel files
@@ -294,3 +295,4 @@ The script returns JSON with error details:
 - Add comments to cells with complex formulas or important assumptions
 - Document data sources for hardcoded values
 - Include notes for key calculations and model sections
+```

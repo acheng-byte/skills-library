@@ -7,6 +7,7 @@ metadata:
   version: "0.0.1"
 ---
 
+```
 # Astro Usage Guide
 
 **Always consult [docs.astro.build](https://docs.astro.build) for code examples and latest API.**
@@ -138,3 +139,4 @@ npx astro add vercel --yes
 - [Config Reference](https://docs.astro.build/en/reference/configuration-reference/)
 - [llms.txt](https://docs.astro.build/llms.txt)
 - [GitHub](https://github.com/withastro/astro)
+```

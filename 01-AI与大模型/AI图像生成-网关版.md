@@ -4,6 +4,7 @@ description: Generate and transform images using AI Gateway API. Use when the us
 allowed-tools: Bash, Read
 ---
 
+```
 # Image Generation Skill
 
 Generate images from text prompts and transform existing images using the AI Gateway API with support for multiple AI models including Google Gemini, Byteplus Seedream, and OpenAI GPT-Image.
@@ -227,3 +228,4 @@ Ensure you're using a valid model name from the supported models list above.
 ## Additional Resources
 
 For more details on API parameters and response formats, see the API documentation at the AI Gateway repository.
+```

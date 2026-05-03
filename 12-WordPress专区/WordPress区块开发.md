@@ -4,6 +4,7 @@ description: "Use when developing WordPress (Gutenberg) blocks: block.json metad
 compatibility: "Targets WordPress 6.9+ (PHP 7.2.24+). Filesystem-based agent with bash + node. Some workflows require WP-CLI."
 ---
 
+```
 # WP Block Development
 
 ## When to use
@@ -172,3 +173,4 @@ If you’re uncertain about upstream behavior/version support, consult canonical
 
 - WordPress Developer Resources (Block Editor Handbook, Theme Handbook, Plugin Handbook)
 - Gutenberg repo docs for bleeding-edge behaviors
+```

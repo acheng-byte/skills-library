@@ -60,6 +60,7 @@ description: >
   (51) extract metadata from a PDF (title, author, subject).
 ---
 
+```
 # LaTeX Document Skill
 
 Create any LaTeX document, compile to PDF, and generate PNG previews. Convert PDFs of any type to LaTeX.
@@ -409,3 +410,4 @@ These cause `Undefined control sequence` -- always include the required package:
 ## Long-Form Document Anti-Patterns
 
 For documents 5+ pages (reports, theses, books), read [references/long-form-best-practices.md](references/long-form-best-practices.md) for 9 critical anti-patterns, the report preamble best practices, and the content generation checklist. **This is MUST-READ material before generating any long document.**
+```

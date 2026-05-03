@@ -6,6 +6,7 @@ description: |
   Use when: (1) User requests audio/voice output with the "tts" trigger or keyword. (2) Content needs to be spoken rather than read (multitasking, accessibility, driving, cooking). (3) User wants a specific voice, speed, pitch, or format for TTS output.
 ---
 
+```
 # Edge-TTS Skill
 
 ## Overview
@@ -196,3 +197,4 @@ node config-manager.js --get
 - For repeated preferences, use `config-manager.js` to set defaults
 - **Default voice**: `en-US-MichelleNeural` (female, natural)
 - Neural voices (ending in `Neural`) provide higher quality than Standard voices
+```

@@ -4,6 +4,7 @@ description: Generates custom design system rules for the user's codebase. Use w
 disable-model-invocation: false
 ---
 
+```
 # Create Design System Rules
 
 ## Overview
@@ -536,3 +537,4 @@ The time invested in creating good rules pays off exponentially across every Fig
 
 - [Figma MCP Server Documentation](https://developers.figma.com/docs/figma-mcp-server/)
 - [Figma Variables and Design Tokens](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+```

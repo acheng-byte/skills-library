@@ -3,7 +3,7 @@ name: "sentry"
 description: "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command."
 ---
 
-
+```
 # Sentry (Read-only Observability)
 
 ## Quick start
@@ -118,3 +118,4 @@ sentry schema issues
 
 Example prompt: "List the top 10 open issues for prod in the last 24h."
 Expected: ordered list with titles, short IDs, counts, last seen.
+```

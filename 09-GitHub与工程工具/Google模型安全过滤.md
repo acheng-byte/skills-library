@@ -11,6 +11,7 @@ metadata:
     cliHelp: "gws modelarmor --help"
 ---
 
+```
 # modelarmor (v1)
 
 > **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
@@ -40,4 +41,4 @@ gws schema modelarmor.<resource>.<method>
 ```
 
 Use `gws schema` output to build your `--params` and `--json` flags.
-
+```

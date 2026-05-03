@@ -3,6 +3,7 @@ name: codex
 description: Use when the user asks to run Codex CLI (codex exec, codex resume) or references OpenAI Codex for code analysis, refactoring, or automated editing. Uses GPT-5.2 by default for state-of-the-art software engineering.
 ---
 
+```
 # Codex Skill Guide
 
 ## Running a Task
@@ -64,3 +65,4 @@ description: Use when the user asks to run Codex CLI (codex exec, codex resume) 
 Requires Codex CLI v0.57.0 or later for GPT-5.2 model support. The CLI defaults to `gpt-5.2` on macOS/Linux and `gpt-5.2` on Windows. Check version: `codex --version`
 
 Use `/model` slash command within a Codex session to switch models, or configure default in `~/.codex/config.toml`.
+```

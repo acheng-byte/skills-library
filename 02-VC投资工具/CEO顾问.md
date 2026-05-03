@@ -12,6 +12,7 @@ metadata:
   frameworks: executive-decisions, board-governance, leadership-culture
 ---
 
+```
 # CEO Advisor
 
 Strategic leadership frameworks for vision, fundraising, board management, culture, and stakeholder alignment.
@@ -167,3 +168,4 @@ All output passes the Internal Quality Loop before reaching the founder (see `ag
 - `references/executive_decision_framework.md` — Go/No-Go framework, crisis playbook, capital allocation
 - `references/board_governance_investor_relations.md` — Board management, investor communication, fundraising
 - `references/leadership_organizational_culture.md` — Culture development, CEO routines, succession planning
+```

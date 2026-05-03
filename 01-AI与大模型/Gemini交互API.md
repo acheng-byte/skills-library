@@ -3,6 +3,7 @@ name: gemini-interactions-api
 description: Use this skill when writing code that calls the Gemini API for text generation, multi-turn chat, multimodal understanding, image generation, streaming responses, background research tasks, function calling, structured output, or migrating from the old generateContent API. This skill covers the Interactions API, the recommended way to use Gemini models and agents in Python and TypeScript.
 ---
 
+```
 # Gemini Interactions API Skill
 
 ## Critical Rules (Always Apply)
@@ -294,3 +295,4 @@ If no MCP documentation tools are available, fetch from the official docs:
 - [Deep Research Full Documentation](https://ai.google.dev/gemini-api/docs/deep-research.md.txt)
 
 These pages cover function calling, built-in tools (Google Search, code execution, URL context, file search, computer use), remote MCP, structured output, thinking configuration, working with files, multimodal understanding and generation, streaming events, and more.
+```

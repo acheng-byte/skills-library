@@ -4,6 +4,7 @@ description: "Use when the user asks about WordPress codebases (plugins, themes,
 compatibility: "Targets WordPress 6.9+ (PHP 7.2.24+). Filesystem-based agent with bash + node. Some workflows require WP-CLI."
 ---
 
+```
 # WordPress Router
 
 ## When to use
@@ -49,3 +50,4 @@ Use this skill at the start of most WordPress tasks to:
 
 - If routing is ambiguous, ask one question:
   - “Is this intended to be a WordPress plugin, a theme (classic/block), or a full site repo?”
+```

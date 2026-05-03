@@ -3,6 +3,7 @@ name: "aws-solution-architect"
 description: Design AWS architectures for startups using serverless patterns and IaC templates. Use when asked to design serverless architecture, create CloudFormation templates, optimize AWS costs, set up CI/CD pipelines, or migrate to AWS. Covers Lambda, API Gateway, DynamoDB, ECS, Aurora, and cost optimization.
 ---
 
+```
 # AWS Solution Architect
 
 Design scalable, cost-effective AWS architectures for startups with infrastructure-as-code templates.
@@ -379,3 +380,4 @@ Provide these details for architecture design:
 | `references/architecture_patterns.md` | 6 patterns: serverless, microservices, three-tier, data processing, GraphQL, multi-region |
 | `references/service_selection.md` | Decision matrices for compute, database, storage, messaging |
 | `references/best_practices.md` | Serverless design, cost optimization, security hardening, scalability |
+```

@@ -3,6 +3,7 @@ name: reddit-post-writer
 description: Master authentic Reddit content generator using emotion-first, phased architecture. Creates posts that sound genuinely human through cognitive state simulation, not just rule-following. Use when the user asks to write a Reddit post, create Reddit content, or needs help with Reddit engagement. Includes adversarial committee review, Claude-ism detection, and interactive refinement workflow.
 ---
 
+```
 # Reddit Post Writer
 
 Generate authentic Reddit posts through emotional truth, not cosmetic rules.
@@ -332,3 +333,4 @@ Optimize for:
 - **Tech Subreddits:** See `references/subreddit-analysis-claude-agentsofai.md`
 - **Tool Mentions:** See `references/tool-mentions.md` for subtlety levels
 - **Examples:** See `references/examples.md` for good vs bad comparisons
+```

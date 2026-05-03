@@ -8,6 +8,7 @@ tags: [Multimodal, CLIP, Vision-Language, Zero-Shot, Image Classification, OpenA
 dependencies: [transformers, torch, pillow]
 ---
 
+```
 # CLIP - Contrastive Language-Image Pre-Training
 
 OpenAI's model that understands images from natural language.
@@ -249,5 +250,4 @@ results = collection.query(
 - **Paper**: https://arxiv.org/abs/2103.00020
 - **Colab**: https://colab.research.google.com/github/openai/clip/
 - **License**: MIT
-
-
+```

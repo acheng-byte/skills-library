@@ -3,6 +3,7 @@ name: solana-vulnerability-scanner
 description: Scans Solana programs for 6 critical vulnerabilities including arbitrary CPI, improper PDA validation, missing signer/ownership checks, and sysvar spoofing. Use when auditing Solana/Anchor programs.
 ---
 
+```
 # Solana Vulnerability Scanner
 
 ## 1. Purpose
@@ -387,3 +388,4 @@ Before completing Solana program audit:
 - [ ] Integration tests with malicious inputs
 - [ ] Local validator testing completed
 - [ ] Trail of Bits lints enabled and passing
+```

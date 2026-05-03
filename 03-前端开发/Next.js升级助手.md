@@ -4,6 +4,7 @@ description: Upgrade Next.js to the latest version following official migration 
 argument-hint: "[target-version]"
 ---
 
+```
 # Upgrade Next.js
 
 Upgrade the current project to the latest Next.js version following official migration guides.
@@ -48,3 +49,4 @@ Upgrade the current project to the latest Next.js version following official mig
 8. **Test the upgrade**:
    - Run `npm run build` to check for build errors
    - Run `npm run dev` and test key functionality
+```

@@ -4,6 +4,7 @@ description: Next.js best practices - file conventions, RSC boundaries, data pat
 user-invocable: false
 ---
 
+```
 # Next.js Best Practices
 
 Apply these rules when writing or reviewing Next.js code.
@@ -150,4 +151,4 @@ See [self-hosting.md](./self-hosting.md) for:
 See [debug-tricks.md](./debug-tricks.md) for:
 - MCP endpoint for AI-assisted debugging
 - Rebuild specific routes with `--debug-build-paths`
-
+```

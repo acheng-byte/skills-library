@@ -3,6 +3,7 @@ name: capymail
 description: Send emails using by capy. Use when the user explicitly asks to send an email, compose an email, email someone, or similar email-sending requests. Sender is automatically determined (no --from needed) - uses user's email alias ($CAPY_USER_EMAIL_ALIAS) if configured, otherwise capy@capymail.ai. IMPORTANT - Always extract recipient email address from user's request, or ask the user to provide it if not specified.
 ---
 
+```
 # Send Email Skill
 
 Send emails using AWS SES (Amazon Simple Email Service) with automatic sender configuration and flexible recipient options.
@@ -542,3 +543,4 @@ This skill has been through two migrations:
 - Recipients can be any valid email address (user-specified, must be provided in the request)
 - AWS credentials are managed securely via environment variables
 - All emails go through AWS SES with proper authentication
+```

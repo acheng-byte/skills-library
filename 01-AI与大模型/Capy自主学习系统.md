@@ -3,6 +3,7 @@ name: capy-cortex
 description: "Autonomous learning system - learns from mistakes, reflects on sessions, and gets smarter over time. The AI brain."
 ---
 
+```
 # Capy Cortex - Autonomous Learning System
 
 You have a persistent learning brain powered by SQLite + FTS5 + sklearn TF-IDF.
@@ -58,3 +59,4 @@ python3 ~/.claude/skills/capy-cortex/scripts/cortex.py decay
 3. **Consolidation**: sklearn clustering groups similar rules into principles
 4. **Decay**: Old, unreinforced rules fade; validated rules strengthen
 5. **Retrieval**: Two-stage FTS5 + TF-IDF returns only relevant knowledge (O(1) context)
+```
